@@ -1,0 +1,18 @@
+node_modules
+dev
+dist
+.env
+
+# Local Netlify folder
+.netlify
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+npm-debug.*
