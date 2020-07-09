@@ -19,7 +19,7 @@ module.exports = merge(common, {
   output: {
     path: `${ __dirname }/dist`,
     filename: '[name].[hash].js',
-    publicPath: './',
+    publicPath: '/',
     chunkFilename: '[name].[hash].js'
   },
   optimization: {
