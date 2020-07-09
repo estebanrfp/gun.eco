@@ -1,0 +1,61 @@
+{
+  "name": "gun.eco",
+  "version": "1.0.0",
+  "description": "gun.eco multilanguage application",
+  "private": true,
+  "scripts": {
+    "build": "rimraf dev/ && webpack --config webpack.dev.js --progress --colors",
+    "dev": "npm run build && nodemon --exec babel-node index.js",
+    "dist": "rimraf dist/ && webpack --config webpack.prod.js --progress --colors",
+    "mark": "rimraf ../gun-site/docs && webpack --config webpack.mark.js --progress --colors",
+    "staging": "rimraf ../gun-site-staging/docs && webpack --config webpack.staging.js --progress --colors",
+    "start": "nodemon --exec babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "estebanrfp",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.8.4",
+    "babel-loader": "^8.1.0",
+    "brotli-webpack-plugin": "^1.1.0",
+    "compression-webpack-plugin": "^3.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.6.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^2.0.4",
+    "offline-plugin": "^5.0.7",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "rimraf": "^3.0.2",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "terser-webpack-plugin": "^3.0.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "brace": "^0.11.1",
+    "express": "^4.17.1",
+    "highlight.js": "^10.1.1",
+    "marked": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.12"
+  }
+}
