@@ -1,0 +1,82 @@
+.gunlogo
+  position relative
+  display block
+  color var(--highlight-color) !important
+  top 23px
+  letter-spacing 4px
+  font-weight 600
+  padding: 0 1rem
+  font-size: 1.2rem !important
+
+.menu
+  position relative
+  top 34px
+  overflow hidden
+  overflow-y scroll
+  -webkit-overflow-scrolling touch
+  font-size var(--font-size)
+  transition 0.3s ease all
+  color gray
+  height calc(100% - 98px)
+
+.menu ul
+	padding .5rem 0 .5rem 1rem
+	list-style none
+	position relative
+
+.menu ul li a
+  color var(--text-color)
+  text-decoration none
+
+.menu ul ul ul
+	display none
+
+.menu ul .open
+  display block !important
+
+.menu ul li .active
+  color var(--highlight-color) !important
+
+.menu ul a:hover
+  filter brightness(1.2)
+
+.menu ul ul::after
+  content "\25b6"
+  position absolute
+  top -1rem
+  right 0
+  font-size .8rem
+  transition all 0.5s
+  transform rotate(90deg)
+  color var(--highlight-color)
+
+.menu ul .open ~ .menu ul ul::after
+  transform rotate(9deg)
+
+.menu > ul > li > a
+  padding 1rem 0
+  cursor pointer
+  z-index 2
+  font-size 1rem
+  color var(--text-color)
+  filter brightness(1.08)
+
+.menu li
+  padding .2rem 0
+
+.menu ul ul
+  border-left 1px solid #84848461
+
+.footerMenu
+  background rgba(0,0,0,0.11)
+  width 100%
+  height 40px
+  text-align right
+  position absolute
+  bottom 0
+  overflow hidden
+  .ln, .col
+    display inline-block
+    padding .5rem 1rem 1rem 0
+    cursor pointer
+    color var(--highlight-color) !important

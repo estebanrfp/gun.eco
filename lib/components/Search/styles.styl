@@ -1,0 +1,56 @@
+#search
+  right .5rem
+  right 0
+  cursor pointer
+  top 20px
+  z-index 1000
+  position absolute
+
+input#searchinput
+  cursor pointer
+  position fixed
+  right 0
+  top 1rem
+  font-size 1rem
+
+  &:focus
+    cursor text
+
+.zmdi-search:before
+  font-size 1.8rem
+  cursor pointer
+  position relative
+  top .2rem
+  pointer-events none
+
+.search-box
+  z-index 1000
+  height 40px
+  width 2rem
+  border 0px solid
+  background-color transparent
+  transition all .2s ease-in
+  & + span
+    color var(--highlight-color)
+    filter brightness(0.8)
+
+  &:focus, &:hover
+    width 8rem
+    padding-left 1rem
+    padding-right 2.5rem
+    transition all .3s ease-in
+    color white
+    border 0px solid
+    background-color var(--highlight-color)
+    filter brightness(0.8)
+    & + span
+      transition all .3s ease-in
+      opacity 0
+
+  &:not(:focus)
+    text-indent 100%
+    white-space nowrap
+    overflow hidden
+
+.test
+  color white !important
