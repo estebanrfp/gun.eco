@@ -7,8 +7,6 @@
     "build": "rimraf dev/ && webpack --config webpack.dev.js --progress --colors",
     "dev": "npm run build && nodemon --exec babel-node index.js",
     "dist": "rimraf dist/ && webpack --config webpack.prod.js --progress --colors",
-    "mark": "rimraf ../gun-site/docs && webpack --config webpack.mark.js --progress --colors",
-    "staging": "rimraf ../gun-site-staging/docs && webpack --config webpack.staging.js --progress --colors",
     "start": "nodemon --exec babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
