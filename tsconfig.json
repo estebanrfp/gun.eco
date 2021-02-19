@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./lib/",
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "importHelpers": true,
+    "allowJs": true,
+    "pretty": true,
+    "paths": {
+      "core/*": ["components/*"]
+    }
+  }
+}

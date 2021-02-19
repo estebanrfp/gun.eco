@@ -1,0 +1,95 @@
+@font-face {
+	font-family: 'Material-Design-Iconic-Font';
+	font-display: auto;
+	src: url("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0") format('woff2'), url("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0") format('woff2'), url("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/material-icons/Material-Design-Iconic-Font.woff?v=2.2.0") format('woff'), url("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0") format('woff2'), url("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/fonts/material-icons/Material-Design-Iconic-Font.ttf?v=2.2.0") format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+.zmdi::before {
+	display: inline-block;
+	margin-right: 0.5em;
+	text-align: center;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	width: 1em;
+	height: 1em;
+	font-family: 'Material-Design-Iconic-Font';
+	line-height: 1;
+	/* speak: none; */
+	cursor: pointer;
+	/* font-smoothing: antialiased; */
+}
+
+/* iconos icomoon */
+
+/* Material Design Iconic Font uses the Unicode Private Use Area (PUA) to ensure screen
+         readers do not read off random characters that represent icons */
+
+.zmdi-assignment-o:before {
+	content: '\f109';
+}
+
+.zmdi-edit:before {
+	content: '\f158';
+}
+
+.zmdi-menu:before {
+	content: '\f197';
+}
+
+.zmdi-refresh:before {
+	content: '\f1b9';
+}
+
+.zmdi-search:before {
+	content: '\f1c3';
+}
+
+.zmdi-alert-circle-o:before {
+	content: '\f1f0';
+}
+
+.zmdi-alert-triangle:before {
+	content: '\f1f4';
+}
+
+.zmdi-help:before {
+	content: '\f1f6';
+}
+
+.zmdi-info-outline:before {
+	content: '\f1f7';
+}
+
+.zmdi-download:before {
+	content: '\f220';
+}
+
+.zmdi-copy:before {
+	content: '\f237';
+}
+
+.zmdi-format-color-fill:before {
+	content: '\f240';
+}
+
+.zmdi-format-size:before {
+	content: '\f24b';
+}
+
+.zmdi-arrow-left:before {
+	content: '\f2ea';
+}
+
+.zmdi-codepen:before {
+	content: '\f33e';
+}
+
+.zmdi-github:before {
+	content: '\f345';
+}

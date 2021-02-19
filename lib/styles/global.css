@@ -1,0 +1,316 @@
+.app-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.62));
+}
+
+.app-container, .app-container .toggle-nav-left {
+	position: absolute;
+	z-index: 10000;
+}
+
+.app-container .zmdi.zmdi-menu, .app-container .toggle-nav-left .zmdi.zmdi-menu {
+	font-size: 1.6rem;
+}
+
+.app-container .toggle-nav-left {
+	padding: 1rem 1.4rem;
+}
+
+.main-container {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	transform: translateX(0);
+	transform: translate3d(0, 0, 0);
+	transition: 0.3s ease all;
+}
+
+.title {
+	padding: 0.5rem 1rem;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--highlight-color);
+	background: rgba(0, 0, 0, 0.11);
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+	/* margin: 1rem 0; */
+	margin-top: 1rem;
+	z-index: 10000;
+}
+
+.Layout {
+	top: 65px;
+	grid-area: main;
+	/* padding: 1rem; */
+	padding: 0 1rem;
+	min-width: var(--menu-width);
+	width: 100%;
+	height: calc(100% - 65px);
+	overflow: scroll;
+	opacity: 1;
+	position: absolute;
+}
+
+.Layout blockquote {
+	border-left: 0.5rem solid var(--highlight-color);
+	margin-bottom: 2rem;
+}
+
+.Layout a {
+	color: var(--highlight-color);
+	text-decoration: none;
+}
+
+.Layout hr {
+	height: 0.5rem;
+	padding: 0;
+	margin: 24px 0;
+	background-color: var(--highlight-color);
+	filter: opacity(0.4);
+	border: 0;
+}
+
+.Layout img {
+	max-width: 100%;
+}
+
+.Layout iframe {
+	border: 0;
+	width: 100%;
+	height: 240px;
+	padding: 1rem 0;
+}
+
+.Layout code {
+	background: rgba(0, 0, 0, 0.271);
+	padding: 0 0.5rem;
+}
+
+.fadein {
+	opacity: 1;
+	transition: opacity 0.25s ease-in-out;
+}
+
+.fadeout {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: all 0.3s ease 0.15s;
+}
+
+.show-nav-left .main-container {
+	transform: translateX(var(--menu-width)) !important;
+	transform: translate3d(var(--menu-width), 0, 0) !important;
+}
+
+.show-nav-left .main-container>.Layout {
+	width: calc(100% - var(--menu-width)) !important;
+}
+
+.Sidebar-left {
+	position: absolute;
+	width: var(--menu-width);
+	height: 100%;
+	padding: 0 1rem 0 0;
+	overflow: scroll;
+	top: 0;
+	left: calc(0px - var(--menu-width));
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.102), rgba(0, 0, 0, 0.102));
+	z-index: 1;
+}
+
+#show-menu-button {
+	display: none;
+}
+
+#show-menu-button:checked {
+	display: none;
+}
+
+#show-menu-button:checked~.sidenav {
+	z-index: 1;
+	opacity: 1;
+}
+
+#show-menu-button:checked~.show-menu-label span {
+	transform: scale3d(0, 1, 1);
+}
+
+#show-menu-button:checked~.show-menu-label:after {
+	transform: rotate3d(0, 0, 1, 45deg);
+}
+
+#show-menu-button:checked~.show-menu-label:before {
+	transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.show-menu-label {
+	width: 20px;
+	height: 24px;
+	cursor: pointer;
+	bottom: 0.6rem;
+	right: 1rem;
+	position: absolute;
+	z-index: 1000;
+}
+
+.show-menu-label:after {
+	transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+}
+
+.show-menu-label:before {
+	transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+}
+
+.show-menu-label span {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	height: 2px;
+	background: var(--highlight-color);
+	top: 50%;
+	transition: all 0.5s;
+}
+
+.show-menu-label:after, .show-menu-label:before {
+	content: "";
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background: var(--highlight-color);
+	top: 50%;
+	transition: transform 0.5s;
+	transform-origin: 50% 50%;
+}
+
+.blink_me {
+	animation-name: blinker;
+	animation-duration: 0.4s;
+	animation-timing-function: linear;
+	animation-iteration-count: 6;
+	color: var(--highlight-color);
+}
+
+.opacity {
+	filter: brightness(0.6);
+}
+
+.Layout h1 a, .Layout h2 a, .Layout h3 a, .Layout h4 a, .Layout h5 a, .Layout h6 a {
+	text-decoration: none;
+	visibility: hidden;
+	font-weight: 400;
+}
+
+.Layout h1:hover>a {
+	visibility: visible !important;
+}
+
+.Layout h2:hover>a {
+	visibility: visible !important;
+}
+
+.Layout h3:hover>a {
+	visibility: visible !important;
+}
+
+.Layout h4:hover>a {
+	visibility: visible !important;
+}
+
+.Layout h5:hover>a {
+	visibility: visible !important;
+}
+
+.Layout h6:hover>a {
+	visibility: visible !important;
+}
+
+@-moz-keyframes blinker {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes blinker {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes blinker {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes blinker {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fading {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fading {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fading {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fading {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

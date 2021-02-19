@@ -17,8 +17,7 @@
 }
 
 span.actions {
-  display: block;
-  // border-top: 1px solid #e0e0e0;
+  display: block; // border-top: 1px solid #e0e0e0;
   margin: 1rem 0 0 0;
   padding: 1rem 0 0 0;
   text-align: right;
@@ -30,16 +29,14 @@ span.actions {
 }
 
 #pageMessages .alert {
-  padding: 1rem
-  margin-bottom: 20px;
+  padding: 1rem margin-bottom: 20px;
   border: 1px solid transparent;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* border-radius: 4px; */
 }
 
 #pageMessages .alert p {
-  word-break: break-all;
-  // margin: 0 0 10px;
+  word-break: break-all; // margin: 0 0 10px;
 }
 
 #pageMessages .alert a {
@@ -56,10 +53,11 @@ span.actions {
   margin: 0 0 10px;
   text-transform: uppercase;
 }
+
 #pageMessages .alertin {
   // position: relative;
   // animation: alertin 1s;
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 }
 
 #pageMessages .alertout {
@@ -100,13 +98,12 @@ span.actions {
   position: absolute;
   top: 2px;
   right: 0;
-  color: inherit;
-  // filter: alpha(opacity=20);
+  color: inherit; // filter: alpha(opacity=20);
   opacity: .2;
 }
 
 .alert .fa {
-  margin-right:.3em;
+  margin-right: .3em;
 }
 
 // @media screen and (max-width:800px) {
@@ -117,7 +114,6 @@ span.actions {
 //     width: 380px;
 //   }
 // }
-
 @media screen and (max-width:600px) {
   #pageMessages {
     padding: 0 1rem;
@@ -128,46 +124,39 @@ span.actions {
 }
 
 @keyframes alertin {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes alertout {
-	from {
-		opacity: 1;
-	}
-
-	to {
-		opacity: 0;
-	}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes shake {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
-
   20%, 80% {
     transform: translate3d(2px, 0, 0);
   }
-
   30%, 50%, 70% {
     transform: translate3d(-4px, 0, 0);
   }
-
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
@@ -177,16 +166,26 @@ span.actions {
   animation: backgroundIn .3s both;
   pointer-events: none;
 }
+
 .backgroundOut {
   pointer-events: auto;
   animation: backgroundOut .3s both;
 }
 
 @keyframes backgroundIn {
-  from { filter: blur(0) brightness(1); }
-    to { filter: blur(3px) brightness(.6); }
+  from {
+    filter: blur(0) brightness(1);
+  }
+  to {
+    filter: blur(3px) brightness(.6);
+  }
 }
+
 @keyframes backgroundOut {
-  from { filter: blur(3px) brightness(.6); }
-    to { filter: blur(0) brightness(1);  }
+  from {
+    filter: blur(3px) brightness(.6);
+  }
+  to {
+    filter: blur(0) brightness(1);
+  }
 }
