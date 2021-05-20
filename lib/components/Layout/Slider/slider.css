@@ -12,7 +12,7 @@
 	width: 100%;
 	transition: all 0.8s;
 	transform: translateX(-200%);
-	overflow: scroll;
+	overflow: auto;
 	transform-style: preserve-3d;
 }
 
