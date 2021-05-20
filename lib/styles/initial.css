@@ -111,10 +111,6 @@ textarea[type="text"]:focus {
 	outline: none;
 }
 
-::-webkit-scrollbar {
-	display: none;
-}
-
 ::-moz-placeholder {
 	color: #d8d7d7;
 }
@@ -131,6 +127,10 @@ textarea[type="text"]:focus {
 
 ::-webkit-scrollbar {
 	display: none;
+}
+
+* {
+	scrollbar-width: none;
 }
 
 input, textarea, select {
