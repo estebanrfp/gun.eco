@@ -52,7 +52,7 @@
 	min-width: var(--menu-width);
 	width: 100%;
 	height: calc(100% - 65px);
-	overflow: scroll;
+	overflow: auto;
 	opacity: 1;
 	position: absolute;
 }
@@ -118,7 +118,7 @@
 	width: var(--menu-width);
 	height: 100%;
 	padding: 0 1rem 0 0;
-	overflow: scroll;
+	overflow: auto;
 	top: 0;
 	left: calc(0px - var(--menu-width));
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.102), rgba(0, 0, 0, 0.102));
