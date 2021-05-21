@@ -1,4 +1,3 @@
 /*                           /                           200
-/manifest.json               /manifest.json              200
+/manifest.webmanifest        /manifest.webmanifest       200
 /sw.js                       /sw.js                      200
-/appcache/manifest.appcache  /appcache/manifest.appcache 200
