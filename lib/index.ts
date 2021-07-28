@@ -4,6 +4,7 @@ import './styles/icons.css'
 import './styles/initial.css'
 import './styles/global.css'
 import './styles/queries.css'
+import './styles/lp.css'
 
 if (navigator.serviceWorker) {
   navigator.serviceWorker.ready.then(registration => registration.update())
