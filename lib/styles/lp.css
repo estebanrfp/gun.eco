@@ -5144,8 +5144,8 @@ img, video {
 }
 
 .py-air {
-  padding-top: 9rem;
-  padding-bottom: 9rem
+  /* padding-top: 9rem;
+  padding-bottom: 9rem */
 }
 
 .px-air {
@@ -7288,9 +7288,9 @@ body.themed {
   transition: background-color .5s ease-in-out, color .2s ease-in-out, opacity .2s ease-in-out .2s
 }
 
-h2, h3 {
+/* h2, h3 {
   color: #eee
-}
+} */
 
 .panel h2, .panel h3 {
   color: inherit
@@ -7310,12 +7310,12 @@ header .inline-icon {
   height: 100%!important
 }
 
-h2, h3, p {
+/* h2, h3, p {
   letter-spacing: .03em;
   font-family: Raleway, Corbel, Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Bitstream Vera Sans, Liberation Sans, Verdana, Verdana Ref, sans-serif
-}
+} */
 
-p a, p button {
+/* p a, p button {
   border-bottom: .01em solid;
   border-radius: 0;
   line-height: 1
@@ -7323,7 +7323,7 @@ p a, p button {
 
 p a:hover, p button:hover {
   color: #fff
-}
+} */
 
 p+p {
   margin-top: 1.5rem
@@ -7347,9 +7347,9 @@ p+p {
   display: block
 }
 
-.links a:hover, .links button:hover {
+/* .links a:hover, .links button:hover {
   color: #fff
-}
+} */
 
 @media (min-width:1024px) {
   .links {
@@ -7440,7 +7440,7 @@ pre {
 }
 
 .panel .footer {
-  font-family: Share Tech Mono, Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace;
+  /* font-family: Share Tech Mono, Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace; */
   font-size: 1.5rem
 }
 
