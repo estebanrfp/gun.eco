@@ -7284,9 +7284,9 @@ body.themed {
   opacity: 1
 } */
 
-.panel .footer, body {
+/* .panel .footer, body {
   transition: background-color .5s ease-in-out, color .2s ease-in-out, opacity .2s ease-in-out .2s
-}
+} */
 
 /* h2, h3 {
   color: #eee
@@ -7394,7 +7394,8 @@ pre {
 .panel .tile.code {
   display: block;
   position: relative;
-  padding: .5rem
+  padding: .5rem;
+  background: whitesmoke;
 }
 
 .panel .tile.code .dots {
@@ -7424,8 +7425,8 @@ pre {
 }
 
 .panel .footer {
-  background-color: #00000096;
-  color: #fff
+  background-color: #fff;
+  color: #000
 }
 
 .panel .inner {
