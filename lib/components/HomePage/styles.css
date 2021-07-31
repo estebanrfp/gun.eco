@@ -27649,6 +27649,15 @@ body.theme-light h2, body.theme-light h3 {
   }
 }
 
-.tile {
+/* .tile {
   background: var(--highlight-color);
 }
+
+.Layout main a {
+  color: white;
+}
+
+.panel h2, .panel h3 {
+  color: inherit;
+  color: white;
+} */
