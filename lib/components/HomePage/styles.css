@@ -27648,3 +27648,7 @@ body.theme-light h2, body.theme-light h3 {
     z-index: auto
   }
 }
+
+.tile {
+  background: var(--highlight-color);
+}
