@@ -1,3 +1,4 @@
+
 <div>
   <div style="outline:none" tabindex="-1">
     <main class="prefers-light-mode">
@@ -66,7 +67,7 @@
                 d="M299.45,191.7c-11.68,0-18.5.9-26,8.8C262.44,212,259.87,231,264,244.38c5.83,15.24,22.38,20.32,29.59,23.62-17.94-14.49-11.44-43.79,7.26-57.54h15.26c34.3,0,32.14-3.19,32.61,20.6h0.16c0.66-33.59.09-38.59-30-39.26-7.85.15-14.17-.08-19.48-0.09h0Zm59.17,67c-3.45,21.81-16.77,24.32-42.49,24.25H238.78l-7.19,24.25h79.63c28.91-.62,43.12-24.25,47.4-48.48h0Z">
               </path>
             </svg>
-            <h2 class="mt-12 text-2xl sm:text-4xl">tttThe database for <br>freedom fighters</h2><span
+            <h2 class="mt-12 text-2xl sm:text-4xl">The database for <br>freedom fighters</h2><span
               class="mt-8 text-dark text-xl"><a href="/docs/Todo-Dapp"><svg aria-hidden="true" focusable="false"
                   data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -663,7 +664,7 @@ const gun = Gun({ peers: ['http://localhost:8765/gun', 'http://gunjs.herokuapp.c
 // And listen to the heartbeat updates in real-time
 gun.get('bob').get('heartbeat').on(heartbeat =&gt; {
 const diff = Date.now() - heartbeat
-
+console.log(`Bob's heartbeat traveled ${diff} ms`)
 })</pre>
                     </div>
                   </div>
