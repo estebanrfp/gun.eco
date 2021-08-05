@@ -19,6 +19,32 @@
   left: 0;
   height: 3px;
   /* width: 30px; */
-  background-color: cyan;
+  background-color: var(--highlight-color);
   z-index: 1;
+}
+
+.scroll-button {
+  z-index: 10000;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  right: 6px;
+  bottom: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+  opacity: .4;
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out transform;
+}
+.scroll-button:hover {
+  opacity: .8;
+  transform: scale(1);
+}
+
+
+.scroll-button svg {
+  z-index: 1000;
+  /* width: 50%; */
+  color: var(--highlight-color);
+  /* pointer-events: none; */
 }
