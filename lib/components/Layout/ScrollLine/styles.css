@@ -1,0 +1,24 @@
+/* body {
+  background-color: #EFEFEF;
+} */
+
+.jumbutron {
+  padding: 30px;
+}
+.content {
+  background-color: #fff;
+  padding: 50px;
+  font-size: 19px;
+  line-height: 1.5;
+  min-height: 3000px;
+}
+
+.scroll-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  /* width: 30px; */
+  background-color: cyan;
+  z-index: 1;
+}
