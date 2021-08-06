@@ -677,15 +677,16 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color
 }
-
-fieldset, ol, ul {
+*/
+.homepage fieldset, ol, ul {
   margin: 0;
   padding: 0
 }
 
-ol, ul {
+.homepage ol, ul {
   list-style: none
 }
+/* 
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -740,7 +741,7 @@ code, kbd, pre, samp {
   font-family: Share Tech Mono, Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace
 }
 
-audio, canvas, embed, iframe, img, object, svg, video {
+.homepage audio, canvas, embed, iframe, img, object, svg, video {
   display: block;
   vertical-align: middle
 }
@@ -5144,8 +5145,8 @@ img, video {
 }
 
 .py-air {
-  /* padding-top: 9rem;
-  padding-bottom: 9rem */
+  padding-top: 9rem;
+  padding-bottom: 9rem
 }
 
 .px-air {
@@ -7409,7 +7410,8 @@ pre {
 .panel .tile, .panel .tile .inner {
   display: flex;
   flex-direction: column;
-  flex: 1
+  flex: 1;
+  /* background: #00000036; */
 }
 
 .panel .tile .inner {
@@ -7440,8 +7442,8 @@ pre {
   height: auto
 }
 
-.panel .footer {
-  /* font-family: Share Tech Mono, Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace; */
+.homepage .panel .footer {
+  font-family: Share Tech Mono, Consolas, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace;
   font-size: 1.5rem
 }
 
@@ -7818,7 +7820,7 @@ body.theme-light .panel.panel-red .links .svg-inline--fa, body.theme-light .pane
 }
 
 body.theme-light .panel.panel-red>.tile {
-  background-color: transparent;
+  background-color: #ff003d;
   color: #fff
 }
 
