@@ -12,6 +12,7 @@ Scalable Multilanguage Application for gun.eco
 * Multilingual EN / ES (scalable)
 * PWA - Progressive Web APP
 * Offline First
+* Scroll line and scroll top module
 * Descentralized & P2P by GUN
 * Based on "Keep it simple" concept
 
