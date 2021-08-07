@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://gun.eco/explainers/basketball/basketball.html" />
+	<title>Relative Ordering Data</title>
+	<link rel="stylesheet" type="text/css" href="basketball.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="header">
+		<div class="title">
+			<h1 class="oxygen top">Relative Ordering Data</h1>
+			<a href="../../index.html"><img src="../../img/gun_logo_white.svg"></a>
+		</div>
+		<div class="panelbg blue"></div>
+	</div>
+	<div class="wrapper">
+		<p class="article">Our mission at GUN is to make more than just great Open Source products, but to also inspire a movement of self-sufficiency. We believe your database should not be a black box of magic. We have been burnt one too many times by blindly trusting authorities. Instead, we at GUN want to do something different, we want to teach you how your data works in simple terms. That way you can call the shots.</p>
+
+		<i class="quote">All physical theories ought to lend themselves to so simple a description 'that even a child could understand them.' <strong>- Einstein</strong></i>
+
+		<p>So let's start with the basics, all data can be divided into three categories:</p>
+
+		<ul>
+			<li>Independent Data</li>
+			<li>Relative Ordering</li>
+			<li>Dependent Causality</li>
+		</ul>
+
+		<p>
+			We'll explain what each one of these means, but this article is going to talk about relative ordering.
+		</p>
+
+		<h2>Relative Ordering</h2>
+
+		<p>This starts with you, what if you want to build a chat app? Or a news feed for your social network? A wall of tweets streaming out from a user? Or search results for your shopping app? All these use cases share a common data structure that we say has "relative ordering". But what does that mean? We'll use an interactive explainer to show how it works. Even if you are not planning on making an app like this, we highly recommend reviewing the concept because other ideas will build off of it.</p>
+        
+        <div id="frame" style="position: relative; padding-bottom: 60%; padding-top: 25px; height: 0;">
+			<iframe src="shorter.html" style="border: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+		</div>
+
+		<div class="explainers">
+			<div class="step step0 active">
+				<p>
+					One of the players runs out to the lineup, this starts the process. It does not matter where they go because there is nothing to compare against. This also means that we have the correct ordering of height. Nothing else needs to be done. Now try to figure out where the next player belongs!
+				</p>
+			</div>
+
+			<div class="step step1">
+				<p>Nice job! Notice how the possible options of where a player can go has grown. For a small data set this is not a problem, it is easy to guess where they should go. But this would become difficult if we were trying to organize thousands of pieces of data. For example, what if we wanted to sort the entire audience? To make things easier, we should create a rule (or an algorithm) that lets the players find their correct position.<br>
+
+				Try doing this yourself. Then use it to choose the correct place for the next player.</p>
+			</div>
+
+			<div class="step step2">
+				<p>Did you make sure to test your rule against every possible option? There are interesting edge cases at the "book ends". Usually we compare the player in question to other players on both sides. But sometimes we have to compare them to nothing on one side and a single player on the other. This happens at the edges of our lineup. As humans, we intuitively understand what is correct and gloss over these details. But a computer has to be told exactly what to do. Keep on going with the interactive explainer, or check out the bonus content below.</p>
+
+				<p><strong>Bonus:</strong> If we are comparing heights of the players, what do we compare against on the edges? Our first guess might be to nothing, or a 0 height. But this has two problems. First, what is on the right should always be larger than what is on the left. But if the right edge is 0 then every player will be taller than that! To a computer this could be confusing. Instead, we need to instruct the computer that if it cannot find another player to the right, then this is where the current player belongs.</p>
+
+				<p>Second, what if the data we're dealing with isn't height? What if the data has both positive and negative values? Instead, we need to use negative infinity, because it will always be the smaller than any other number. A lot of people are not familiar with how to use infinity though, or that it has practical value. But that is for another discussion. Often times we might deal with data that is not a number, but this is not a problem because a computer can always convert it to a number.</p>
+			</div>
+
+			<div class="step step3">
+				<p>The important thing to note here is that the players had to make room for the new player. Because we do not know the total number of players in advance, we are unable to give them reserved spots. As a result, we have to create spots for them on the fly by shifting the other players around. This is important when building apps for two reasons.</p>
+
+				<p>First, your app does not have to rely on the data having been sent correctly. Anybody who has sent mail has probably experienced problems with lost mail or wrong addresses. Computers can mess up too, and building your apps this way protects you against failures because it knows how to reorder the data correctly.</p>
+
+				<p>Second, if you want your app to have realtime updates then it needs to know how to display the new data regardless of what it already has. In these situations, the data is never "done" because at any moment new data might stream in. This is exactly what is going on in our interactive sports explainer.</p>
+			</div>
+
+			<div class="step step4">
+				<p>Great job! You have finished the explainer and should have a basic understanding of how relative ordered data works. While it is fairly simple, it can be used in a wide variety of applications. For instance, in a chat app a message is like one of the players in the explainer. In the same way a player has a height, a team, and points scored, a chat message has a timestamp, an author, and its contents. We can then continuously receive chat messages and display them in the correct relative order without having to load the entire history.</p>
+
+				<p>And there you have it! This category of data covers anything from news feeds, chat apps, to search results, or many other use cases. It is one of the most widespread types of data out there and why you should be able to understand and identify it. Having this conceptual knowledge in your mental tool belt will help you be able to pitch ideas to others, answer technical questions, communicate algorithms to your team, and even give you a basis to implement it yourself if you know how to code.</p>
+
+				<p>If you are interested in trying to code a chat app yourself, check out this interactive coding tutorial to get you started.</p>
+
+				<p>But what if the app you want to build does not fit within this category? What if you need to do more complicated stuff? Like collaborative document editing? A MMORPG game world? Graphics editor or a diagramming tool? A BOM inventory tracker? Or blockchain technology? Well, we have you covered - you are probably needing data with <strong>dependent causality.</strong> Check out the next article in this series.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="nextArticle">
+		<img src="img/school.svg">
+		<h2>Next article coming soon.</h2>
+	</div>
+
+	<!-- FOOTER -->
+	<div id="footer">
+		<div class="container" class="page">
+			<div class="footer_social">
+				<div class="grid">
+					<a href="http://www.github.com/amark/gun" target="_blank"><img src="../../img/icons/github.svg"></a>
+					<a href="https://gitter.im/amark/gun" target="_blank"><img src="../../img/icons/gitter.svg"></a>
+					<a href="https://twitter.com/databasegun" target="_blank"><img src="../../img/icons/twitter.svg"></a>
+					<a href="https://www.linkedin.com/company/gun-inc" target="_blank"><img src="../../img/icons/linkedin.svg"></a>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<a href="https://gun.eco/" target="_blank">Get Started</a>
+			<a href="../../docs">Documentation</a>
+			<a href="https://gun.eco/think.html">Tutorials</a>
+			<a href="https://github.com/amark/gun">Download</a>
+			<a href="http://gun.js.org/enterprise/pages/team.html" target="_blank">Our Team</a>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">
+			<p>Designed with &hearts; by Mark Nadal, the gun team, and many very awesome contributors. Liberally licensed under  <a href="https://github.com/amark/gun/wiki/package.json"> Zlib or MIT or Apache 2.0.</a></p>
+		</div>
+	</footer>
+	<!-- END FOOTER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="basketball.js"></script>
+	<!-- <script type="text/javascript" src="shorter_edge.js"></script> -->
+</body>
+</html>
