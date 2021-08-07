@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://gun.eco/explainers/conflict/deferred.html" />
+  <meta charset="utf-8">
+	<title>Deferred Sort</title>
+	<link rel="stylesheet" type="text/css" href="conflict_style.css">
+</head>
+<body>
+	<div class="wrapper_header">
+			<img class="close" src="../../img/close.svg">
+			<iframe class="iframeVid" style="display: none;"></iframe>
+		</div>
+		<div class="header">
+			<div class="title">
+				<a href="../../index.html"><img src="../../img/gun_logo_white.svg"></a>
+				<h1 class="oxygen top">Deferred Sort</h1>
+			</div>
+			<div class="panelbg red"></div>
+		</div>
+	</div>
+	<div class="wrapper oxygen">
+		<iframe width="100%" height="400px" src="https://www.youtube.com/embed/gRoJqzko_mE" frameborder="0" allowfullscreen></iframe>
+
+		<p class="article redArt">
+		Our last video showed how gun uses timestamps to figure out the correct order of updates. In our concert app, we needed to establish a timeline of updates (and in the correct order), otherwise we might end up saving the wrong data. In our case, it was the agreements between us and our concert sponsors.</p>
+
+		<p>When an update is created, the computer attaches it’s timestamp, which is then used by the database to determine if your update is more recent than what it already has. However, this opens a vulnerability. There’s an employee at your sponsor’s company who really hates concerts, and he’s trying to sabotage the agreement. Knowing gun uses timestamps, he cleverly sets his own clock two years into the future and submits his devious update.</p>
+
+		<p>With such a high timestamp, it’ll be considered the most recent data for the next two years, ignoring all other writes. It’s obviously malicious, so how do we safely ignore it? That’s where deferred updates come in. Since the data claims to be from the future (relative to our own machine), we wait until our system clock reaches that timestamp before even acknowledging its existence.</p>
+
+		<p>While the concert-hating attacker is left waiting for his update to be recognized, others reading from the database will still see the old agreements, and if anything happens to the database process, the malicious update will be lost from memory, needing to be re-sent by a peer that trusts it.</p>
+
+		<div class="nav">
+			<div class="navPrev">
+				<a href="chronological.html"><img src="img/prev.png">
+				<h4>Previous article</h4></a>
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="footer">
+		<div class="container" class="page">
+			<div class="footer_social">
+				<div class="grid">
+					<a href="http://www.github.com/amark/gun" target="_blank"><img src="../../img/icons/github.svg"></a>
+					<a href="https://gitter.im/amark/gun" target="_blank"><img src="../../img/icons/gitter.svg"></a>
+					<a href="https://twitter.com/databasegun" target="_blank"><img src="../../img/icons/twitter.svg"></a>
+					<a href="https://www.linkedin.com/company/gun-inc" target="_blank"><img src="../../img/icons/linkedin.svg"></a>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<a href="https://gun.eco/" target="_blank">Get Started</a>
+			<a href="../../docs">Documentation</a>
+			<a href="https://gun.eco/think.html">Tutorials</a>
+			<a href="https://github.com/amark/gun">Download</a>
+			<a href="http://gun.js.org/enterprise/pages/team.html" target="_blank">Our Team</a>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">
+			<p>Designed with &hearts; by Mark Nadal, the gun team, and many very awesome contributors. Liberally licensed under  <a href="https://github.com/amark/gun/wiki/package.json"> Zlib or MIT or Apache 2.0.</a></p>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="conflict.js"></script>
+</body>
+</html>

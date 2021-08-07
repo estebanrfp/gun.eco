@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://gun.eco/explainers/data/summary.html" />
+  <meta charset="utf-8">
+	<title>Summary</title>
+	<link rel="stylesheet" type="text/css" href="conflict_style.css">
+</head>
+<body>
+	<div class="wrapper_header">
+		<div class="black_screen">
+			<img class="close" src="../../img/close.svg">
+			<iframe class="iframeVid" style="display: none;"></iframe>
+		</div>
+		<div class="header">
+			<div class="title">
+				<a href="../../index.html"><img src="../../img/gun_logo_white.svg"></a>
+				<h1 class="oxygen top">Security Summary</h1>
+			</div>
+			<div class="panelbg red"></div>
+		</div>
+	</div>
+	<div class="wrapper oxygen">
+		<iframe width="100%" height="400px" src="https://www.youtube.com/embed/gBp_vA6D9PI" frameborder="0" allowfullscreen></iframe>
+
+		<p class="article redArt">
+			Let's take what we have learned and put it into technical terms:
+		</p>
+
+		<p>To create a new user account, we first generate a public/private key pair. We then add the ability to login to the account by hashing the password and a salt with PBKDF2. This produces a proof of work that is used to encrypt and decrypt the private key with AES.</p>
+
+		<p>Once we have the private key, we can then read and write our own personal data using the private key as an AES encryption key. We can also have private conversations with others by sending them our public key padlock.</p>
+
+		<p>Finally, we can prove to others we said something by adding a digital signature to our published content, which the public key can then verify.</p>
+
+    <p>This covers some of the most advanced security possible. And is why GUN pushes the standard of true security. Covering all of your application's needs.</p>
+		
+		<p>To build secure apps like this today, try this <a href="https://gun.eco/docs/Auth">short tutorial</a>, or look at <a href="https://gun.eco/docs/SEA">SEA</a> which implements the algorithms discussed in the series.</p>
+
+		<div class="nav">
+
+			<div class="navPrev">
+				<a href="signature.html"><img src="../conflict/img/prev.png">
+				<h4>Previous article</h4></a>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="container" class="page">
+			<div class="footer_social">
+				<div class="grid">
+					<a href="http://www.github.com/amark/gun" target="_blank"><img src="../../img/icons/github.svg"></a>
+					<a href="https://gitter.im/amark/gun" target="_blank"><img src="../../img/icons/gitter.svg"></a>
+					<a href="https://twitter.com/databasegun" target="_blank"><img src="../../img/icons/twitter.svg"></a>
+					<a href="https://www.linkedin.com/company/gun-inc" target="_blank"><img src="../../img/icons/linkedin.svg"></a>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<a href="https://gun.eco/" target="_blank">Get Started</a>
+			<a href="../../docs">Documentation</a>
+			<a href="https://gun.eco/think.html">Tutorials</a>
+			<a href="https://github.com/amark/gun">Download</a>
+			<a href="http://gun.js.org/enterprise/pages/team.html" target="_blank">Our Team</a>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">
+			<p>Designed with &hearts; by Mark Nadal, the gun team, and many very awesome contributors. Liberally licensed under  <a href="https://github.com/amark/gun/wiki/package.json"> Zlib or MIT or Apache 2.0.</a></p>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="conflict.js"></script>
+</body>
+</html>

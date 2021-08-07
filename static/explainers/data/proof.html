@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://gun.eco/explainers/data/proof.html" />
+  <meta charset="utf-8">
+	<title>Proof of work</title>
+	<link rel="stylesheet" type="text/css" href="conflict_style.css">
+</head>
+<body>
+	<div class="wrapper_header">
+		<div class="black_screen">
+			<img class="close" src="../../img/close.svg">
+			<iframe class="iframeVid" style="display: none;"></iframe>
+		</div>
+		<div class="header">
+			<div class="title">
+				<a href="../../index.html"><img src="../../img/gun_logo_white.svg"></a>
+				<h1 class="oxygen top">proof of work</h1>
+			</div>
+			<div class="panelbg green"></div>
+		</div>
+	</div>
+	<div class="wrapper oxygen">
+		<iframe width="100%" height="400px" src="https://www.youtube.com/embed/jXni0KDQNsc" frameborder="0" allowfullscreen></iframe>
+
+		<p class="article greenArt">
+			I have a secret recipe for a delicious pie. How hard would it be for you to make that pie without knowing the recipe?
+		</p>
+
+		<p>I will even give you a hint. One of the ingredients is salt.</p>
+
+		<p>It might be easy for you to guess what the other ingredients are. But you would still have to bake a pie for each guess. That is a lot of extra work.</p>
+
+		<p>And that is exactly why mixing our password with some salt* keeps our account secure. This recipe is called Password Based Key Derivation Function number Two or PBKDF2 for short.</p>
+
+		<p>If you know the password, it is easy to bake the same pie again and again. If you don't know the password, guessing is easy, but baking is hard.</p>
+
+		<p>This idea is called "proof of work" and is important for creating and signing into a user account.</p>
+
+		<p>We have one last step. With public/private key cryptography, the proof of work and the private key are different, even though they are both long and complicated. Instead, we use the proof of work to encrypt and decrypt the private key.</p>
+
+		<p>What's encryption? Well, that is in the next video!</p>
+
+		<div class="nav">
+
+			<div class="navPrev">
+				<a href="cryptography.html"><img src="../conflict/img/prev.png">
+				<h4>Previous article</h4></a>
+			</div>
+
+			<div class="navNext">
+				<a href="encryption.html"><img src="../conflict/img/next.png">
+				<h4>Next article</h4></a>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="container" class="page">
+			<div class="footer_social">
+				<div class="grid">
+					<a href="http://www.github.com/amark/gun" target="_blank"><img src="../../img/icons/github.svg"></a>
+					<a href="https://gitter.im/amark/gun" target="_blank"><img src="../../img/icons/gitter.svg"></a>
+					<a href="https://twitter.com/databasegun" target="_blank"><img src="../../img/icons/twitter.svg"></a>
+					<a href="https://www.linkedin.com/company/gun-inc" target="_blank"><img src="../../img/icons/linkedin.svg"></a>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<a href="https://gun.eco/" target="_blank">Get Started</a>
+			<a href="../../docs">Documentation</a>
+			<a href="https://gun.eco/think.html">Tutorials</a>
+			<a href="https://github.com/amark/gun">Download</a>
+			<a href="http://gun.js.org/enterprise/pages/team.html" target="_blank">Our Team</a>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">
+			<p>Designed with &hearts; by Mark Nadal, the gun team, and many very awesome contributors. Liberally licensed under  <a href="https://github.com/amark/gun/wiki/package.json"> Zlib or MIT or Apache 2.0.</a></p>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="conflict.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://gun.eco/explainers/data/encryption.html" />
+  <meta charset="utf-8">
+	<title>Encryption</title>
+	<link rel="stylesheet" type="text/css" href="conflict_style.css">
+</head>
+<body>
+	<div class="wrapper_header">
+		<div class="black_screen">
+			<img class="close" src="../../img/close.svg">
+			<iframe class="iframeVid" style="display: none;"></iframe>
+		</div>
+		<div class="header">
+			<div class="title">
+				<a href="../../index.html"><img src="../../img/gun_logo_white.svg"></a>
+				<h1 class="oxygen top">Encryption</h1>
+			</div>
+			<div class="panelbg blue"></div>
+		</div>
+	</div>
+	<div class="wrapper oxygen">
+		<iframe width="100%" height="400px" src="https://www.youtube.com/embed/_RDC37hrTo8" frameborder="0" allowfullscreen></iframe>
+
+		<p class="article blueArt">
+			Let's summarize. So far, we created a user account with public/private key cryptography. This way, it is secure, unlike passwords. We then used PBKDF2 to extend the user's password into a "proof of work". That way, if a hacker tries to guess the password, they have to do hours of extra work for every guess.
+		</p>
+
+		<p>Now, we use the proof of work to decrypt the private key. This private key is used to lock and unlock our private data, in the same way you lock your house or car to stop other people from getting at your stuff. But, how does a lock work?</p>
+
+		<p>Well, take a minute to stare at this animation and replay it again and again while listening to my epic voice. This is how a lock works.</p>
+
+		<p>Encryption is the same thing, it rotates each letter by a different distance, thus scrambling the message. You can only unscramble the message if you have a key that perfectly restores every letter in the message. This is called Advanced Encryption Standard, or AES for short.</p>
+
+		<p>But wait. If we use the private key to keep our things safe, how do we then protect the private key itself? That is where the proof of work comes in. And answers why we encrypt the private key with the proof of work. Keeping our accounts secure and our users happy.</p>
+
+		<div class="nav">
+
+			<div class="navPrev">
+				<a href="proof.html"><img src="../conflict/img/prev.png">
+				<h4>Previous article</h4></a>
+			</div>
+
+			<div class="navNext">
+				<a href="private.html"><img src="../conflict/img/next.png">
+				<h4>Next article</h4></a>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="container" class="page">
+			<div class="footer_social">
+				<div class="grid">
+					<a href="http://www.github.com/amark/gun" target="_blank"><img src="../../img/icons/github.svg"></a>
+					<a href="https://gitter.im/amark/gun" target="_blank"><img src="../../img/icons/gitter.svg"></a>
+					<a href="https://twitter.com/databasegun" target="_blank"><img src="../../img/icons/twitter.svg"></a>
+					<a href="https://www.linkedin.com/company/gun-inc" target="_blank"><img src="../../img/icons/linkedin.svg"></a>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<a href="https://gun.eco/" target="_blank">Get Started</a>
+			<a href="../../docs">Documentation</a>
+			<a href="https://gun.eco/think.html">Tutorials</a>
+			<a href="https://github.com/amark/gun">Download</a>
+			<a href="http://gun.js.org/enterprise/pages/team.html" target="_blank">Our Team</a>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">
+			<p>Designed with &hearts; by Mark Nadal, the gun team, and many very awesome contributors. Liberally licensed under  <a href="https://github.com/amark/gun/wiki/package.json"> Zlib or MIT or Apache 2.0.</a></p>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="conflict.js"></script>
+</body>
+</html>
