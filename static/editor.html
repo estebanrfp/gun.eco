@@ -1,0 +1,116 @@
+<html>
+<body>
+<link rel="stylesheet" href="./dep/codemirror/codemirror.css">
+<link rel="stylesheet" href="./dep/codemirror/colorforth.css">
+<style>
+	.edit { 
+		border: 1px dashed; 
+		overflow: hidden; 
+	}
+	.CodeMirror {
+		float: left;
+		padding: .5em;
+		height: auto;
+		width: 49%;
+	}
+	.codeditor { 
+		float: left;
+		width: 49%;
+		border: none;
+	}
+</style>
+<textarea style="height: 15em"></textarea>
+<div id="preview"></div>
+
+<script src="./dep/jquery.js"></script>
+<script src="./dep/jsquery.js"></script>
+
+<script src="./dep/codemirror/codemirror.js"></script>
+<script src="./dep/codemirror/xml.js"></script>
+<script src="./dep/codemirror/javascript.js"></script>
+<script src="./dep/codemirror/css.js"></script>
+<script src="./dep/codemirror/htmlmixed.js"></script>
+<script src="./dep/codemirror/matchbrackets.js"></script>
+<script src="./dep/codemirror/jshint.js"></script>
+
+<script src="./dep/beautify/beautify.js"></script>
+<script src="./dep/beautify/beautify-css.js"></script>
+<script src="./dep/beautify/beautify-html.js"></script>
+<script src="./dep/beautify/unpackers/javascriptobfuscator_unpacker.js"></script>
+<script src="./dep/beautify/unpackers/urlencode_unpacker.js"></script>
+<script src="./dep/beautify/unpackers/p_a_c_k_e_r_unpacker.js"></script>
+<script src="./dep/beautify/unpackers/myobfuscate_unpacker.js"></script>
+<script>
+var editor = CodeMirror.fromTextArea($('textarea')[0], {
+	theme: 'colorforth',
+	//lineNumbers: true,
+	matchBrackets: true,
+	mode: "text/html",
+	tabSize: 2
+});
+editor.live = function(cb){ editor.cb = cb || editor.cb }
+editor.on("change", function change() {
+	clearTimeout(change.throttle);
+	change.throttle = setTimeout(live, 250);
+});
+   
+function live(){
+	updateHints();
+	$('#preview').empty();
+	$('#preview').html("<iframe class='codeditor'></iframe>");
+	var frame = $('.codeditor').height($('.CodeMirror').height() * .95)[0];
+	frame = frame.contentDocument ||  frame.contentWindow.document;
+	frame.open();
+	frame.write(editor.getValue());
+	(editor.cb || function(){})(frame);
+	frame.close();
+}
+setTimeout(live, 100);
+</script>
+<script>
+var widgets = []
+function updateHints() {
+  editor.operation(function(){
+    for (var i = 0; i < widgets.length; ++i)
+      editor.removeLineWidget(widgets[i]);
+    widgets.length = 0;
+		
+		var f = "\<script\>";
+		var c = editor.getValue();
+		var s = c.indexOf(f);
+		if(s < 0){ return }
+		s += f.length;
+		c = c.slice(s);
+		var e = c.indexOf("\<\/script\>");
+		c = c.slice(0, e);
+    JSHINT(c);
+		var loff = 0, lend = false;
+		editor.eachLine(function(l){
+			if(lend){ return }
+			if(l && l.text && l.text.indexOf(f) >= 0){
+				lend = true;
+				return;
+			}
+			loff += 1;
+		});
+    for (var i = 0; i < JSHINT.errors.length; ++i) {
+      var err = JSHINT.errors[i];
+      if (!err) continue;
+      var msg = document.createElement("div");
+      var icon = msg.appendChild(document.createElement("span"));
+      icon.innerHTML = "Error: ";
+      icon.className = "lint-error-icon";
+      msg.appendChild(document.createTextNode(err.reason));
+      msg.className = "lint-error";
+      widgets.push(editor.addLineWidget(err.line + loff - 1, msg, {coverGutter: false, noHScroll: true}));
+    }
+  });
+  var info = editor.getScrollInfo();
+  var after = editor.charCoords({line: editor.getCursor().line + 1, ch: 0}, "local").top;
+  if (info.top + info.clientHeight < after)
+    editor.scrollTo(null, after - info.clientHeight + 3);
+}
+</script>
+<script src="dep/rsc/analytics.js"></script>
+</html>
+</body>
