@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://gun.eco/explainers/school/class.html" />
+  <title>Dependent Causality</title>
+	<link rel="stylesheet" type="text/css" href="school.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="header" style="height: auto;">
+		<div class="title">
+			<a href="../../index.html"><img src="../../img/gun_logo_white.svg" style="margin: 1em 0;"></a>
+		</div>
+		<div class="panelbg red"></div>
+	</div>
+	<div class="wrapper">
+			<h2>Dependent Causality</h2>
+    <div id="frame" style="position: relative; padding-bottom: 60%; padding-top: 25px; height: 0;">
+			<iframe src="class_comp.html" style="border: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+		</div>
+
+		<div class="explainers">
+			<div class="step step0 active">
+				<p>Alice wants to send a love note to Carl, but she is afraid that the Evil Teacher will steal it and read it out loud.
+					So she comes up with a plan, she'll send Carl the note letter by letter. That way she can stop writing the note if the teacher steps in, to avoid any embarrassment.</p>
+				<p>Unfortunately, Alice does not have Google Docs to share notes with Carl. So how might she build something like it? As we will see, <b>sending letters one by one won't work</b>. Click <i>next</i> to learn why. Then we will show you how to help Alice solve the problem.</p>
+				<p>Our previous article on relative ordering explained the algorithms necessary to create apps like chat rooms and news feeds. Most applications are just glorified lists, like a thousand todo apps combined together in different ways. But some use cases require more complex data structures, like a game world, diagramming tools, inventory trackers, etc. and that is where dependent causality comes in. Let's see how it works, click next.</p>
+			</div>
+
+			<div class="step step1">
+				<p>The reason sending letters one by one won't work is because we cannot trust the mail man. Bob sits between Alice and Carl, and while Bob is a loveable guy, he sometimes gets hungry. And what better snack is a glue sandwhich with paper bread?</p>
+				<p>It does not matter whether you are sending mail via USPS, a homing pidgeon, pony express, or email via the internet with WiFi or LAN. They are all Bob. They are the glue that connects us together, but they will all fail at some point. We cannot trust them as being reliable - if we did, our app may unexpectedly crash.</p>
+				<p>So how do we overcome this problem? Let's see what Alice does next, click next.</p>
+			</div>
+
+			<div class="step step2">
+				<p>Great! If we give each of our messages a unique ID, we can resend it multiple times until it goes through. If Carl receives the same message more than once, he knows to ignore the duplicate based on the ID. This is the idea behind <b>at least once delivery</b>, which guarantees a message will eventually be successful.</p>
+				<p>But, oh no! Alice has a new problem. Because she is sending multiple messages out, and occasionally resending them, the letters got out of order. This is a timing error. Take a guess at how we might solve for this, and then click next.</p>
+				<p>Note, it is possible we could just wait a long period of time between each message. This would decrease the odds of messages getting out of order. However it is not provably guaranteed unless we wait for an acknowledgement on every message before we send the next one. That would work, but it is slow. Ideally, our solution should be fast and guaranteed.</p>
+			</div>
+
+			<div class="step step3">
+				<p>Alice has another idea. What if each message also said what its previous message ID was? That way, even if Carl gets the messages out of order, all he has to do is sort them as they come in. He would also know which message is the first one in the series because it would have no dependency on any other message.</p>
+				<p>And there you have it! Each message specifies its <i>causality</i> by saying what its previous dependencies are. Now, no matter how many times the network fails or the messages get out of order, Carl is always able to recover the original meaning. And he can do this in realtime as Alice types her message, opening any letters that link back to the start, and simply waiting for ones that have gaps until the links fill in.</p>
+				<p>Congratulations, that is all it takes! Pretty simple, huh? Even the most complex apps can be built by creating a data structure which precisely describe the dependent causality of its information.</p>
+				<p>Interestingly enough, Google Docs does not use this approach, however Git does. Google Docs uses an algorithm called Operational Transformation which requires a centralized server to correctly produce the results. While it is possible to build OT with GUN, you would lose all the advantageous of GUN's decentralized graph architecture. Which is why we recommend using an algorithm similar to above, you can check out a <a href="https://www.youtube.com/watch?v=rci89p0o2wQ">prototype</a> of it in action here.</p>
+				<p>We hope you enjoyed this article. But wait, isn't there one last problem? Yes, nothing stops the Evil Teacher from spying on Alice's conversation with Carl. But we have a way to stop that! Check out our animated explainer series on <a href="https://gun.eco/explainers/data/security.html">cryptography</a> next!</p>
+			</div>
+		</div>
+	</div>
+	<!-- FOOTER -->
+	<div id="footer">
+		<div class="container" class="page">
+			<div class="footer_social">
+				<div class="grid">
+					<a href="http://www.github.com/amark/gun" target="_blank"><img src="../../img/icons/github.svg"></a>
+					<a href="https://gitter.im/amark/gun" target="_blank"><img src="../../img/icons/gitter.svg"></a>
+					<a href="https://twitter.com/databasegun" target="_blank"><img src="../../img/icons/twitter.svg"></a>
+					<a href="https://www.linkedin.com/company/gun-inc" target="_blank"><img src="../../img/icons/linkedin.svg"></a>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<a href="https://gun.eco/" target="_blank">Get Started</a>
+			<a href="../../docs">Documentation</a>
+			<a href="https://gun.eco/think.html">Tutorials</a>
+			<a href="https://github.com/amark/gun">Download</a>
+			<a href="http://gun.js.org/enterprise/pages/team.html" target="_blank">Our Team</a>
+		</nav>
+	</div>
+	<footer>
+		<div class="container">
+			<p>Designed with &hearts; by Mark Nadal, the gun team, and many very awesome contributors. Liberally licensed under  <a href="https://github.com/amark/gun/wiki/package.json"> Zlib or MIT or Apache 2.0.</a></p>
+		</div>
+	</footer>
+	<!-- END FOOTER -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="school.js"></script>
+	<!-- <script type="text/javascript" src="shorter_edge.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="105.4px" height="147px" viewBox="0 0 105.4 147" style="enable-background:new 0 0 105.4 147;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#E6E7E8;}
+	.st2{fill:#E6E6E6;}
+	.st3{fill:#E2A28F;}
+	.st4{fill:#3DB766;}
+	.st5{fill:url(#SVGID_1_);}
+	.st6{fill:url(#SVGID_2_);}
+	.st7{fill:url(#SVGID_3_);}
+	.st8{fill:url(#SVGID_4_);}
+</style>
+<defs>
+	
+		<pattern  x="-155.2" y="-1080" width="10" height="10" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_1" viewBox="0 -10 10 10" style="overflow:visible;">
+		<g>
+			<polygon class="st0" points="0,0 10,0 10,-10 0,-10 			"/>
+			<path class="st1" d="M6.1-5.2c0,0.7-0.6,1.3-1.2,1.3S3.6-4.5,3.6-5.2s0.6-1.3,1.2-1.3S6.1-5.8,6.1-5.2z"/>
+			<path class="st2" d="M10-1.3C9.3-1.3,8.8-0.7,8.8,0c0,0,0,0,0,0H10V-1.3z"/>
+			<path class="st2" d="M1.3,0C1.3,0,1.3,0,1.3,0c0-0.7-0.6-1.3-1.3-1.3V0H1.3z"/>
+			<path class="st2" d="M0-10v1.2c0.7,0,1.3-0.5,1.3-1.2H0z"/>
+			<path class="st2" d="M8.8-10c0,0.7,0.5,1.2,1.2,1.2V-10H8.8z"/>
+		</g>
+	</pattern>
+</defs>
+<path class="st3" d="M105.4,43C92.2,30,73.2,23,52.1,23S10.6,29.2,0,43H105.4z"/>
+<polygon class="st3" points="88.6,128.6 15.6,128.6 12.6,39.3 91.6,39.3 "/>
+<g>
+	<path class="st4" d="M87.3,42.5c0-5.3,5.9-9.4,5.9-9.4s-4.3-2.8-13.3-6.1v9.2c0,7-12.8,12.7-29,12.7c-16.2,0-29-5.7-29-12.7v-8.3
+		c-7.1,2.7-11.6,5.5-11.6,5.5s5.5,3.7,5.5,9c0,5.3-2.4,15.2-2.4,15.2l-3,89.3h82.4l-1.8-89.3C90.9,57.7,87.3,47.8,87.3,42.5z"/>
+</g>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="50.3197" y1="29.1145" x2="54.0314" y2="-1.1145">
+		<stop  offset="0.4115" style="stop-color:#E2A28F"/>
+		<stop  offset="0.4296" style="stop-color:#DE9F8D"/>
+		<stop  offset="0.4462" style="stop-color:#D59988"/>
+		<stop  offset="0.4622" style="stop-color:#C89080"/>
+		<stop  offset="0.4777" style="stop-color:#B58374"/>
+		<stop  offset="0.4837" style="stop-color:#AC7C6F"/>
+	</linearGradient>
+	<path class="st5" d="M63.1,0c0,0-0.3,0.2-0.7,0.9c-0.4,0.8-0.8,1.7-1.3,3.1c-0.2,0.7-0.4,1.3-0.6,2.1c-0.2,0.8-0.4,1.5-0.5,2.4
+		c-0.1,0.8-0.3,1.7-0.4,2.5c-0.1,0.9-0.2,1.8-0.2,2.6c-0.1,1.8-0.1,3.5,0.1,5.2c0.2,1.7,0.6,2.6,1.1,3.9c0.5,1.3,1.1,2.4,1.6,3.2
+		c0.2,0.4,0.5,1.1,0.6,1.3c0.1,0.2,0.2,0.7,0.2,0.7H41.2c0,0,0.1-0.5,0.2-0.7c0.2-0.2,0.4-0.7,0.6-1.1c0.5-0.8,1.1-2,1.6-3.3
+		c0.5-1.3,0.9-2.3,1.1-4c0.2-1.7,0.2-3.5,0.1-5.2c-0.1-0.9-0.1-1.8-0.2-2.7c-0.1-0.9-0.2-1.7-0.4-2.6C44.2,7.6,44,6.8,43.8,6
+		c-0.2-0.8-0.4-1.5-0.6-2.2c-0.4-1.3-0.9-2.2-1.3-2.9C41.5,0.2,41.2,0,41.2,0H63.1z"/>
+	<ellipse class="st3" cx="52.1" cy="28.9" rx="11.3" ry="8.5"/>
+	<g>
+		<pattern  id="SVGID_2_" xlink:href="#New_Pattern_Swatch_1" patternTransform="matrix(1 0 0 1 12.0279 116.4472)">
+		</pattern>
+		<path class="st6" d="M87.3,42.5c0-5.3,5.9-9.4,5.9-9.4s-4.3-2.8-13.3-6.1v9.2c0,7-12.8,12.7-29,12.7c-16.2,0-29-5.7-29-12.7v-8.3
+			c-7,2.8-11.6,5.5-11.6,5.5s5.5,3.7,5.5,9c0,5.3-2.4,15.2-2.4,15.2l-3,89.3h41.4h41l-1.8-89.3C90.9,57.7,87.3,47.8,87.3,42.5z"/>
+	</g>
+</g>
+</svg>
