@@ -11,6 +11,11 @@
 <body>
   <section class='Layout'>
 <div class="homepage">
+  <style>
+    .homepage .hp-rarr::before {
+      content: "\2794";
+    }
+  </style>
   <div style="outline:none" tabindex="-1">
     <main class="prefers-light-mode">
       <div class="panel panel-red panel-full-height">
@@ -43,23 +48,21 @@
 
             </div>
           </header>
-          <div class="inner lg:w-box lg:mx-auto px-6 lg:px-0"><svg alt="" viewBox="0 0 722 404"
-              style="max-width: 20rem; min-height: 10rem;">
-              <path fill="#fff"
-                d="M8.47,395.09C7.95,394.21,63,204.33,64.42,202c0.94-1.53,73.38-1.53,74.32,0,0.39,0.63-7.82,30.4-18.24,66.17s-18.69,65.72-18.36,66.56c0.82,2.15,24.29,2.16,25.94,0,1.82-2.37,46.8-158.36,46-159.61-0.39-.64-21.93-1.11-50.56-1.11-27.43,0-50.14-.44-50.47-1S83.29,135.28,96.5,90.36l24-81.68,88.35-.31c48.59-.17,88.77.1,89.27,0.61s-13.88,51.7-32,113.76-43.11,148-55.61,190.92-23.23,79-23.82,80.21c-1,2-6.52,2.13-89.42,2.13-48.58,0-88.57-.41-88.87-0.91h0ZM192.74,112.68c1.37-1.77,12.54-39.94,12.54-42.87,0-1.68-1.83-2-12.66-2-8.7,0-13,.48-13.82,1.52-1.37,1.81-12.56,40-12.56,42.85,0,1.7,1.8,2,12.66,2,8.68,0,13-.48,13.84-1.52h0Zm78,60.39c-0.3-.51,10.27-37.7,23.49-82.66l24-81.73,36.43-.32c20-.18,36.92.16,37.5,0.74S387,31.57,378.58,60.18c-8.09,27.5-14.71,50.93-14.71,52.06,0,1.82,1.54,2,13.72,1.71l13.72-.34,15.25-51.3c8.39-28.21,15.69-52,16.24-52.76C423.91,7.88,495,7.35,496,9c0.3,0.5-10.27,37.7-23.5,82.65l-24,81.73-88.59.31c-48.72.17-88.84-.1-89.14-0.61h0Zm195.18,0c-0.3-.5,10.27-37.7,23.5-82.65l24-81.73,88.29-.31c48.56-.17,88.68.1,89.16,0.61s-10,37.7-23.19,82.66l-24.06,81.73-36.43.32c-20,.18-36.92-0.16-37.5-0.74s5.23-22.46,13.64-51.07c8.09-27.5,14.71-50.93,14.71-52.06,0-1.82-1.54-2-13.72-1.71l-13.72.35-15.25,51.3c-8.39,28.21-15.69,52-16.24,52.76-1.12,1.65-72.24,2.19-73.22.55h0Zm220.81-54c-5.18-4.07-5.19-8.62-.05-27.49,3.55-13.06,5.39-17.76,7.93-20.34a11.12,11.12,0,0,1,18.8,5.64c1.19,6.36-7.57,37-11.8,41.33a11,11,0,0,1-14.88.86h0Z">
-              </path>
-              <path fill="#fff"
-                d="M299.45,191.7c-11.68,0-18.5.9-26,8.8C262.44,212,259.87,231,264,244.38c5.83,15.24,22.38,20.32,29.59,23.62-17.94-14.49-11.44-43.79,7.26-57.54h15.26c34.3,0,32.14-3.19,32.61,20.6h0.16c0.66-33.59.09-38.59-30-39.26-7.85.15-14.17-.08-19.48-0.09h0Zm59.17,67c-3.45,21.81-16.77,24.32-42.49,24.25H238.78l-7.19,24.25h79.63c28.91-.62,43.12-24.25,47.4-48.48h0Z">
-              </path>
-            </svg>
+          <div class="inner lg:w-box lg:mx-auto px-6 lg:px-0">
+            <img id="hp-logo" src="https://gun.eco/media/gun.svg" style="width: 50%;"><script>
+;(function(){
+  var logo = document.getElementById('hp-logo'), w = window;
+  w.onmousemove = w.ontouchmove = tilt;
+  function tilt(eve){
+    eve = eve.originalEvent || eve;
+    eve = (eve.touches && eve.touches[0]) || eve;
+    var x = eve.clientX - (w.outerWidth/2), y = eve.clientY - (w.outerHeight/2);
+    if(!logo){ return }
+    logo.style.transform = 'rotateX('+y/15+'deg) rotateY('+x/15+'deg)';
+  };
+}());</script>
             <h2 class="mt-12 text-2xl sm:text-4xl">The database for <br>freedom fighters</h2><span
-              class="mt-8 text-dark text-xl"><a href="/docs/Todo-Dapp"><svg aria-hidden="true" focusable="false"
-                  data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg><span class="font-mono ml-2">Get started</span></a></span>
+              class="mt-8 text-dark text-xl"><a href="/docs/Todo-Dapp"><span class="hp-rarr"></span><span class="font-mono ml-2">Get started</span></a></span>
           </div>
         </div>
         <div class="footer">
@@ -166,21 +169,8 @@
                 aria-label="scroll to section about decentralization">decentralization</button> and <button
                 aria-label="scroll to section about privacy">real privacy</button> — to reclaim the web and make it
               truly free and open.</p>
-            <div class="links"><button aria-label="scroll to quick start section"><svg aria-hidden="true"
-                  focusable="false" data-prefix="fas" data-icon="arrow-right"
-                  class="svg-inline--fa fa-arrow-right fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Get up and running with GUN in five minutes or less</button><button
-                aria-label="start video about GUN's vision"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Watch GUN's author share his vision for the web</button></div>
+            <div class="links"><button aria-label="scroll to quick start section"><span class="hp-rarr svg-inline--fa"></span>Get up and running with GUN in five minutes or less</button><button
+                aria-label="start video about GUN's vision"><span class="hp-rarr svg-inline--fa"></span>Watch GUN's author share his vision for the web</button></div>
           </div>
           <div class="order-2 h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
           <div class="order-1 lg:order-3 w-full md:w-8/12 lg:w-smallcol">
@@ -248,46 +238,21 @@
               al&shy;low&shy;ing you to build ex&shy;act&shy;ly the data sys&shy;tem you want.
             </p>
             <div class="links"><a href="/docs/Awesome-GUN#framework-integrations" target="_blank"
-                rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Learn how to add GUN to an existing React oder Svelte app</a><a
+                rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Learn how to add GUN to an existing React oder Svelte app</a><a
                 href="https://github.com/skiqh/gun-cli#example-creating-a-redundant-mesh-network" target="_blank"
-                rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Build a distributed &amp; fault tolerant data delivery system</a></div>
+                rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Build a distributed &amp; fault tolerant data delivery system</a></div>
           </div>
         </div>
       </div>
       <div class="panel panel-yellow" id="decentralization">
         <div class="tile py-air">
           <div class="lg:w-box lg:mx-auto px-6 lg:px-0">
-            <h3>50 Million monthly downloads</h3>
+            <h3>60 Million monthly downloads</h3>
             <h2>GUN is pow&shy;er&shy;ing de&shy;cen&shy;tral&shy;ized plat&shy;forms with mil&shy;lions of users and
               vast&shy;ly dif&shy;fer&shy;ent re&shy;quire&shy;ments on a shoe&shy;string bud&shy;get.</h2>
             <div class="links"><a
-                href="https://finance.yahoo.com/news/hacker-noon-storing-content-blockchain-150011860.html"><svg
-                  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right"
-                  class="svg-inline--fa fa-arrow-right fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>See how HackerNoon handles ~4M users on $0 server costs</a><a
-                href="https://news.ycombinator.com/item?id=17685682"><svg aria-hidden="true" focusable="false"
-                  data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Decentralizing the Internet Archive with lots of GUNs</a></div>
+                href="https://finance.yahoo.com/news/hacker-noon-storing-content-blockchain-150011860.html"><span class="hp-rarr svg-inline--fa"></span>See how HackerNoon handles ~4M users on $0 server costs</a><a
+                href="https://news.ycombinator.com/item?id=17685682"><span class="hp-rarr svg-inline--fa"></span>Decentralizing the Internet Archive with lots of GUNs</a></div>
           </div>
         </div>
         <div class="footer">
@@ -400,21 +365,8 @@
                 mod&shy;ule</a> is built on strong
               en&shy;cryp&shy;tion stan&shy;dards and works com&shy;plete&shy;ly de&shy;cen&shy;tral&shy;ized. In
               oth&shy;er words — real pri&shy;va&shy;cy with no sin&shy;gle point of fail&shy;ure.</p>
-            <div class="links"><a href="/docs/User" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"
-                  focusable="false" data-prefix="fas" data-icon="arrow-right"
-                  class="svg-inline--fa fa-arrow-right fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Learn how to securely store and exchange user data</a><a href="https://gun.eco/converse.html"
-                target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Build a multi-user chat with e2e encryption</a></div>
+            <div class="links"><a href="/docs/User" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Learn how to securely store and exchange user data</a><a href="https://gun.eco/converse.html"
+                target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Build a multi-user chat with e2e encryption</a></div>
           </div>
           <div class="order-2 h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
           <div class="order-1 lg:order-3 w-full md:w-8/12 lg:w-smallcol"><a href="/docs/SEA" target="_blank"
@@ -436,13 +388,7 @@ Me.get('secret-birthday-wish').grant(Barry)
               </div>
               <div class="footer">
                 <div class="inner">
-                  <div class="footericon"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                      data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="currentColor"
-                        d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                      </path>
-                    </svg></div>
+                  <div class="footericon"><span class="hp-rarr svg-inline--fa"></span></div>
                   <div class="ml-3">Read more about SEA, GUN's built-in module for Security, Encryption and
                     Authentication</div>
                 </div>
@@ -470,13 +416,7 @@ console.log(name) // -&gt; Larry
               </div>
               <div class="footer">
                 <div class="inner">
-                  <div class="footericon"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                      data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="currentColor"
-                        d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                      </path>
-                    </svg></div>
+                  <div class="footericon"><span class="hp-rarr svg-inline--fa"></span></div>
                   <div class="ml-3">Learn how to create, traverse, index and query linked data in GUN</div>
                 </div>
               </div>
@@ -489,20 +429,8 @@ console.log(name) // -&gt; Larry
               still be&shy;ing ca&shy;pa&shy;ble of do&shy;ing <a href="/docs/Performance" target="_blank"
                 rel="noopener noreferrer">20M+ API ops/sec</a> in just ~9KB gzipped size.</p>
             <div class="links"><a href="/docs/Simple-introduction-to-graph-data-structures" target="_blank"
-                rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Read more about GUN's graph data structure</a><a href="https://github.com/brysgo/graphql-gun"
-                target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                  data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Query a GUN database with GraphQL</a></div>
+                rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Read more about GUN's graph data structure</a><a href="https://github.com/brysgo/graphql-gun"
+                target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Query a GUN database with GraphQL</a></div>
           </div>
         </div>
         <div class="flex flex-col lg:flex-row my-air md:items-center lg:items-start">
@@ -511,22 +439,8 @@ console.log(name) // -&gt; Larry
             <p>Any re&shy;mote up&shy;dates to the data you sub&shy;scribe to will be
               au&shy;to&shy;mat&shy;i&shy;cal&shy;ly prop&shy;a&shy;gat&shy;ed through the net&shy;work, so you can
               re&shy;act to changes as they hap&shy;pen.</p>
-            <div class="links"><a href="/docs/Service-Discovery" target="_blank" rel="noopener noreferrer"><svg
-                  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right"
-                  class="svg-inline--fa fa-arrow-right fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Learn how GUN peers find and talk to each other</a><a
-                href="https://www.youtube.com/watch?v=5fCPRY-9hkc" target="_blank" rel="noopener noreferrer"><svg
-                  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right"
-                  class="svg-inline--fa fa-arrow-right fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512">
-                  <path fill="currentColor"
-                    d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                  </path>
-                </svg>Watch GUN's author implement its sync algorithm from scratch</a></div>
+            <div class="links"><a href="/docs/Service-Discovery" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Learn how GUN peers find and talk to each other</a><a
+                href="https://www.youtube.com/watch?v=5fCPRY-9hkc" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Watch GUN's author implement its sync algorithm from scratch</a></div>
           </div>
           <div class="order-2 h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
           <div class="order-1 lg:order-3 w-full md:w-8/12 lg:w-smallcol"><a
@@ -549,13 +463,7 @@ gun.get('coords').on(coords =&gt; {
               </div>
               <div class="footer">
                 <div class="inner">
-                  <div class="footericon"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                      data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path fill="currentColor"
-                        d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                      </path>
-                    </svg></div>
+                  <div class="footericon"><span class="hp-rarr svg-inline--fa"></span></div>
                   <div class="ml-3">Learn how to set up a fault-tolerant distributed GUN network to transfer live data
                     around the world</div>
                 </div>
@@ -682,21 +590,8 @@ npx gun-cli --host 127.0.0.1</pre>
               <h2>Nice, right?</h2>
               <p>But we've bare&shy;ly scratched the sur&shy;face. Start the tu&shy;to&shy;r&shy;i&shy;al or check out
                 the doc&shy;u&shy;men&shy;ta&shy;tion to see what else you can do with GUN!</p>
-              <div class="links"><a href="/docs/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"
-                    focusable="false" data-prefix="fas" data-icon="arrow-right"
-                    class="svg-inline--fa fa-arrow-right fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512">
-                    <path fill="currentColor"
-                      d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                    </path>
-                  </svg>Jump straight to GUN's Documentation</a><a href="/docs/Todo-Dapp" target="_blank"
-                  rel="noopener noreferrer"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                    data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-w-14 " role="img"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path fill="currentColor"
-                      d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-                    </path>
-                  </svg>Tutorial: Create a distributed multi-user todo app</a></div>
+              <div class="links"><a href="/docs/" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Jump straight to GUN's Documentation</a><a href="/docs/Todo-Dapp" target="_blank"
+                  rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Tutorial: Create a distributed multi-user todo app</a></div>
             </div>
           </div>
         </div>
