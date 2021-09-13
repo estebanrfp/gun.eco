@@ -11,704 +11,494 @@
 <body>
   <section class='Layout'>
 <div class="homepage">
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/Users/alive/Dropbox/Public/gun/gun/examples/style.css">
+<!-- link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gun/examples/style.css" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Choose white text on a black background so you can add color in.
+    Pick your favorite font and choose a font size.
+  */
+  @import url('https://fonts.googleapis.com/css?family=Raleway|Oxygen');
+  .homepage {
+    font-family: "Raleway", sans-serif;
+    color:  white;
+  }
+
+  .homepage a {
+    background: transparent;
+  }
+  .homepage .icon {
+    height: 1.5em;
+  }
+  .homepage .fade {
+    opacity: 0.75;
+    transition: all 0.3s;
+  }
+  .homepage .fade:hover {
+    opacity: 1;
+  }
+  body { background: black; }
+
+  .homepage button {
+    font-size: 100%;
+    padding: 1em;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 1.5em;
+    margin: 0.5em;
+    margin-bottom: 0;
+    cursor: pointer;
+    color:  white;
+  }
+  .homepage button:hover {
+    background: white;
+    color: black;
+  }
+
+/*.rgb {
+  filter:
+    drop-shadow(-1px 1px 1px rgba(255,0,0,1))
+    drop-shadow(-1px 0px 2px rgba(0,255,0,1))
+    drop-shadow(1px 1px 1px rgba(0,0,255,1))
+    ;
+}*/
+
+.rgb {
+  --s: 1;
+  --rx: calc(var(--s) * -1px);
+  --ry: calc(var(--s) *  1px);
+  --bx: calc(var(--s) *  1px);
+  --by: calc(var(--s) * -1px);
+  --gx: calc(var(--s) *  0px);
+  --gy: calc(var(--s) *  0px);
+  --gb: 2px;
+  --a: 1;
+  --wasx: 0px;
+  --wasy: 0px;
+  filter:
+    drop-shadow(var(--rx) var(--ry) 1px rgba(255,0,0,var(--a)))
+    drop-shadow(var(--gx) var(--gy) var(--gb) rgba(0,255,0,var(--a)))
+    drop-shadow(var(--bx) var(--by) 1px rgba(0,0,255,var(--a)))
+    ;
+}
+img.rgb {
+  --rx: -3px;
+  --ry: 2px;
+  --bx: 3px;
+  --by: 0px;
+  --gb: 1px;
+  --a:  1;
+  --wasx: 0px;
+  --wasy: 0px;
+  filter: drop-shadow(var(--rx) var(--ry) 1px red)
+    drop-shadow(0px -3px var(--gb) green)
+    drop-shadow(1px 2px var(--gb) green)
+    drop-shadow(var(--bx) var(--by) 1px blue);
+}
+.glitch:hover {
+  animation: 3s 0.1s infinite glitch;
+}
+.glitching {
+  animation: 3s 0.1s infinite glitch;
+}
+@keyframes glitch {
+  0% {
+    --a: 0.5;
+    /*opacity: 1;
+    transform:  translate(0,0);
+    --rx: var(--px1); --ry: calc(var(--px2) / 3);
+    --bx: var(--px3); --by: calc(var(--px4) / 3);
+    --gb: var(--px5);*/
+  }
+  9% { opacity:  1; }
+  10% { opacity: 0; transform: translate(0,0); }
+  11% {
+    opacity: 0;
+    --wasx: calc(var(--per6) / 10);
+    --wasy: calc(var(--per7) / 10);
+    transform: translate(var(--wasx), var(--wasy));
+  }
+  13% { opacity: 0; }
+  14% { opacity: 1; }
+  40% {
+    transform: translate(var(--wasx), var(--wasy));
+    --rx: calc(var(--px5) * 1.5 ); --ry: calc(var(--px4) / 3);
+    --bx: calc(var(--px3) * 1.5 ); --by: calc(var(--px2) / 3);
+    --gb: var(--px1);
+  }
+  41% { transform: translate(0,0); }
+  60%, 70%, 80%, 90% {
+    --rx: var(--px8); --ry: calc(var(--px6) / 3);
+    --bx: var(--px7); --by: calc(var(--px1) / 3);
+    --gb: var(--px9);
+  }
+}
+
+#hi p+p { margin-top: 0; }
+</style>
+<script>
+;(function(){
+  (function rando(i){ setTimeout(rando, Math.random() * 100);
+    i = 10; while(--i){ var r = Math.round((Math.random() - Math.random())*100);
+    document.documentElement.style.setProperty('--px'+i, r+'px');
+  }}());
+  (function rando(i){ setTimeout(rando, Math.random() * 500);
+    i = 10; while(--i){ var r = Math.round((Math.random() - Math.random())*100);
+    document.documentElement.style.setProperty('--per'+i, r+'%');
+  }}());
+
+}());
+</script>
+
+<!-- div class="cyber">
+<div class="cyberR"></div>
+<div class="cyberG"></div>
+<div class="cyberB"></div>
+</div -->
+
+<!-- for educational sites, consider starting with a nice full screen welcome message -->
+<div id="hi" class="row hold center full">
+  <div class="row">
+    <a href="https://era.eco" class="left gap fade"><img src="https://gun.eco/media/era.png" class="rgb glitch icon"></a>
+    <a href="https://github.com/amark/gun" class="right gap fade"><img src="https://gun.eco/media/github.svg" class="icon rgb glitch"></a>
+  </div>
+  <div class="focus center row leak gap">
+    <!-- just like in real life, looking pretty attracts attention, so show off and look glamorous! -->
+    <img id="hp-logo" class="rgb glitching" src="https://gun.eco/media/gun.svg" style="margin-top: 4%; width: 30%; min-width: 250px;">
+  </div>
+  <div class="center row focus crack">
+    <p class="loud rgb">protecting people's privacy</p>
+    <p class="rgb">the decentralized database for developers.</p>
+    <a href="https://gun.eco/docs/Todo-Dapp"><button class="rgb glitch">GET STARTED</button></a>
+    <a href="https://gun.eco/docs/API"><button class="rgb glitch">DOCUMENTATION</button></a>
+  </div>
+  <a href="https://gitter.im/amark/gun" class="left gap fade" style="position: absolute; bottom: 0; left: 0;"><img src="https://gun.eco/media/gitter.svg" class="icon rgb glitch"></a>
+  <a href="https://twitter.com/marknadal" class="right gap fade" style="position: absolute; bottom: 0; right: 0;"><img src="https://gun.eco/media/twitter.png" class="icon rgb glitch"></a>
+  <script>
+    ;(function(){return;
+      var logo = document.getElementById('hp-logo'), w = window;
+      w.onmousemove = w.ontouchmove = tilt;
+      function tilt(eve){
+        eve = eve.originalEvent || eve;
+        eve = (eve.touches && eve.touches[0]) || eve;
+        var x = eve.clientX - (w.outerWidth/2), y = eve.clientY - (w.outerHeight/2);
+        if(!logo){ return }
+        logo.style.transform = 'rotateX('+y/15+'deg) rotateY('+x/15+'deg)';
+      };
+    }());
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/gun/lib/fun.js"></script>
+</div>
+
+<div id="logos" class="row hold white">
+  <div class="row logos center">
+    <style>
+      #logos { margin-top: 2%; }
+      #logos img {
+        filter: grayscale(1);
+        margin: 2%;
+        transform:  scale(0.6);
+      }
+      #logos img:hover {
+        filter: grayscale(0);
+      }
+      #logos a {
+        vertical-align: middle;
+      }
+    </style>
+    <a href="https://techcrunch.com/2018/05/23/gun-raises-more-than-1-5m-for-its-decentralized-database-system/"><img style="height: 3em;" src="https://tissuepathology.com/wp-content/uploads/2019/07/TechCrunch-Logo-300x300.jpg"></a>
+    
+    <a href="https://www.nbcnews.com/tech/tech-news/these-technologists-think-internet-broken-so-they-re-building-another-n1030136"><img style="height: 2em;" src="https://logodownload.org/wp-content/uploads/2020/06/nbc-logo-3.png"></a>
+    
+    <a href="https://finance.yahoo.com/news/hacker-noon-storing-content-blockchain-150011860.html"><img style="height: 1.9em;" src="https://cereusfinancial.com/wp-content/uploads/2020/08/Yahoo-Finance.png"></a>
+    
+    <a href="https://www.coywolf.news/social/twitter-bluesky-decentralized-social-ecosystem-review/"><img style="height: 2em;" src="https://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo.png"></a>
+
+    <a href="https://dweb.archive.org/"><img style="height: 2.3em;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Internet_Archive_logo_and_wordmark.svg/900px-Internet_Archive_logo_and_wordmark.svg.png"></a>
+    
+    <a href="https://www.coindesk.com/tech/2020/01/22/hacker-noon-is-storing-content-on-a-blockchain-after-ditching-medium/"><img style="height: 1.4em;" src="https://hackernoon.com/hn-logo.png"></a>
+
+    <a href="https://www.zdnet.com/article/era-hatches-meething-an-open-source-browser-based-video-conferencing-system/"><img style="height: 2em;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/ZDNet_Logo.svg/1024px-ZDNet_Logo.svg.png"></a>
+  </div>
+</div>
+
+<div id="why" class="row full pad">
   <style>
-    .homepage .hp-rarr::before {
-      content: "\2794";
+    #why {
+    }
+    #why .see {
+      width: 100%;
+      margin-top: -0.2em;
+      padding: 0 3%;
+    }
+    .homepage .just {
+      text-align: justify;
+    }
+    .homepage .above {
+      z-index:  9999;
+      line-height: 0.9em;
+    }
+    .homepage a {
+      color:  inherit;
+    }
+    .homepage .ru {
+      c-olor: red;
+      border-bottom: solid 1px red;
+    }
+    .homepage .gu {
+      c-olor: green;
+      border-bottom: solid 1px lime;
+    }
+    .homepage .bu {
+      c-olor: blue;
+      border-bottom: solid 1px blue;
     }
   </style>
-  <div style="outline:none" tabindex="-1">
-    <main class="prefers-light-mode">
-      <div class="panel panel-red panel-full-height">
-        <div class="tile">
-          <header class="lg:w-box lg:mx-auto px-6 lg:px-0 py-4">
-            <div class="flex flex-row items-center w-full text-dark font-mono text-sm sm:text-base"><a
-                href="https://era.eco" class="h-8 md:h-12 w-8 md:w-12" target="_blank" rel="noopener noreferrer"><svg
-                  width="1246" height="1086" viewBox="0 0 1246 1086" class="fill-current w-full h-full">
-                  <path
-                    d="M 615.994 1.875 C 608.536 4.320, 602.340 9.749, 599.301 16.500 C 597.621 20.230, 597.466 26.636, 597 111.514 L 596.500 202.527 299.726 625.705 C 136.501 858.453, 2.288 1050.766, 1.476 1053.067 C -5.211 1072.021, 13.821 1091.302, 32.624 1084.623 C 34.756 1083.866, 52.475 1074.024, 72 1062.752 C 91.525 1051.480, 125.884 1031.646, 148.353 1018.677 L 189.206 995.096 705.720 1040.694 L 1222.234 1086.292 1227.730 1084.559 C 1245.180 1079.058, 1250.664 1056.335, 1237.595 1043.676 C 1235.002 1041.164, 1205.484 1023.535, 1157.104 995.605 L 1080.709 951.500 862.273 482 C 704.366 142.601, 642.958 11.575, 640.668 9.162 C 638.926 7.327, 635.733 4.914, 633.572 3.801 C 629.285 1.593, 619.968 0.572, 615.994 1.875 M 648 171.911 L 648 203.154 721.644 330.827 C 784.984 440.637, 801.326 468.608, 796.238 458.500 C 795.684 457.400, 762.270 385.625, 721.984 299 C 681.699 212.375, 648.572 141.313, 648.369 141.083 C 648.166 140.854, 648 154.726, 648 171.911 M 424.975 601.099 C 316.364 789.208, 227.350 943.539, 227.167 944.057 C 226.958 944.646, 375.195 945, 622.417 945 C 839.987 945, 1018 944.783, 1018 944.518 C 1018 944.091, 628.266 268.565, 624.111 261.791 L 622.450 259.083 424.975 601.099 M 211.721 838.250 C 156.454 917.038, 111.346 981.627, 111.482 981.782 C 111.619 981.937, 123.746 975.115, 138.432 966.623 L 165.133 951.183 238.489 824.120 C 278.836 754.236, 312.132 696.595, 312.482 696.029 C 312.832 695.463, 312.913 695, 312.663 695 C 312.413 695, 266.989 759.462, 211.721 838.250 M 765.500 995.720 C 772.624 996.405, 1108.209 1026, 1108.844 1026 C 1109.183 1026, 1097.378 1019.025, 1082.612 1010.500 L 1055.766 995 908.633 995.168 C 827.710 995.261, 763.300 995.509, 765.500 995.720 "
-                    stroke="none" fill="inherit" fill-rule="evenodd"></path>
-                </svg></a>
-              <div class="flex-grow"></div>
-              <a class="p-1 sm:p-2 mx-1 sm:mx-3" href="/docs/">Docs</a>
-              <a href="http://chat.gun.eco/" class="p-1 sm:p-2 mx-1 sm:mx-3" target="_blank"
-                rel="noopener noreferrer">Community</a>
-              <a href="https://twitter.com/marknadal/" class="p-1 sm:p-2 mx-1 sm:mx-2 h-8 w-8 sm:h-10 sm:w-10"
-                target="_blank" rel="noopener noreferrer"><svg version="1.1" id="svg3626"
-                  viewBox="0 0 300.00006 244.18703" class="fill-current inline-icon">
-                  <path transform="translate(-539.17946,-568.85777)"
-                    d="m 633.89823,812.04479 c 112.46038,0 173.95627,-93.16765 173.95627,-173.95625 0,-2.64628 -0.0539,-5.28062 -0.1726,-7.90305 11.93799,-8.63016 22.31446,-19.39999 30.49762,-31.65984 -10.95459,4.86937 -22.74358,8.14741 -35.11071,9.62551 12.62341,-7.56929 22.31446,-19.54304 26.88583,-33.81739 -11.81284,7.00307 -24.89517,12.09297 -38.82383,14.84055 -11.15723,-11.88436 -27.04079,-19.31655 -44.62892,-19.31655 -33.76374,0 -61.14426,27.38052 -61.14426,61.13233 0,4.79784 0.5364,9.46458 1.58538,13.94057 -50.81546,-2.55686 -95.87353,-26.88582 -126.02546,-63.87991 -5.25082,9.03545 -8.27852,19.53111 -8.27852,30.73006 0,21.21186 10.79366,39.93837 27.20766,50.89296 -10.03077,-0.30992 -19.45363,-3.06348 -27.69044,-7.64676 -0.009,0.25652 -0.009,0.50661 -0.009,0.78077 0,29.60957 21.07478,54.3319 49.0513,59.93435 -5.13757,1.40062 -10.54335,2.15158 -16.12196,2.15158 -3.93364,0 -7.76596,-0.38716 -11.49099,-1.1026 7.78383,24.2932 30.35457,41.97073 57.11525,42.46543 -20.92578,16.40207 -47.28712,26.17062 -75.93712,26.17062 -4.92898,0 -9.79834,-0.28036 -14.58427,-0.84634 27.05868,17.34379 59.18936,27.46396 93.72193,27.46396"
-                    style="fill-opacity: 1; fill-rule: nonzero; stroke: none;"></path>
-                </svg></a>
-              <a href="https://github.com/amark/gun" class="p-1 sm:p-2 mx-1 sm:mx-2 sm:mx-3 h-8 w-8 sm:h-10 sm:w-10"
-                target="_blank" rel="noopener noreferrer"><svg class="fill-current inline-icon" viewBox="0 0 38 37">
-                  <path transform="translate(-452.000000, -4786.000000)"
-                    d="M470.627178,4786.08054 C460.340392,4786.08054 452,4794.37651 452,4804.6085 C452,4812.79591 457.336686,4819.73937 464.739098,4822.18879 C465.670238,4822.35844 466.010184,4821.78621 466.010184,4821.29768 C466.010184,4820.85662 465.993122,4819.39559 465.984026,4817.84858 C460.804252,4818.96811 459.709396,4815.66376 459.709396,4815.66376 C458.861277,4813.52418 457.641343,4812.95423 457.641343,4812.95423 C455.948489,4811.80528 457.769768,4811.8279 457.769768,4811.8279 C459.639981,4811.9568 460.624602,4813.73678 460.624602,4813.73678 C462.286786,4816.56845 464.985799,4815.74971 466.045401,4815.27475 C466.214719,4814.08056 466.69677,4813.26182 467.227791,4812.80043 C463.092848,4812.33228 458.743038,4810.74227 458.743038,4803.64273 C458.743038,4801.61848 459.469535,4799.96746 460.658727,4798.67036 C460.468854,4798.19993 459.827635,4796.31478 460.842889,4793.76472 C460.842889,4793.76472 462.405025,4793.26714 465.965799,4795.66456 C467.450589,4795.25181 469.043431,4795.04825 470.627141,4795.04145 C472.209724,4795.04825 473.803657,4795.25405 475.290775,4795.6668 C478.844783,4793.26714 480.409175,4793.76696 480.409175,4793.76696 C481.427848,4796.3193 480.78663,4798.20217 480.595628,4798.67036 C481.789368,4799.96746 482.510189,4801.61852 482.510189,4803.64273 C482.510189,4810.76037 478.15354,4812.32772 474.003827,4812.78686 C474.674623,4813.36134 475.268074,4814.48767 475.268074,4816.21562 C475.268074,4818.69222 475.243043,4820.68929 475.243043,4821.29996 C475.243043,4821.79301 475.581825,4822.36973 476.525481,4822.18879 C483.922253,4819.73485 489.254355,4812.79139 489.254355,4804.6085 C489.254355,4794.37651 480.913964,4786.08054 470.627178,4786.08054 Z">
-                  </path>
-                </svg></a>
 
-            </div>
-          </header>
-          <div class="inner lg:w-box lg:mx-auto px-6 lg:px-0">
-            <img id="hp-logo" src="https://gun.eco/media/gun.svg" style="width: 50%;"><script>
-;(function(){
-  var logo = document.getElementById('hp-logo'), w = window;
-  w.onmousemove = w.ontouchmove = tilt;
-  function tilt(eve){
-    eve = eve.originalEvent || eve;
-    eve = (eve.touches && eve.touches[0]) || eve;
-    var x = eve.clientX - (w.outerWidth/2), y = eve.clientY - (w.outerHeight/2);
-    if(!logo){ return }
-    logo.style.transform = 'rotateX('+y/15+'deg) rotateY('+x/15+'deg)';
-  };
-}());</script>
-            <h2 class="mt-12 text-2xl sm:text-4xl">The database for <br>freedom fighters</h2><span
-              class="mt-8 text-dark text-xl"><a href="/docs/Todo-Dapp"><span class="hp-rarr"></span><span class="font-mono ml-2">Get started</span></a></span>
-          </div>
-        </div>
-        <div class="footer">
-          <div class="inner lg:w-box lg:mx-auto px-6 lg:px-0 flex-row justify-between"><span
-              class="pr-16 hidden sm:block footerlead">Used by</span><a href="https://www.hackernoon.com/"
-              target="_blank" rel="noopener noreferrer" class="item h-4 sm:h-4 md:h-5"><svg height="26.335"
-                viewBox="0 0 199.216 26.335">
-                <path
-                  d="M10.346-25.344V-22.3H8.323v4.047H6.285l0,3.038,0,3.04,1.016,0,1.015,0v4.047h2.024v6.071l7.087,0,7.086,0,0-3.031,0-3.033,1.009,0,1.008,0,0-2.019,0-2.021,1.009,0,1.008,0,0-1.016,0-1.015H30.6V-16.23H28.573v-2.024H26.549V-22.3H24.526l0-3.04,0-3.038-7.086,0-7.087,0Zm6.071,6.078v5.059h2.024V-24.325h2.024V-22.3h4.047v4.047h2.038v6.071l-1.015,0-1.016,0,0,2.019,0,2.021-2.021,0-2.019,0,0,1.016,0,1.015-3.033,0-3.031,0,0-1.016,0-1.015H10.346v-4.047H8.323v-6.071h2.024V-22.3h4.047v-2.024h2.024Z"
-                  transform="translate(-6.285 28.386)"></path>
-                <path
-                  d="M37.155-15.122V-8h2.853V-13.7h8.53V-8H51.39V-22.24l-1.422,0-1.424,0,0,2.842,0,2.843h-8.53V-22.24H37.155Z"
-                  transform="translate(-5.887 28.466)"></path>
-                <path
-                  d="M54.022-22.23c-.006,0-.01,3.208-.01,7.118V-8h2.853V-13.7h8.544V-8h2.853l0-7.115,0-7.114-7.112,0C57.231-22.239,54.026-22.236,54.022-22.23Zm11.387,4.262v1.419H56.865v-2.839h8.544Z"
-                  transform="translate(-5.669 28.466)"></path>
-                <path d="M70.883-15.122V-8H85.118v-2.853H73.735v-8.53H85.118V-22.24H70.883Z"
-                  transform="translate(-5.452 28.466)"></path>
-                <path
-                  d="M87.74-15.122V-8h2.853V-13.7h5.691v2.853h2.839V-8h2.853v-2.853H99.137V-13.7H96.284v-2.839l1.424,0,1.422,0,0-1.424,0-1.422h2.839V-22.24l-1.422,0-1.424,0,0,1.422,0,1.424H96.284v2.839H90.592V-22.24H87.74Z"
-                  transform="translate(-5.234 28.466)"></path>
-                <path
-                  d="M104.606-22.23c-.006,0-.01,3.208-.01,7.118V-8h14.25l0-1.424,0-1.422-5.687,0-5.689,0V-13.7h5.691l0-1.424,0-1.422-2.842,0-2.843,0v-2.839h11.383l0-1.424,0-1.422-7.112,0C107.816-22.239,104.611-22.236,104.606-22.23Z"
-                  transform="translate(-5.017 28.466)"></path>
-                <path
-                  d="M121.467-15.122V-8h2.853V-13.7H130l0,1.422,0,1.424,1.424,0,1.422,0V-8H135.7v-2.853h-2.839V-13.7H135.7V-22.24H121.467Zm11.383-2.846v1.419h-8.53v-2.839h8.53Z"
-                  transform="translate(-4.799 28.466)"></path>
-                <path d="M138.324-15.122V-8h2.853V-19.387h8.53V-8h2.853V-22.24H138.324Z"
-                  transform="translate(-4.582 28.466)"></path>
-                <path
-                  d="M155.191-22.23c-.006,0-.01,3.208-.01,7.118V-8h14.25V-22.24h-7.115C158.4-22.24,155.2-22.236,155.191-22.23Zm11.387,7.108v4.265h-8.53v-8.53h8.53Z"
-                  transform="translate(-4.364 28.466)"></path>
-                <path d="M172.052-15.122V-8h14.236V-22.24H172.052Zm11.383,0v4.265h-8.53v-8.53h8.53Z"
-                  transform="translate(-4.147 28.466)"></path>
-                <path d="M188.909-15.122V-8h2.853V-19.387h8.53V-8h2.853V-22.24H188.909Z"
-                  transform="translate(-3.929 28.466)"></path>
-              </svg></a><a href="https://archive.org/" target="_blank" rel="noopener noreferrer"
-              class="item h-5 sm:h-6 md:h-8"><svg height="43.269" viewBox="0 0 272.685 43.269">
-                <path
-                  d="M186.731 27.209l-1.248-3.461h-4.242l-1.248 3.461h-1.032l3.311-9.068a5.876 5.876 0 0 0 .283-.982c0-.7-.765-.7-1.281-.782v-.366h3.128l4.06 11.2h-1.731zm-3.428-9.1l-1.78 4.858h3.677zM200.985 27.209l-2.945-5.175h-1.031v5.174h-1.83v-8.934c0-1.6 0-1.664-1.581-1.9v-.363h4.276c2.013 0 4.509.433 4.509 2.978 0 1.68-.965 2.5-2.546 2.745l3.061 5.474h-1.913zm-2.862-10.416c-1.2 0-1.115.449-1.115 1.5v2.959h.948c1.448 0 2.6-.532 2.6-2.163-.004-1.647-.852-2.296-2.433-2.296zM213.489 27.375c-3.827 0-4.908-2.479-4.908-5.923 0-3.211 1.065-5.491 4.644-5.491a10.687 10.687 0 0 1 3.328.5l.1 2.779h-.482a2.466 2.466 0 0 0-.353-1.018 2.764 2.764 0 0 0-2.429-1.464c-2.512 0-2.845 2.762-2.845 4.692 0 2.063.632 4.991 3.228 4.991a4.749 4.749 0 0 0 2.912-.849v1.15a7.506 7.506 0 0 1-3.195.633zM230.371 27.208v-5.44h-4.525v5.44h-1.83v-9c0-1.448-.266-1.481-1.664-1.63v-.367l3.494-.383v5.158h4.525v-4.975h1.834v11.2h-1.83zM238.631 27.208v-.42c1.248 0 1.414-.333 1.414-1.547v-7.153c0-1.215-.166-1.547-1.414-1.547v-.414h4.659v.416c-1.248 0-1.414.349-1.414 1.547v7.155c0 1.2.166 1.547 1.414 1.547v.416h-4.659zM255.443 27.209h-1.448l-3.261-9.068c-.5-1.4-.582-1.5-2.013-1.764v-.366h3.228l3.261 9.117h.033l3.178-9.117h1.081zM272.635 27.209h-6.639v-8.935c0-1.6-.017-1.647-1.581-1.9v-.363h7.97l.05 2.462h-.466c0-1.248-.616-1.68-1.8-1.68h-1.3c-.765 0-1.048.017-1.048.865v3.311h2.019c.948 0 1.215-.433 1.364-1.281h.466v3.494h-.466c0-.932-.4-1.431-1.364-1.431h-2.013v3.711c0 .915.2.965 1.048.965h1.847c1.131 0 1.414-.566 1.5-1.631h.466z">
-                </path>
-                <path
-                  d="M56.179 27.058v-.413c1.238 0 1.4-.33 1.4-1.535v-7.1c0-1.205-.165-1.535-1.4-1.535v-.407h4.622v.412c-1.238 0-1.4.347-1.4 1.535v7.1c0 1.189.165 1.535 1.4 1.535v.408zM74.322 27.063l-5.448-9.394h-.033v9.394h-1.04v-9c0-1.552-.247-1.486-1.651-1.75v-.361h3.484l5.2 8.981h.033v-8.981h1.04v11.111zM90.649 18.395c0-1.288-.561-1.667-1.8-1.667h-1.117v10.335h-1.816V16.728h-1.139c-1.255 0-1.684.363-1.783 1.618h-.462l.061-2.394h8.453l.066 2.443zM104.335 27.063h-6.587v-8.866c0-1.585-.016-1.634-1.568-1.882v-.363h7.908l.049 2.443h-.462c0-1.238-.611-1.667-1.783-1.667h-1.288c-.759 0-1.04.017-1.04.858v3.286h2c.941 0 1.2-.429 1.354-1.271h.462v3.467h-.462c0-.925-.4-1.42-1.354-1.42h-2v3.681c0 .908.2.958 1.04.958h1.832c1.123 0 1.4-.561 1.486-1.618h.462zM117.625 27.063l-2.922-5.135h-1.024v5.134h-1.816v-8.865c0-1.585 0-1.651-1.568-1.882v-.363h4.243c2 0 4.474.429 4.474 2.955 0 1.667-.958 2.476-2.526 2.724l3.038 5.432h-1.9zm-2.84-10.335c-1.189 0-1.106.446-1.106 1.486v2.938h.941c1.436 0 2.575-.528 2.575-2.146 0-1.634-.841-2.278-2.41-2.278zM133.144 27.063l-5.448-9.394h-.033v9.394h-1.04v-9c0-1.552-.248-1.486-1.651-1.75v-.361h3.483l5.2 8.981h.033v-8.981h1.04v11.111zM149.372 27.063h-6.587v-8.866c0-1.585-.016-1.634-1.568-1.882v-.363h7.907l.049 2.443h-.462c0-1.238-.611-1.667-1.783-1.667h-1.288c-.759 0-1.04.017-1.04.858v3.286h2c.941 0 1.205-.429 1.354-1.271h.462v3.467h-.468c0-.925-.4-1.42-1.354-1.42h-2v3.681c0 .908.2.958 1.04.958h1.839c1.123 0 1.4-.561 1.486-1.618h.462zM163.57 18.395c0-1.288-.561-1.667-1.8-1.667h-1.119v10.335h-1.819V16.728h-1.139c-1.255 0-1.684.363-1.783 1.618h-.459l.063-2.394h8.452l.066 2.443z">
-                </path>
-                <path
-                  d="M0 41.308h38.252v1.962H0zM1.509 37.535h35.31v2.716H1.509zM1.283 6.602h35.121v3.772H1.283zM18.843 0L.453 4.3l1.056 1.166h34.669l1.06-1.165zM6.348 22.316q-.045-2.779-.151-5.557c-.068-1.744-.181-3.487-.266-5.231-.007-.151-.071-.183-.2-.21a7.344 7.344 0 0 0-3.1 0c-.125.027-.189.06-.2.21-.085 1.744-.2 3.487-.266 5.231q-.109 2.777-.151 5.557c-.021 1.313-.008 2.627.013 3.94.023 1.457.055 2.914.114 4.37.063 1.562.161 3.124.247 4.685.016.3.047.6.07.888a6.184 6.184 0 0 0 3.439 0c.023-.291.054-.589.07-.888.086-1.561.184-3.123.247-4.685.059-1.456.091-2.913.114-4.37.028-1.313.041-2.627.02-3.94zM15.911 22.316q-.045-2.779-.151-5.557c-.068-1.744-.181-3.487-.266-5.231-.007-.151-.071-.183-.2-.21a7.344 7.344 0 0 0-3.1 0c-.125.027-.189.06-.2.21-.085 1.744-.2 3.487-.266 5.231q-.109 2.777-.151 5.557c-.021 1.313-.008 2.627.013 3.94.023 1.457.055 2.914.114 4.37.063 1.562.161 3.124.247 4.685.016.3.047.6.07.888a6.184 6.184 0 0 0 3.439 0c.023-.291.054-.589.07-.888.086-1.561.183-3.123.247-4.685.059-1.456.091-2.913.114-4.37.028-1.313.042-2.627.02-3.94zM27.002 22.316q-.045-2.779-.151-5.557c-.068-1.744-.181-3.487-.266-5.231-.007-.151-.071-.183-.2-.21a7.344 7.344 0 0 0-3.1 0c-.125.027-.189.06-.2.21-.085 1.744-.2 3.487-.266 5.231q-.109 2.777-.151 5.557c-.021 1.313-.008 2.627.013 3.94.023 1.457.055 2.914.114 4.37.063 1.562.161 3.124.247 4.685.017.3.047.6.07.888a6.184 6.184 0 0 0 3.439 0c.023-.291.054-.589.07-.888.086-1.561.183-3.123.247-4.685.059-1.456.091-2.913.114-4.37.028-1.313.041-2.627.02-3.94zM36.337 22.316q-.045-2.779-.151-5.557c-.068-1.744-.181-3.487-.266-5.231-.007-.151-.071-.183-.2-.21a7.344 7.344 0 0 0-3.1 0c-.125.027-.189.06-.2.21-.085 1.744-.2 3.487-.266 5.231q-.109 2.777-.151 5.557c-.021 1.313-.008 2.627.013 3.94.023 1.457.055 2.914.114 4.37.063 1.562.161 3.124.247 4.685.017.3.047.6.07.888a6.184 6.184 0 0 0 3.439 0c.023-.291.054-.589.07-.888.086-1.561.184-3.123.247-4.685.059-1.456.091-2.913.114-4.37.028-1.313.04-2.627.02-3.94z">
-                </path>
-              </svg></a><a href="https://iris.to" target="_blank" rel="noopener noreferrer"
-              class="item h-5 sm:h-6 md:h-8"><svg height="42" viewBox="0 0 1046 444.46">
-                <defs>
-                  <filter id="b" width="472.556" height="472.551" x="-10" y="-11" filterUnits="userSpaceOnUse">
-                    <feOffset dy="3"></feOffset>
-                    <feGaussianBlur result="blur" stdDeviation="11"></feGaussianBlur>
-                    <feFlood flood-opacity=".2"></feFlood>
-                    <feComposite in2="blur" operator="in"></feComposite>
-                    <feComposite in="SourceGraphic"></feComposite>
-                  </filter>
-                </defs>
-                <g>
-                  <g filter="url(#b)" transform="translate(-.003 .001)">
-                    <path fill="#8884"
-                      d="M48.41 320.56a202.754 202.754 0 0 1-24.5-117.43c8.83-95.86 86.07-173.73 181.88-183.1a203.331 203.331 0 0 1 222.83 221.8c-8.73 93.46-82.67 169.98-175.77 181.98a202.23 202.23 0 0 1-128.75-26.03L23.03 425.53z">
-                    </path>
-                  </g>
-                  <g transform="translate(1.327 5.781)">
-                    <path fill="#b0b0b0"
-                      d="M339.6 126.07a147.11 147.11 0 0 0-51.01-40.72L224.95 217.5l142.99-32.64a146.082 146.082 0 0 0-28.34-58.79z">
-                    </path>
-                    <path fill="#ababab" d="M224.95 217.5v146.64a146.332 146.332 0 0 0 114.65-55.21z"></path>
-                    <path fill="#848484" d="M110.31 308.93a146.332 146.332 0 0 0 114.65 55.21V217.5z"></path>
-                    <path fill="#707070"
-                      d="M224.95 70.86a146.168 146.168 0 0 0-63.64 14.49l63.64 132.15 63.64-132.15a145.994 145.994 0 0 0-63.64-14.49z">
-                    </path>
-                    <path fill="#cdcdcd" d="M367.94 184.86L224.95 217.5l114.65 91.43a146.8 146.8 0 0 0 28.34-124.07z">
-                    </path>
-                    <path fill="#656565" d="M161.31 85.35a146.986 146.986 0 0 0-79.36 99.51l155.613 46.653z"></path>
-                    <path fill="#545454" d="M81.96 184.86a146.5 146.5 0 0 0 28.35 124.07l114.65-91.43z"></path>
-                    <circle cx="64.52" cy="64.52" r="64.52" transform="translate(161.28 153.74)"></circle>
-                    <circle cx="29.33" cy="29.33" r="29.33" fill="#fff" transform="translate(154.68 155.53)"></circle>
-                  </g>
-                  <g class="fill-current inline-icon">
-                    <path
-                      d="M502.017 108.461c0-18.4 14.18-32.21 33.35-32.21s32.97 13.8 32.97 32.21c0 18.02-13.8 32.2-32.97 32.2s-33.35-14.18-33.35-32.2zm5.37 257.25v-191.69h55.59v191.69z">
-                    </path>
-                    <path
-                      d="M664.567 365.711h-55.59v-191.69h53.67v33.36c12.65-23.77 34.5-37.19 61.72-37.19 3.45 0 7.28 0 9.58.77v56.74a60.463 60.463 0 0 0-19.94-3.07c-31.44 0-49.46 15.72-49.46 44.09v96.99z">
-                    </path>
-                    <path
-                      d="M758.117 108.461c0-18.4 14.18-32.21 33.35-32.21s32.97 13.8 32.97 32.21c0 18.02-13.8 32.2-32.97 32.2s-33.35-14.18-33.35-32.2zm5.36 257.25v-191.69h55.59v191.69z">
-                    </path>
-                    <path
-                      d="M941.747 369.541c-49.46 0-87.03-24.54-87.03-67.09h53.67c0 18.78 14.18 27.99 32.97 27.99 16.87 0 27.22-6.13 27.22-18.4 0-37.57-110.41-3.83-110.41-82.81 0-36.8 33.74-59.04 77.83-59.04 47.54 0 83.58 28.37 83.58 64.79h-53.67c0-14.57-12.65-25.69-29.52-25.69-14.95 0-25.3 6.52-25.3 17.25 0 34.12 111.95 3.07 111.95 82.43-.01 37.95-34.9 60.57-81.29 60.57z">
-                    </path>
-                  </g>
-                </g>
-              </svg></a></div>
-        </div>
-      </div>
-      <div class="lg:w-box lg:mx-auto px-6 lg:px-0">
-        <div class="flex flex-col lg:flex-row my-air md:items-center lg:items-start">
-          <div class="order-3 lg:order-1 w-full md:w-8/12 lg:w-1/2">
-            <h2>Get ready to disrupt Big Tech</h2>
-            <p>GUN gives you the most powerful weapons of the internet — <button
-                aria-label="scroll to section about decentralization">decentralization</button> and <button
-                aria-label="scroll to section about privacy">real privacy</button> — to reclaim the web and make it
-              truly free and open.</p>
-            <div class="links"><button aria-label="scroll to quick start section"><span class="hp-rarr svg-inline--fa"></span>Get up and running with GUN in five minutes or less</button><button
-                aria-label="start video about GUN's vision"><span class="hp-rarr svg-inline--fa"></span>Watch GUN's author share his vision for the web</button></div>
-          </div>
-          <div class="order-2 h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
-          <div class="order-1 lg:order-3 w-full md:w-8/12 lg:w-smallcol">
-            <div class="panel panel-small">
-              <div class="tile aspect aspect-640-360">
-                <div style="width: 100%; height: 100%;">
-                  <div style="width: 100%; height: 100%;"><iframe frameborder="0" allowfullscreen="1"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      title="YouTube video player" width="100%" height="100%"
-                      src="https://www.youtube.com/embed/ZF7a5oj77-U?autoplay=0&amp;mute=0&amp;controls=1&amp;origin=https%3A%2F%2Fgun.eco&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;enablejsapi=1&amp;widgetid=1"
-                      id="widget2"></iframe></div>
-                </div>
-              </div>
-              <div class="footer" role="button" tabindex="0" style="cursor: pointer;">
-                <div class="inner">
-                  <div class="footericon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play"
-                      class="svg-inline--fa fa-play fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512">
-                      <path fill="currentColor"
-                        d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z">
-                      </path>
-                    </svg></div>
-                  <div class="ml-3">GUN au&shy;thor Mark Nadal on why he is build&shy;ing a
-                    de&shy;cen&shy;tral&shy;ized web, and what it looks like.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row mb-air md:items-center lg:items-start">
-          <div class="w-full md:w-8/12 lg:w-smallcol">
-            <div class="panel panel-small">
-              <div class="tile aspect aspect-640-360">
-                <div style="width: 100%; height: 100%;">
-                  <iframe frameborder="0" allowfullscreen="1"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    title="YouTube video player" width="100%" height="100%"
-                    src="https://www.youtube.com/embed/5fCPRY-9hkc?autoplay=0&amp;mute=0&amp;controls=1&amp;origin=https%3A%2F%2Fgun.eco&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;enablejsapi=1&amp;widgetid=3"
-                    id="widget4"></iframe>
-                </div>
-              </div>
-              <div class="footer" role="button" tabindex="0" style="cursor: pointer;">
-                <div class="inner">
-                  <div class="footericon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play"
-                      class="svg-inline--fa fa-play fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512">
-                      <path fill="currentColor"
-                        d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z">
-                      </path>
-                    </svg></div>
-                  <div class="ml-3">Mark Nadal at Nordic.js 2017 - The De&shy;sign and Evo&shy;lu&shy;tion of
-                    Event-Dri&shy;ven Data&shy;bas&shy;es</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
-          <div class="w-full md:w-8/12 lg:w-1/2">
-            <h2>Powerful and flexible</h2>
-            <p>GUN is a data&shy;base en&shy;gine that runs every&shy;where JavaScript does — <a
-                href="/docs/Installation#browser" target="_blank" rel="noopener noreferrer">browsers</a>,
-              <a href="/docs/React-Native" target="_blank" rel="noopener noreferrer">mo&shy;bile
-                de&shy;vices</a> and <a href="/docs/Installation#server" target="_blank"
-                rel="noopener noreferrer">servers</a>,
-              al&shy;low&shy;ing you to build ex&shy;act&shy;ly the data sys&shy;tem you want.
-            </p>
-            <div class="links"><a href="/docs/Awesome-GUN#framework-integrations" target="_blank"
-                rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Learn how to add GUN to an existing React oder Svelte app</a><a
-                href="https://github.com/skiqh/gun-cli#example-creating-a-redundant-mesh-network" target="_blank"
-                rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Build a distributed &amp; fault tolerant data delivery system</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-yellow" id="decentralization">
-        <div class="tile py-air">
-          <div class="lg:w-box lg:mx-auto px-6 lg:px-0">
-            <h3>60 Million monthly downloads</h3>
-            <h2>GUN is pow&shy;er&shy;ing de&shy;cen&shy;tral&shy;ized plat&shy;forms with mil&shy;lions of users and
-              vast&shy;ly dif&shy;fer&shy;ent re&shy;quire&shy;ments on a shoe&shy;string bud&shy;get.</h2>
-            <div class="links"><a
-                href="https://finance.yahoo.com/news/hacker-noon-storing-content-blockchain-150011860.html"><span class="hp-rarr svg-inline--fa"></span>See how HackerNoon handles ~4M users on $0 server costs</a><a
-                href="https://news.ycombinator.com/item?id=17685682"><span class="hp-rarr svg-inline--fa"></span>Decentralizing the Internet Archive with lots of GUNs</a></div>
-          </div>
-        </div>
-        <div class="footer">
-          <div class="inner lg:w-box lg:mx-auto px-6 lg:px-0 flex-row justify-between"><span
-              class="pr-16 hidden sm:block footerlead">GUN in the news</span><a
-              href="https://www.nbcnews.com/video/building-a-new-internet-the-bold-plan-to-decentralize-the-web-63742021851"
-              target="_blank" rel="noopener noreferrer" class="item item h-6 sm:h-5 md:h-8"><svg height="76.43"
-                viewBox="0 0 77.549 76.43">
-                <path
-                  d="M38.771,5.916A9.057,9.057,0,0,0,29.1.085,9.356,9.356,0,0,0,20.946,11.6a9.516,9.516,0,0,0-11.711.83c-5.363,5.376-2.494,12.646.454,14.39a9.251,9.251,0,0,0-9.52,7.638C-1.039,41.588,4.4,45.744,9.69,45.744H68.383c6.121,0,9.517-5.295,9.136-10.289A9.134,9.134,0,0,0,67.7,26.974c2.718-1.516,6.348-8.64.828-14.239C64.148,8.567,58.563,10.083,56.6,11.9,57.658,8.419,55.922,1.223,48.815.084A12.758,12.758,0,0,0,47.4,0a9.122,9.122,0,0,0-8.629,5.916"
-                  transform="translate(0.001)" fill="none"></path>
-                <path
-                  d="M58.431,86.016a8.1,8.1,0,0,0,1.359,12.877l22.285,15.289L71.27,89.427c-2.264-5.842-8.458-7.116-12.839-3.411"
-                  transform="translate(-48.217 -72.452)"></path>
-                <path
-                  d="M169.288,10.9a7.944,7.944,0,0,0-6.641,10.975l11.175,26.357,3.927-27.722c.909-6.888-4.3-10.068-8.462-9.609"
-                  transform="translate(-139.89 -9.374)"></path>
-                <path
-                  d="M289.61,19.08h2.113s1.129,0,1.282.532c-.832.679-3.1.764-2.795,4.392l3.553,23.852,11.1-26.426a8.038,8.038,0,0,0-6.723-10.979c-.2-.014-.4-.026-.6-.026-3.794,0-8.142,2.757-7.93,8.655"
-                  transform="translate(-250.006 -9)"></path>
-                <path
-                  d="M331.657,90.071l-10.5,24.458,22.279-15.37a7.994,7.994,0,0,0-4.33-14.746c-2.769,0-5.733,1.468-7.451,5.658"
-                  transform="translate(-277.248 -72.872)"></path>
-                <path
-                  d="M333.758,208.562l-20.923,14.614H338.6c5.285,0,8.682-5.45,7.172-10.45a8.052,8.052,0,0,0-7.476-5.614,8.171,8.171,0,0,0-4.535,1.451"
-                  transform="translate(-270.062 -178.794)"></path>
-                <path
-                  d="M18.845,222.713H44.227L23.3,208.1c-4.835-3.106-10.271-1.289-12.234,3.866a8.153,8.153,0,0,0,7.78,10.748"
-                  transform="translate(-9.231 -178.331)"></path>
-                <path
-                  d="M241.992,377.668H246.7a3.258,3.258,0,0,1,3,3.251,3.413,3.413,0,0,1-3.07,3.392h-4.639v-6.643m-.072-10.421H245.8a2.947,2.947,0,0,1,2.891,2.868,3.078,3.078,0,0,1-2.717,3.183h-4.05v-6.051m-5.3-4.337v25.734h12.486a7.042,7.042,0,0,0,6.487-6.852,7.362,7.362,0,0,0-4.326-6.852,6.448,6.448,0,0,0,2.933-5.63c-.14-5.175-4.92-6.4-6.559-6.4H236.622"
-                  transform="translate(-204.27 -313.291)"></path>
-                <path d="M62.187,382.036V367.214l16.184,15.8V356.3H72.933v14.443L56.745,355.256v26.78Z"
-                  transform="translate(-48.986 -306.684)"></path>
-                <path
-                  d="M381.784,371.138c.136,8.138,5.984,14.222,13.5,14.222a15.482,15.482,0,0,0,5.579-1.077V379.04a9.34,9.34,0,0,1-4.871,1.377c-4.549,0-8.841-3.366-8.663-9.488a8.852,8.852,0,0,1,8.754-8.4,8.613,8.613,0,0,1,4.78,1.472v-5.1a13.822,13.822,0,0,0-19.079,12.235"
-                  transform="translate(-329.584 -308.931)"></path>
-              </svg></a><a
-              href="https://techcrunch.com/2018/05/23/gun-raises-more-than-1-5m-for-its-decentralized-database-system/"
-              target="_blank" rel="noopener noreferrer" class="item item h-6 sm:h-5 md:h-8"><svg height="58.423"
-                viewBox="0 0 85.434 58.423">
-                <path
-                  d="M39.217-2.607H-3.5V11.534H10.641V40.7H25.076V11.534H39.217Zm14.141,0H81.934V11.534H53.358Zm0,28.414V11.534H39.217V40.7H81.934V25.828Z"
-                  transform="translate(3.5 2.607)"></path>
-                <path
-                  d="M2.392,158.822v8.838H.035v-8.838H-3.5v-1.768H5.338v1.768Zm9.566,5.3h-4.9a1.693,1.693,0,0,0,1.686,1.719,1.78,1.78,0,0,0,1.4-.492l1.53,1.323a3.845,3.845,0,0,1-2.935,1.349c-2.357,0-3.856-1.659-3.856-4.25,0-2.513,1.576-4.272,3.653-4.272,2.186,0,3.449,1.764,3.449,4.106a2.052,2.052,0,0,1-.032.518ZM8.43,161.478c-.781,0-1.264.289-1.342,1.468H9.9c-.062-1.178-.5-1.468-1.467-1.468Zm8.694,6.568a4.289,4.289,0,0,1,.094-8.539,3.684,3.684,0,0,1,3.247,1.811l-1.42,1.436a2.209,2.209,0,0,0-1.873-1.171c-1.031,0-1.7.858-1.7,2.2,0,1.312.671,2.186,1.7,2.186a2.364,2.364,0,0,0,1.936-1.046l1.373,1.3a3.909,3.909,0,0,1-3.357,1.827Zm9.719-.387v-4.219c0-1.467-.281-1.9-1.171-1.9s-1.186.437-1.186,1.858v4.265H22.13V157.573l2.357-1.078v3.732c0-.39.944-.718,1.8-.718,2.092,0,2.911,1.436,2.911,3.746v4.405H26.844Z"
-                  transform="translate(3.5 -109.624)"></path>
-                <path
-                  d="M120.382,160.132a2.076,2.076,0,0,0-2-1.186c-1.639,0-2.575,1.436-2.575,3.465,0,1.967.952,3.465,2.591,3.465a2.287,2.287,0,0,0,2.139-1.389l1.842,1.092a4.174,4.174,0,0,1-4.043,2.466c-2.857,0-4.777-2.186-4.777-5.636,0-3.325,2-5.635,4.854-5.635a4.12,4.12,0,0,1,4,2.419Zm8.024,2.06a1.682,1.682,0,0,0-1.175-.531c-.842,0-1.315.36-1.315,1.779v4.219h-2.357v-8.249h2.357v.815c.589-.39.847-.718,1.612-.718a2,2,0,0,1,1.476.577Zm6.938,5.394v-.258a2.8,2.8,0,0,1-1.8.718c-2.092,0-2.911-1.436-2.911-3.746v-4.889H132.4v4.7c0,1.467.575,1.9,1.466,1.9s1.48-.438,1.48-1.858v-4.748H137.7v8.249h-2.449Zm8.543.073v-4.219c0-1.467-.133-1.9-1.024-1.9s-1.038.437-1.038,1.858v4.265h-2.357v-8.249h2.357v.815c0-.39.8-.718,1.655-.718,2.092,0,2.764,1.436,2.764,3.746v4.405Zm8.058.387a4.289,4.289,0,0,1,.094-8.539,3.682,3.682,0,0,1,3.247,1.811l-1.419,1.436a2.209,2.209,0,0,0-1.873-1.171c-1.031,0-1.7.858-1.7,2.2,0,1.312.671,2.186,1.7,2.186a2.364,2.364,0,0,0,1.936-1.046l1.373,1.3a3.912,3.912,0,0,1-3.358,1.827Zm9.618-.171v-4.434c0-1.467-.281-1.9-1.171-1.9s-1.186.437-1.186,1.858v4.265h-2.357V157.573l2.357-1.078v3.732c0-.39.944-.718,1.8-.718,2.092,0,2.911,1.436,2.911,3.746v4.405h-2.3Z"
-                  transform="translate(-79.075 -109.624)"></path>
-              </svg></a><a href="https://changelog.com/podcast/236" target="_blank" rel="noopener noreferrer"
-              class="item item h-6 sm:h-5 md:h-8"><svg height="60.998" viewBox="0 0 199.005 60.998">
-                <defs>
-                  <linearGradient id="linear-gradient" y1="0.66" x2="0.999" y2="0.66" gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#2e2e2e" stop-opacity="0"></stop>
-                    <stop offset="1" stop-color="#2e2e2e"></stop>
-                  </linearGradient>
-                  <linearGradient id="linear-gradient-2" y1="0.737" x2="0.995" y2="0.737"
-                    gradientUnits="objectBoundingBox">
-                    <stop offset="0" stop-color="#2e2e2e"></stop>
-                    <stop offset="1" stop-color="#2e2e2e" stop-opacity="0"></stop>
-                  </linearGradient>
-                </defs>
-                <g id="changelog-logo-full-grayscale" transform="translate(0.001 -0.003)">
-                  <path d="M138.6,24.68H131.32V28.39H137.8v4.034H131.32v3.946h7.552v4.067H126.949V20.652H138.6Z">
-                  </path>
-                  <path
-                    d="M35.511,26.934c-1.756-1.989-3.094-2.7-4.993-2.7a6.309,6.309,0,0,0,0,12.612c1.9,0,3.27-.742,5.053-2.748l3.121,2.907c-2.587,2.748-4.993,3.918-8.114,3.918a10.4,10.4,0,1,1,0-20.8c3.088,0,5.466,1.127,8.026,3.847Z">
-                  </path>
-                  <path d="M45.97,28.39h7.36V20.641h4.4V40.425h-4.4V32.456H45.97v7.979h-4.4V20.652h4.4Z"></path>
-                  <path
-                    d="M66.6,36.072l-1.519,4.363H60.442l7.4-19.784H72.9l7.4,19.784H75.629l-1.514-4.363Zm3.743-10.738-2.317,6.677h4.668Z">
-                  </path>
-                  <path d="M82.989,20.641H86.7L95.859,32.66V20.641h4.4V40.425H96.58L87.387,28.417V40.436h-4.4Z">
-                  </path>
-                  <path
-                    d="M123.536,29.159v2.05a10.79,10.79,0,0,1-1.277,5.369,9.054,9.054,0,0,1-8.086,4.364,10.4,10.4,0,1,1-.028-20.8c3.061,0,5.318,1.039,8.142,3.676l-3.105,2.907c-1.872-1.836-3.149-2.489-5.053-2.489a6.309,6.309,0,0,0,.033,12.612,4.614,4.614,0,0,0,4.811-3.682h-5.3V29.159Z">
-                  </path>
-                  <path d="M146.959,20.641V36.369h7.536v4.067H142.56V20.652Z"></path>
-                  <path
-                    d="M176.59,30.555a10.532,10.532,0,1,1-3.141-7.386A10.543,10.543,0,0,1,176.59,30.555Zm-16.706.088a6.138,6.138,0,0,0,12.275-.088,6.142,6.142,0,1,0-12.275.088Z">
-                  </path>
-                  <path
-                    d="M199,29.159v2.05a10.79,10.79,0,0,1-1.277,5.369,9.056,9.056,0,0,1-8.087,4.364,10.4,10.4,0,1,1-.027-20.8c3.061,0,5.317,1.039,8.141,3.676l-3.121,2.907c-1.871-1.836-3.148-2.489-5.053-2.489a6.309,6.309,0,0,0,.033,12.612,4.614,4.614,0,0,0,4.811-3.682h-5.29V29.159Z">
-                  </path>
-                  <path
-                    d="M30.556,61h-.628A30.5,30.5,0,1,1,52.124,8.942a.825.825,0,0,1-1.167,1.165,28.836,28.836,0,1,0,0,40.8.825.825,0,0,1,1.167,1.165A30.3,30.3,0,0,1,30.556,61Z"
-                    fill="url(#linear-gradient)"></path>
-                  <path
-                    d="M30.5,51.108h-.7a20.608,20.608,0,1,1,0-41.216,20.749,20.749,0,0,1,15.314,6.045.825.825,0,0,1-.9,1.345.82.82,0,0,1-.267-.18,19.086,19.086,0,0,0-14.087-5.55,18.959,18.959,0,1,0,0,37.919,19.085,19.085,0,0,0,14.087-5.561.821.821,0,0,1,1.167,0,.829.829,0,0,1,0,1.165A20.737,20.737,0,0,1,30.5,51.108Z"
-                    fill="url(#linear-gradient-2)"></path>
-                </g>
-              </svg></a><a href="https://finance.yahoo.com/news/hacker-noon-storing-content-blockchain-150011860.html"
-              target="_blank" rel="noopener noreferrer" class="item item h-6 sm:h-5 md:h-8"><svg height="229.46"
-                viewBox="0 0 626 229.46" class="fill-current inline-icon">
-                <path
-                  d="M224.499 68.962l.066 68.961h33.405l.136-27.532c.15-30.6.023-28.479 1.943-32.55 2.115-4.486 5.349-6.465 10.563-6.465 6.312 0 9.63 2.8 11.3 9.527.2.806.338 9.923.442 29.1l.149 27.923h33.405l.078-30.142c.11-41.986-.257-44.972-6.7-54.663-10.4-15.636-35.543-17.456-49.214-3.561-1.253 1.273-1.877 1.744-2.018 1.524-.113-.177-.207-11.742-.208-25.7V.005h-33.413l.066 68.962M583.687 5.684c-1.28 3.118-3.76 9.132-5.513 13.367l-16.748 40.45c-1.218 2.942-3.191 7.7-4.381 10.569-5.825 14.035-6.655 16.07-6.655 16.313 0 .174 6.728.24 19.888.2l19.889-.067 5.293-12.788c2.909-7.032 6.168-14.9 7.237-17.484 3.006-7.259 8.344-20.149 10.319-24.923 2.938-7.1 8-19.325 10.574-25.511L626 0l-19.994.008-19.994.006-2.325 5.67m-433.89 34.775c-38.17 4.672-54.273 55.236-27.347 85.872 14.332 16.308 41.858 18.986 55.6 5.408 2.645-2.613 2.516-2.717 2.6 2.073l.072 4.11h32.1l.066-47.692.067-47.692h-32.363v4.029c0 4.854 0 4.857-2.411 2.487-6.573-6.47-17.85-9.884-28.384-8.595m220.13-.091c-34.071 2.974-54.925 35.018-43.786 67.282 15.168 43.936 82.168 43.483 96.594-.653 11.642-35.615-15.52-69.883-52.808-66.629m106.736.128c-33 3.321-53.252 35.269-42.484 67.011 14.78 43.566 81.105 43.868 96.352.44C543.258 71.7 515.239 36.612 476.664 40.5M0 42.76a4.042 4.042 0 0 0 .368.979c.362.742 6.079 14.2 15.29 35.989 2.549 6.028 9.23 21.8 14.847 35.051l10.213 24.091-1.727 4.093c-.95 2.252-2.7 6.384-3.89 9.184s-3.3 7.79-4.7 11.091-2.875 6.807-3.29 7.792a11.952 11.952 0 0 0-.756 2.153c0 .512 35.017.548 35.433.038.235-.288 1.826-4.077 9.066-21.6 2.5-6.05 19.729-47.575 26.095-62.893 17.064-41.072 18.92-45.57 18.92-45.9 0-.216-4.688-.276-17.666-.227l-17.666.067-.827 2.087-4.378 11.092C62.242 89.036 58.697 97.972 58.58 98.09c-.373.371.49 2.5-13.58-33.5-4.544-11.626-8.371-21.344-8.5-21.6-.265-.5-36.5-.733-36.5-.235m167.543 28.736c21.427 7.4 16.462 38.568-6.133 38.49-23.1-.078-27.39-32.732-5.09-38.734a26.27 26.27 0 0 1 11.223.244m210.706-.113c12.6 2.6 18.885 16.139 13.032 28.052-6.8 13.844-27.648 13.579-34.18-.434-6.894-14.794 5.415-30.869 21.148-27.618m108.147.019c19.7 4.038 20.395 32.659.914 37.71a19.2 19.2 0 0 1-24-19.855c.755-12.118 11.3-20.273 23.083-17.855m69.739 24.233a22.64 22.64 0 0 0-14.157 35.017c8.238 12.094 27.5 11.93 36.23-.308 11.7-16.4-2.57-38.834-22.073-34.708">
-                </path>
-                <path
-                  d="M147.04 76.53l-.766.849.849-.767a6.456 6.456 0 0 0 .849-.849c0-.2-.216-.023-.93.767m176.124 13.766c0 .932.049 1.314.107.847a8.3 8.3 0 0 0 0-1.7c-.058-.467-.107-.085-.107.849m210.34.13c0 .861.05 1.182.109.712a6.967 6.967 0 0 0 0-1.566c-.06-.391-.106-.008-.1.853m-173.627 13a6.456 6.456 0 0 0 .849.849l.847.766-.766-.847c-.714-.791-.93-.969-.93-.767M519.19 125.85l-1.032 1.109 1.11-1.03a11.827 11.827 0 0 0 1.109-1.11c0-.2-.227 0-1.187 1.032m-181.624.2a7.25 7.25 0 0 0 1.149 1.044 4.511 4.511 0 0 0-.888-1.044 7.226 7.226 0 0 0-1.151-1.044 4.6 4.6 0 0 0 .889 1.044m221.5 13.757a5.8 5.8 0 0 0 1.436 0c.395-.06.072-.108-.717-.108s-1.113.049-.72.108m-404.893.781a2.873 2.873 0 0 0 1.044-.006c.249-.066-.017-.116-.59-.113s-.778.056-.454.119m220 0a2.873 2.873 0 0 0 1.044-.006c.249-.066-.017-.116-.59-.113s-.778.056-.454.119m107.778 0a3.693 3.693 0 0 0 1.174 0c.324-.061.06-.113-.587-.113s-.91.052-.587.113m-202.84 6.447c-5.785 1.43-9.521 6.854-8.508 12.351a11.073 11.073 0 0 0 21 2.679c3.753-7.81-3.993-17.13-12.492-15.03m-26.49.274c-.215.052-1.27.238-2.348.412-11.14 1.807-17.882 10.029-18.5 22.565l-.157 3.132-3.523.158c-1.937.086-3.551.174-3.587.2s-.066 3.561-.066 7.867v7.829h3.36c2.5 0 3.435.091 3.652.351s.312 5.781.359 19.116l.067 18.766 9.72.067 9.723.069v-18.879c0-14.33.075-18.947.313-19.185s2.07-.313 6.655-.313h6.342v-7.829c0-4.306-.03-7.853-.066-7.882s-3-.117-6.59-.2l-6.524-.142.022-1.566a7.391 7.391 0 0 1 3.854-6.86c1.655-.872 6.71-1.021 8.693-.254 1.477.57 1.394 1.038 1.394-7.8 0-9.112.343-8.1-3.072-9a43.312 43.312 0 0 0-9.716-.634m76.778 25.452a16.266 16.266 0 0 0-7.668 4.488c-2.3 2.314-2.3 2.313-2.3-1.079 0-1.856-.08-2.33-.413-2.458-.93-.355-18.823-.172-19.13.2-.215.258-.276 7.547-.227 27.075l.066 26.722h19.573l.132-15.658.13-15.658.618-1.535c2.385-5.914 9.824-6.423 12.348-.846l.6 1.336.13 16.18.13 16.181h19.573v-19.573c0-21.491.08-20.248-1.613-24.756-3.161-8.416-12.8-13.079-21.948-10.616m49.65-.114c-26.325 5.786-27.493 48.08-1.54 55.847 7.37 2.2 15.884.316 20.63-4.578 1.532-1.578 1.623-1.5 1.72 1.444l.075 2.347h19.312l.066-26.722c.049-19.527-.013-26.816-.227-27.075-.4-.487-18.483-.526-18.968-.042a6.012 6.012 0 0 0-.313 2.61c0 2.631-.052 2.674-1.448 1.228-4.275-4.431-12.431-6.569-19.307-5.058m78.226.114a16.055 16.055 0 0 0-7.69 4.527l-2.023 2.053-.05-.871a84.1 84.1 0 0 1-.074-2.631c-.04-2.458.675-2.3-10.07-2.223l-9.51.069-.066 27.075-.066 27.076h9.788c9.14 0 9.788-.03 9.805-.457.009-.251.008-6.328 0-13.505-.033-17.525.175-19.4 2.414-21.757a6.7 6.7 0 0 1 9.639.219c1.776 2.073 1.763 1.949 1.768 19.285 0 8.56.1 15.712.213 15.893.164.257 2.31.315 9.847.26l9.639-.067v-19.575c0-22.3.07-21.5-2.325-26.359-3.661-7.427-12.771-11.293-21.236-9.013m52.007 0c-28.191 6.1-31.221 45.771-4.2 54.975 7.242 2.468 19.34 1.818 23.019-1.234.45-.376.547-17.722.1-17.722a7.977 7.977 0 0 0-1.63.763c-8.426 4.7-18.414 1.167-19.817-7.015-1.668-9.728 9.058-15.688 19.529-10.85 2.418 1.116 2.2 1.942 2.122-8.214l-.07-8.479-1.285-.614c-4.1-1.956-12.6-2.726-17.764-1.61m45.962-.127c-19.784 4.1-29.373 26.644-18.848 44.308 9.7 16.278 38.643 16.8 49.593.886 1.3-1.888 1.9-1.473-7.273-5.008-8.925-3.439-8.338-3.323-9.685-1.932-5.44 5.62-15.618 3.352-17.343-3.863-.337-1.409-.871-1.369 18.817-1.441l18.373-.067.078-3.653c.312-14.594-7.323-25.343-20.516-28.885a45.63 45.63 0 0 0-13.2-.346M272 173.713c-.258.1-.326 5.773-.326 27.12v26.989h9.758c8.657 0 9.775-.047 9.916-.413.493-1.286.157-53.329-.346-53.6s-18.341-.365-19-.1m292.287 13.917c2.695.833 5.208 3.536 5.462 5.873l.085.783-9.068.069-9.078.079v-.59c.019-4.541 6.937-7.948 12.588-6.2m-171.141 2.892a10.857 10.857 0 0 1 3.63 18.251c-5.36 4.942-14.568 3.255-17.6-3.222a11.035 11.035 0 0 1 13.97-15.029">
-                </path>
-              </svg></a></div>
-        </div>
-      </div>
-      <div class="lg:w-box lg:mx-auto px-6 lg:px-0" id="privacy">
-        <div class="flex flex-col lg:flex-row my-air md:items-center lg:items-start">
-          <div class="order-3 lg:order-1 w-full md:w-8/12 lg:w-1/2">
-            <h2>Decentralized auth built-in</h2>
-            <p>GUN's <a href="/docs/SEA" target="_blank" rel="noopener noreferrer">se&shy;cu&shy;ri&shy;ty
-                mod&shy;ule</a> is built on strong
-              en&shy;cryp&shy;tion stan&shy;dards and works com&shy;plete&shy;ly de&shy;cen&shy;tral&shy;ized. In
-              oth&shy;er words — real pri&shy;va&shy;cy with no sin&shy;gle point of fail&shy;ure.</p>
-            <div class="links"><a href="/docs/User" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Learn how to securely store and exchange user data</a><a href="https://gun.eco/converse.html"
-                target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Build a multi-user chat with e2e encryption</a></div>
-          </div>
-          <div class="order-2 h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
-          <div class="order-1 lg:order-3 w-full md:w-8/12 lg:w-smallcol"><a href="/docs/SEA" target="_blank"
-              rel="noopener noreferrer" class="panel panel-small panel-pink">
-              <div class="tile code"><svg class="dots" height="7" viewBox="0 0 45 11">
-                  <circle cx="5.5" cy="5.5" r="5.5" fill="#0019FF"></circle>
-                  <circle cx="22.5" cy="5.5" r="5.5" fill="#00c2e0"></circle>
-                  <circle cx="39.5" cy="5.5" r="5.5" fill="#FDFF14"></circle>
-                </svg>
-                <pre class="language-js">const Me = gun.user()
-const Barry = gun.user(barrys_pub_key)
-
-Me.auth('Larry', 'h4x0r-Llama-123', ret =&gt; {
-if(ret.err)
-  return console.error('auth failed: ', ret.err)
-// let Barry read what I want for my birthday
-Me.get('secret-birthday-wish').grant(Barry)
-})</pre>
-              </div>
-              <div class="footer">
-                <div class="inner">
-                  <div class="footericon"><span class="hp-rarr svg-inline--fa"></span></div>
-                  <div class="ml-3">Read more about SEA, GUN's built-in module for Security, Encryption and
-                    Authentication</div>
-                </div>
-              </div>
-            </a></div>
-        </div>
-        <div class="flex flex-col lg:flex-row mb-air md:items-center lg:items-start">
-          <div class="w-full md:w-8/12 lg:w-smallcol"><a href="/docs/Graph-Guide" target="_blank"
-              rel="noopener noreferrer" class="panel panel-yellow panel-small">
-              <div class="tile code"><svg class="dots" height="7" viewBox="0 0 45 11">
-                  <circle cx="5.5" cy="5.5" r="5.5" fill="#8800FF"></circle>
-                  <circle cx="22.5" cy="5.5" r="5.5" fill="#F600A4"></circle>
-                  <circle cx="39.5" cy="5.5" r="5.5" fill="#46ffe6"></circle>
-                </svg>
-                <pre class="language-js">const Larry = gun.get('larry').put({name: 'Larry'})
-const Barry = gun.get('barry').put({name: 'Barry'})
-
-Larry.get('bff').put(Barry)
-Barry.get('bff').put(Larry)
-
-// goin from Larry to his BFF's BFF
-Larry.path('bff.bff.name').once(name =&gt; {
-console.log(name) // -&gt; Larry
-})</pre>
-              </div>
-              <div class="footer">
-                <div class="inner">
-                  <div class="footericon"><span class="hp-rarr svg-inline--fa"></span></div>
-                  <div class="ml-3">Learn how to create, traverse, index and query linked data in GUN</div>
-                </div>
-              </div>
-            </a></div>
-          <div class="h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
-          <div class="w-full md:w-8/12 lg:w-1/2">
-            <h2>Graph data for the win</h2>
-            <p>GUN's <a href="/docs/Graph-Guide" target="_blank" rel="noopener noreferrer">graph data
-                mod&shy;el</a> al&shy;lows you to use in&shy;tu&shy;itive data struc&shy;tures and queries, while
-              still be&shy;ing ca&shy;pa&shy;ble of do&shy;ing <a href="/docs/Performance" target="_blank"
-                rel="noopener noreferrer">20M+ API ops/sec</a> in just ~9KB gzipped size.</p>
-            <div class="links"><a href="/docs/Simple-introduction-to-graph-data-structures" target="_blank"
-                rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Read more about GUN's graph data structure</a><a href="https://github.com/brysgo/graphql-gun"
-                target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Query a GUN database with GraphQL</a></div>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row my-air md:items-center lg:items-start">
-          <div class="order-3 lg:order-1 w-full md:w-8/12 lg:w-1/2">
-            <h2>Respond in real-time</h2>
-            <p>Any re&shy;mote up&shy;dates to the data you sub&shy;scribe to will be
-              au&shy;to&shy;mat&shy;i&shy;cal&shy;ly prop&shy;a&shy;gat&shy;ed through the net&shy;work, so you can
-              re&shy;act to changes as they hap&shy;pen.</p>
-            <div class="links"><a href="/docs/Service-Discovery" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Learn how GUN peers find and talk to each other</a><a
-                href="https://www.youtube.com/watch?v=5fCPRY-9hkc" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Watch GUN's author implement its sync algorithm from scratch</a></div>
-          </div>
-          <div class="order-2 h-12 lg:h-auto flex-grow-0 lg:flex-grow"></div>
-          <div class="order-1 lg:order-3 w-full md:w-8/12 lg:w-smallcol"><a
-              href="https://github.com/skiqh/gun-cli#example-creating-a-redundant-mesh-network" target="_blank"
-              rel="noopener noreferrer" class="panel panel-small panel-blue">
-              <div class="tile code"><svg class="dots" height="7" viewBox="0 0 45 11">
-                  <circle cx="5.5" cy="5.5" r="5.5" fill="#F600A4"></circle>
-                  <circle cx="22.5" cy="5.5" r="5.5" fill="#fdff14"></circle>
-                  <circle cx="39.5" cy="5.5" r="5.5" fill="#46ffe6"></circle>
-                </svg>
-                <pre class="language-js">// on your device
-navigator.geolocation.watchPosition(position =&gt; {
-gun.get('coords').put(position.coords)
-})
-
-// in your app
-gun.get('coords').on(coords =&gt; {
-  map.dot.move(coords.latitude, coords.longitude)
-})</pre>
-              </div>
-              <div class="footer">
-                <div class="inner">
-                  <div class="footericon"><span class="hp-rarr svg-inline--fa"></span></div>
-                  <div class="ml-3">Learn how to set up a fault-tolerant distributed GUN network to transfer live data
-                    around the world</div>
-                </div>
-              </div>
-            </a></div>
-        </div>
-      </div>
-      <div class="panel panel-guninfiveminutes" id="guninfiveminutes">
-        <div class="tile py-air flex-col md:items-center lg:items-start">
-          <div class="px-6 lg:px-0 lg:w-box lg:mx-auto">
-            <div class="md:w-8/12 md:mx-auto lg:mx-0">
-              <h2 class="mb-0">GUN in 5 minutes</h2>
-              <div class="font-mono mb-8 text-sm">(click the boxes to copy the text)</div>
-              <ol>
-                <li>
-                  <p><strong>Add the GUN library. </strong>GUN runs in <a href="/docs/Installation#browser"
-                      target="_blank" rel="noopener noreferrer">browsers</a>, in <a href="/docs/Installation#node"
-                      target="_blank" rel="noopener noreferrer">Node.js</a>, <a href="/docs/Installation"
-                      target="_blank" rel="noopener noreferrer">Elec&shy;tron</a>, and even <a href="/docs/React-Native"
-                      target="_blank" rel="noopener noreferrer">Re&shy;act
-                      Na&shy;tive</a>. In&shy;stall it from <a href="https://www.npmjs.com/package/gun" target="_blank"
-                      rel="noopener noreferrer">npm</a>, use a <a href="https://www.jsdelivr.com/package/npm/gun"
-                      target="_blank" rel="noopener noreferrer">CDN</a>, or <a
-                      href="https://github.com/amark/gun/releases" target="_blank"
-                      rel="noopener noreferrer">down&shy;load it here</a>.</p>
-                  <div class="panel panel-small panel-code mt-4">
-                    <div class="tile code cursor-pointer">
-                      <div class="buttons"><button class="text-gray-500" aria-label="copy code to clipboard"><svg
-                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
-                            class="svg-inline--fa fa-copy fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                              d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z">
-                            </path>
-                          </svg></button></div>
-                      <pre>&lt;!-- To get going, add GUN to your website from a CDN --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/gun/gun.js"&gt;&lt;/script&gt;</pre>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <p><strong>Play around with your data. </strong>GUN's <a href="/docs/API" target="_blank"
-                      rel="noopener noreferrer">core API</a> is de&shy;lib&shy;er&shy;ate&shy;ly small
-                    but pow&shy;er&shy;ful. For more, check out GUN's many <a href="/docs/API#-extended-api-"
-                      target="_blank" rel="noopener noreferrer">use&shy;ful ex&shy;ten&shy;sions</a> or ex&shy;plore its
-                    <a href="https://github.com/amark/gun/wiki/Awesome-GUN" target="_blank"
-                      rel="noopener noreferrer">wider ecosys&shy;tem</a></p>
-                  <p>As an ex&shy;am&shy;&shy;ple, run the fol&shy;low&shy;ing snip&shy;pets in the con&shy;&shy;soles
-                    of two sep&shy;a&shy;rate tabs or browsers:</p>
-                  <div class="panel panel-small panel-code mt-4">
-                    <div class="tile code cursor-pointer">
-                      <div class="buttons"><button class="text-gray-500" aria-label="copy code to clipboard"><svg
-                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
-                            class="svg-inline--fa fa-copy fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                              d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z">
-                            </path>
-                          </svg></button></div><svg class="dots" height="7" viewBox="0 0 45 11">
-                        <circle cx="5.5" cy="5.5" r="5.5" fill="#0019FF"></circle>
-                        <circle cx="22.5" cy="5.5" r="5.5" fill="#F600A4"></circle>
-                        <circle cx="39.5" cy="5.5" r="5.5" fill="#FFB706"></circle>
-                      </svg>
-                      <pre>// Connect to as many peers as you want
-const gun = Gun({ peers: ['http://localhost:8765/gun', 'http://gunjs.herokuapp.com/gun'] })
-
-// Then make the browser regularly update the db
-setInterval(() =&gt; {
-gun.get('bob').get('heartbeat').put(Date.now())
-}, 1000)</pre>
-                    </div>
-                  </div>
-                  <div class="panel panel-small panel-code mt-2">
-                    <div class="tile code cursor-pointer">
-                      <div class="buttons"><button class="text-gray-500" aria-label="copy code to clipboard"><svg
-                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
-                            class="svg-inline--fa fa-copy fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                              d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z">
-                            </path>
-                          </svg></button></div><svg class="dots" height="7" viewBox="0 0 45 11">
-                        <circle cx="5.5" cy="5.5" r="5.5" fill="#0019FF"></circle>
-                        <circle cx="22.5" cy="5.5" r="5.5" fill="#F600A4"></circle>
-                        <circle cx="39.5" cy="5.5" r="5.5" fill="#FFB706"></circle>
-                      </svg>
-                      <pre>// Browsers will discover each other automatically through one of the many peers
-const gun = Gun({ peers: ['http://localhost:8765/gun', 'http://gunjs.herokuapp.com/gun'] })
-
-// And listen to the heartbeat updates in real-time
-gun.get('bob').get('heartbeat').on(heartbeat =&gt; {
-const diff = Date.now() - heartbeat
-console.log(`Bob's heartbeat traveled ${diff} ms`)
-})</pre>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <p><strong>Run a GUN relay. </strong>(op&shy;tion&shy;al) A re&shy;lay can run on your lap&shy;top
-                    or in the cloud, they are used as fall&shy;backs when We&shy;bRTC fails. You can de&shy;ploy one
-                    to <a href="https://heroku.com/deploy?template=https://github.com/amark/gun" target="_blank"
-                      rel="noopener noreferrer">heroku</a>, spin it up in <a href="https://hub.docker.com/r/gundb/gun"
-                      target="_blank" rel="noopener noreferrer">dock&shy;er</a>, use the <a
-                      href="/docs/Installation#server" target="_blank" rel="noopener noreferrer">node.js
-                      API di&shy;rect&shy;ly</a>, or start one with <a href="https://github.com/skiqh/gun-cli"
-                      target="_blank" rel="noopener noreferrer">GUN's cli</a>
-                    like this:</p>
-                  <div class="panel panel-small panel-code mt-4">
-                    <div class="tile code cursor-pointer">
-                      <div class="buttons"><button class="text-gray-500" aria-label="copy code to clipboard"><svg
-                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
-                            class="svg-inline--fa fa-copy fa-w-14 " role="img" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                              d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z">
-                            </path>
-                          </svg></button></div>
-                      <pre>#  Assuming you have node.js and npm installed, run this in your command line
-npx gun-cli --host 127.0.0.1</pre>
-                    </div>
-                  </div>
-                </li>
-              </ol>
-              <h2>Nice, right?</h2>
-              <p>But we've bare&shy;ly scratched the sur&shy;face. Start the tu&shy;to&shy;r&shy;i&shy;al or check out
-                the doc&shy;u&shy;men&shy;ta&shy;tion to see what else you can do with GUN!</p>
-              <div class="links"><a href="/docs/" target="_blank" rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Jump straight to GUN's Documentation</a><a href="/docs/Todo-Dapp" target="_blank"
-                  rel="noopener noreferrer"><span class="hp-rarr svg-inline--fa"></span>Tutorial: Create a distributed multi-user todo app</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="footer community-links">
-          <div class="inner lg:w-box lg:mx-auto px-6 lg:px-0"><span class="pr-16 hidden md:block footerlead">Join
-              us!</span><a href="https://twitter.com/marknadal" target="_blank" rel="noopener noreferrer" class="item">
-              <div class="text-sm"><svg version="1.1" id="svg3626" viewBox="0 0 300.00006 244.18703"
-                  class="fill-current inline-icon">
-                  <path transform="translate(-539.17946,-568.85777)"
-                    d="m 633.89823,812.04479 c 112.46038,0 173.95627,-93.16765 173.95627,-173.95625 0,-2.64628 -0.0539,-5.28062 -0.1726,-7.90305 11.93799,-8.63016 22.31446,-19.39999 30.49762,-31.65984 -10.95459,4.86937 -22.74358,8.14741 -35.11071,9.62551 12.62341,-7.56929 22.31446,-19.54304 26.88583,-33.81739 -11.81284,7.00307 -24.89517,12.09297 -38.82383,14.84055 -11.15723,-11.88436 -27.04079,-19.31655 -44.62892,-19.31655 -33.76374,0 -61.14426,27.38052 -61.14426,61.13233 0,4.79784 0.5364,9.46458 1.58538,13.94057 -50.81546,-2.55686 -95.87353,-26.88582 -126.02546,-63.87991 -5.25082,9.03545 -8.27852,19.53111 -8.27852,30.73006 0,21.21186 10.79366,39.93837 27.20766,50.89296 -10.03077,-0.30992 -19.45363,-3.06348 -27.69044,-7.64676 -0.009,0.25652 -0.009,0.50661 -0.009,0.78077 0,29.60957 21.07478,54.3319 49.0513,59.93435 -5.13757,1.40062 -10.54335,2.15158 -16.12196,2.15158 -3.93364,0 -7.76596,-0.38716 -11.49099,-1.1026 7.78383,24.2932 30.35457,41.97073 57.11525,42.46543 -20.92578,16.40207 -47.28712,26.17062 -75.93712,26.17062 -4.92898,0 -9.79834,-0.28036 -14.58427,-0.84634 27.05868,17.34379 59.18936,27.46396 93.72193,27.46396"
-                    style="fill-opacity: 1; fill-rule: nonzero; stroke: none;"></path>
-                </svg></div><span class="hidden sm:w-3/12 text-xxs sm:block lg:text-xs">Follow GUN on Twitter</span>
-            </a><a href="https://github.com/amark/gun" target="_blank" rel="noopener noreferrer" class="item">
-              <div class="text-sm"><svg class="fill-current inline-icon" viewBox="0 0 38 37">
-                  <path transform="translate(-452.000000, -4786.000000)"
-                    d="M470.627178,4786.08054 C460.340392,4786.08054 452,4794.37651 452,4804.6085 C452,4812.79591 457.336686,4819.73937 464.739098,4822.18879 C465.670238,4822.35844 466.010184,4821.78621 466.010184,4821.29768 C466.010184,4820.85662 465.993122,4819.39559 465.984026,4817.84858 C460.804252,4818.96811 459.709396,4815.66376 459.709396,4815.66376 C458.861277,4813.52418 457.641343,4812.95423 457.641343,4812.95423 C455.948489,4811.80528 457.769768,4811.8279 457.769768,4811.8279 C459.639981,4811.9568 460.624602,4813.73678 460.624602,4813.73678 C462.286786,4816.56845 464.985799,4815.74971 466.045401,4815.27475 C466.214719,4814.08056 466.69677,4813.26182 467.227791,4812.80043 C463.092848,4812.33228 458.743038,4810.74227 458.743038,4803.64273 C458.743038,4801.61848 459.469535,4799.96746 460.658727,4798.67036 C460.468854,4798.19993 459.827635,4796.31478 460.842889,4793.76472 C460.842889,4793.76472 462.405025,4793.26714 465.965799,4795.66456 C467.450589,4795.25181 469.043431,4795.04825 470.627141,4795.04145 C472.209724,4795.04825 473.803657,4795.25405 475.290775,4795.6668 C478.844783,4793.26714 480.409175,4793.76696 480.409175,4793.76696 C481.427848,4796.3193 480.78663,4798.20217 480.595628,4798.67036 C481.789368,4799.96746 482.510189,4801.61852 482.510189,4803.64273 C482.510189,4810.76037 478.15354,4812.32772 474.003827,4812.78686 C474.674623,4813.36134 475.268074,4814.48767 475.268074,4816.21562 C475.268074,4818.69222 475.243043,4820.68929 475.243043,4821.29996 C475.243043,4821.79301 475.581825,4822.36973 476.525481,4822.18879 C483.922253,4819.73485 489.254355,4812.79139 489.254355,4804.6085 C489.254355,4794.37651 480.913964,4786.08054 470.627178,4786.08054 Z">
-                  </path>
-                </svg></div><span class="hidden sm:w-3/12 text-xxs sm:block lg:text-xs">Star GUN on Github</span>
-            </a><a href="http://chat.gun.eco/" target="_blank" rel="noopener noreferrer" class="item">
-              <div class="text-sm"><svg width="45.341" height="32.395" viewBox="0 0 45.341 32.395"
-                  class="fill-current inline-icon">
-                  <path transform="translate(738.13 5433.951)"
-                    d="M-726.272-5401.557h0a15.749,15.749,0,0,1-9.148-3.048,11.23,11.23,0,0,1-2.71-2.834,50,50,0,0,1,2.8-15.9,45.473,45.473,0,0,1,2.8-6.581,19.478,19.478,0,0,1,10.831-4.031h.03l.379.475c-6.739,1.925-10.016,4.9-10.145,5.023l.023-.013c.367-.2,1.148-.6,2.249-1.075a31.115,31.115,0,0,1,8.748-2.456l.074-.01a2.876,2.876,0,0,0,.33-.024,3.036,3.036,0,0,1,.334-.024,30.54,30.54,0,0,1,4.228-.282,36.047,36.047,0,0,1,3.644.188,32.663,32.663,0,0,1,11.715,3.7c-.028-.026-3.194-2.926-9.675-4.885l.521-.616h.031a19.367,19.367,0,0,1,10.83,4.031,45.27,45.27,0,0,1,2.8,6.581,50,50,0,0,1,2.8,15.9.317.317,0,0,0-.032.045,11.884,11.884,0,0,1-2.992,2.992,15.84,15.84,0,0,1-8.833,2.8l-.011-.013c-.247-.289-1.529-1.8-2.55-3.117,5.056-1.4,7.047-4.522,7.067-4.554a22.226,22.226,0,0,1-4.458,2.276,27.087,27.087,0,0,1-5.645,1.661,26.282,26.282,0,0,1-4.885.46,26.875,26.875,0,0,1-5.17-.508,28.336,28.336,0,0,1-5.691-1.66,18.775,18.775,0,0,1-2.845-1.329.47.47,0,0,0-.165-.095.476.476,0,0,1-.167-.095.3.3,0,0,1-.088-.065c-.018-.018-.03-.03-.054-.03-.747-.374-1.183-.615-1.186-.617a12.146,12.146,0,0,0,6.783,4.554c-1.064,1.374-2.407,2.993-2.557,3.172l0,0Zm17.737-20.585a4.089,4.089,0,0,0-3.984,4.269,4.138,4.138,0,0,0,3.984,4.269,4.089,4.089,0,0,0,3.984-4.269A4.138,4.138,0,0,0-708.535-5422.142Zm-14.18,0a4.089,4.089,0,0,0-3.984,4.269,4.138,4.138,0,0,0,3.984,4.269,4.089,4.089,0,0,0,3.984-4.269,4.244,4.244,0,0,0-1.2-3.087A3.874,3.874,0,0,0-722.716-5422.142Z"
-                    fill="#2e2e2e"></path>
-                </svg></div><span class="hidden sm:w-3/12 text-xxs sm:block lg:text-xs">Join our Discord</span>
-            </a></div>
-        </div>
-      </div>
-      <div class="lg:w-box lg:mx-auto px-6 lg:px-0 h-16"></div>
-      <div class="panel panel-pink" id="panel-links">
-        <div class="tile py-air">
-          <div class="flex flex-col md:flex-row items-start justify-between lg:w-box lg:mx-auto px-6 lg:px-0">
-            <div class="item mb-6 md:mb-0">
-              <h2 class="mb-1 md:mb-4 text-sm md:text-lg lg:text-xl">Concepts</h2>
-              <ul class="font-mono text-dark md:text-xs lg:text-sm">
-                <li><a href="/docs/Hypothetical-Amnesia-Machine" target="_blank" rel="noopener noreferrer">HAM —
-                    Conflict resolution</a></li>
-                <li><a href="/docs/SEA" target="_blank" rel="noopener noreferrer">SEA — Security &amp;
-                    encryption</a></li>
-                <li><a href="/docs/RAD" target="_blank" rel="noopener noreferrer">RAD — Storage data
-                    structure</a></li>
-                <li><a href="/docs/DAM" target="_blank" rel="noopener noreferrer">DAM — Mesh
-                    netwoking</a></li>
-                <li><a href="/docs/AXE" target="_blank" rel="noopener noreferrer">AXE — Incentivised
-                    transfer</a></li>
-                <li><a href="/docs/DHT" target="_blank" rel="noopener noreferrer">DHT — Finding
-                    content</a></li>
-                <li><a href="/docs/CAP-Theorem" target="_blank" rel="noopener noreferrer">CAP —
-                    Database tradeoffs</a></li>
-                <li><a href="https://github.com/amark/gun/wiki/DAP-Theorem" target="_blank"
-                    rel="noopener noreferrer">DAP — Distributed system limits</a></li>
-              </ul>
-            </div>
-            <div class="item mb-6 md:mb-0">
-              <h2 class="mb-1 md:mb-4 text-sm md:text-lg lg:text-xl">Links</h2>
-              <ul class="font-mono text-dark md:text-xs lg:text-sm">
-                <li><a href="/docs/FAQ" target="_blank" rel="noopener noreferrer">FAQ</a></li>
-                <li><a href="https://gun.eco/docs" target="_blank" rel="noopener noreferrer">Docs</a></li>
-                <li><a href="https://github.com/amark/gun" target="_blank" rel="noopener noreferrer">Github</a></li>
-                <li><a href="https://github.com/amark/gun/issues" target="_blank" rel="noopener noreferrer">Issues</a>
-                </li>
-                <li><a href="https://twitter.com/databasegun" target="_blank" rel="noopener noreferrer">Twitter</a>
-                </li>
-                <li><a href="http://chat.gun.eco/" target="_blank" rel="noopener noreferrer">Discord</a></li>
-                <li><a href="https://www.youtube.com/channel/UCQAtpf-zi9Pp4__2nToOM8g" target="_blank"
-                    rel="noopener noreferrer">Youtube</a></li>
-              </ul>
-            </div>
-            <div class="item mb-6 md:mb-0">
-              <h2 class="mb-1 md:mb-4 text-sm md:text-lg lg:text-xl">Explainer Videos</h2>
-              <ul class="font-mono text-dark md:text-xs lg:text-sm">
-                <li><a href="https://www.youtube.com/watch?v=UBnkhpcLQuM" target="_blank"
-                    rel="noopener noreferrer">Chronological ordering</a></li>
-                <li><a href="https://www.youtube.com/watch?v=jXni0KDQNsc" target="_blank"
-                    rel="noopener noreferrer">Proof of work</a></li>
-                <li><a href="https://www.youtube.com/watch?v=tg06mdcGs5k" target="_blank"
-                    rel="noopener noreferrer">Digital signature</a></li>
-                <li><a href="https://www.youtube.com/watch?v=ccKThyaDR30" target="_blank" rel="noopener noreferrer">Data
-                    security</a></li>
-                <li><a href="https://www.youtube.com/watch?v=_RDC37hrTo8" target="_blank"
-                    rel="noopener noreferrer">Crypto</a></li>
-                <li><a href="https://www.youtube.com/channel/UCQAtpf-zi9Pp4__2nToOM8g" target="_blank"
-                    rel="noopener noreferrer">more ...</a></li>
-              </ul>
-            </div>
-            <div class="item ">
-              <h2 class="mb-1 sm:mb-4 text-sm md:text-lg lg:text-xl">Technical Videos</h2>
-              <ul class="font-mono text-dark md:text-xs lg:text-sm">
-                <li><a href="https://www.youtube.com/watch?v=neqz5t4FSJI" target="_blank"
-                    rel="noopener noreferrer">Conflict resolution algorithm</a></li>
-                <li><a href="https://www.youtube.com/watch?v=ik_dqXBMBHw" target="_blank" rel="noopener noreferrer">User
-                    accounts with SEA</a></li>
-                <li><a href="https://www.youtube.com/watch?v=fG9Xjt3mZ5U&amp;t=11s" target="_blank"
-                    rel="noopener noreferrer">Implementing lists in GUN</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer">
-          <div class="inner lg:w-box lg:mx-auto px-6 lg:px-0">
-            <div class="footericon text-4xl"><svg aria-hidden="true" focusable="false" data-prefix="fas"
-                data-icon="heart" class="svg-inline--fa fa-heart fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
-                </path>
-              </svg></div>
-            <div class="text-xs ml-4">Made with love by the ERA team, and many very awesome contributors.
-              <br>Liberally licensed under Zlib or MIT or Apache 2.0
-            </div>
-            <div class="flex-grow"></div>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-box lg:mx-auto px-6 lg:px-0 h-16"></div>
-    </main>
+  <div class="row"><p class="shout above rgb glitch" style="max-width: 8em;"><b>Get ready to disrupt Big Tech</b></p></div>
+  <div class="row center" style="margin-bottom: 7%;">
+    <div class="unit see crack"><embed class="rgb" style="height: 18em;"
+      src="https://www.youtube.com/embed/ZF7a5oj77-U?autohide=0&autoplay=1&modestbranding=1&norel=1"
+      wmode="transparent"
+      type="video/mp4"
+      width="100%"
+      allow="encrypted-media; picture-in-picture"
+      allowfullscreen
+    ></div>
+    <div class="unit">
+      <p class="left just">&emsp;GUN gives you the most powerful digital weapons on the internet: <a href="https://gun.eco/docs/Cartoon-Cryptography" class="ru">encryption</a> for privacy, and independence through <a href="https://gun.eco/distributed/matters.html" class="gu">decentralization</a>. There are now enough phones on the planet to power all of Facebook by the people, for the people, and of the people. So why don't we?
+    </div>
   </div>
+
+  <div class="row center" style="margin-bottom: 7%;">
+    <div class="unit col left" style="margin-top: -2.5%; /* v-align not work :( */">
+      <p class="shout above rgb glitch" style="max-width: 5.5em;"><b>60+ million monthly downloads</b></p>
+    </div>
+    <div class="unit col" style="width: 100%;"><embed class="rgb" style="height: 8.5em;"
+      src="https://www.youtube.com/embed/oTQXzhm8w_8?autohide=0&autoplay=1&modestbranding=1&norel=1"
+      wmode="transparent"
+      type="video/mp4"
+      width="100%"
+      allow="encrypted-media; picture-in-picture"
+      allowfullscreen
+    ></div>
+    <div class="unit">
+      <p class="left just" style="padding-top: 1%;">&emsp;Learn why GUN is so neon hot with developers: It's the Pied Piper, Open Source Firebase, Decentralized Dropbox! Backed by FireFox's <a href="https://builders.mozilla.community/who-we-fund.html" class="bu">Mozilla</a>, <a href="https://techcrunch.com/2018/05/23/gun-raises-more-than-1-5m-for-its-decentralized-database-system/" class="ru">Billionaires</a>, and <a href="https://github.com/amark/gun#support" class="gu"><i>the people</i></a>. We're building the future.</p>
+    </div>
+  </div>
+
+  <div class="row center" style="margin-bottom: 7%;">
+    <div class="center row">
+      <p class="loud rgb glitching" style="padding: 0 1em;">the protocol for freedom fighters</p>
+      <span class="loud rgb" style="animation: 3s 0.5s infinite glitch;">&rarr;</span><a href="https://chat.gun.eco"><button class="rgb glitch" style="margin-bottom: 0.5em;">JOIN THE COMMUNITY</button></a>
+      <p class="loud rgb">Values first. Family first. <i>Monopoly never.</i></p>
+    </div>
+  </div>
+
+  <div class="row center left">
+    <div class="unit col" style="width: 100%;">
+      <style>
+        .behold { font-size: 16px; }
+        .behold .rgb { filter: none; }
+        .behold .grid { display: inline-block; }
+        .behold .screen { position: relative; overflow: hidden;}
+        .behold .behold {
+          padding:0;
+          text-align: center;
+        }
+        .behold .sync { display: block; width: 1em; height: 1em; }
+        .behold .sync::before {
+          position: absolute;
+          transform: rotate(0.5turn);
+          top: -0.2em;
+          left: 0;
+          content: '\02938';
+        }
+        .behold .sync::after {
+          position: absolute;
+          top: -0.3em;
+          left: 0.5em;
+          content: '\02938';
+        }
+        .rotate {
+          opacity: 0;
+          animation: linear infinite;
+          animation-name: rotate, rshow;
+          animation-duration: 3s, 9s;
+        }
+        @keyframes rotate {
+          0% { transform:  rotate(0turn); }
+          100% { transform:  rotate(1turn); }
+        }
+        @keyframes rshow {
+          20% { opacity: 0; }
+          25% { opacity: 1; }
+          90% { opacity: 1; }
+          95% { opacity: 0; }
+        }
+        .rgbs {
+          box-shadow: -1px 1px 4px rgba(255,0,0,1),
+            -1px 0px 4px rgba(0,255,0,1),
+            1px -1px 4px rgba(0,0,255,1)
+            ;
+        }
+      </style>
+      <div class="behold">
+      <div class="graphic grid" style="min-width: 250px; max-width: 600px; height: 250px; position: relative; margin:0 auto; padding:0;">
+
+        <div class="desktop rgb glitch" style="height: 10em; width: 17em; position: absolute; top: 10%; left: 3%;">
+          <div class="monitor rgbs" style="height: 100%; width: 100%; background: white; padding: .35em; border-radius: 0.5em;">
+            <div class="screen rgb" style="height: 100%; width: 100%;">
+              <div class="mouse" style="top: 87%; left: 110%; width: 16px; position: absolute; color: white;">&#x27a4;</div>
+              <style>
+              .graphic .screen {
+                background: black;
+                animation: 9s infinite screen;
+              }
+              @keyframes screen {
+                20% { background: black; }
+                23% { background: red; }
+                
+                40% { background: red; }
+                43% { background: lime; }
+                
+                60% { background: lime; }
+                63% { background: blue; }
+                
+                80% { background: blue; }
+                83% { background: black; }
+              }
+              .mouse {
+                transform: translate(0%, 0%) scale(1) rotate(-0.32turn);
+                animation: 9s infinite mouse;
+              }
+              @keyframes mouse {
+                18% { transform:  translate(-1000%, -250%) scale(1) rotate(-0.32turn) }
+
+                19%, 39%, 59%, 79% { transform:  translate(-1000%, -250%) scale(1) rotate(-0.32turn) }
+                20%, 40%, 60%, 80% { transform:  translate(-1000%, -250%) scale(0.5) rotate(-0.32turn) }
+                21%, 41%, 61%, 81% { transform:  translate(-1000%, -250%) scale(1) rotate(-0.32turn) }
+              }
+              </style>
+            </div>
+          </div>
+          <div class="stand" style="margin: 1px auto 0px;
+            border-bottom: 2.75em solid white;
+            border-left: .5em solid transparent;
+            border-right: .5em solid transparent;
+            height: 0;
+            width: 3.2em;">
+          </div>
+          <div class="stand rgbs" style="width: 6em; height: .5em; background: white; margin: 0px auto"></div>
+        </div>
+
+        <div class="laptop rgb glitch" style="height: 7em; width: 12em; position: absolute; top: 47%; left: 49%;">
+          <div class="lid rgbs" style="height: 100%; width: 100%; background: white; padding: .5em; border-radius: .5em .5em 0em 0em;">
+            <div class="screen rgb" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+          <div class="case rgbs" style="height: .5em; width: 140%; margin-left: -20%; background: white; border-radius: 0em 0em 5em 5em;">
+          </div>
+        </div>
+
+        <div class="phone rgb glitch" style="height: 3.75em; width: 2.1em; position: absolute; top: 13%; left: 67%;">
+          <div class="case rgbs" style="height: 100%; width: 100%; background: white; padding: .2em .05em; margin-left: -.1em; border-radius: 0.25em;">
+            <div class="screen" style="height: 100%; width: 100%; border-radius: 0.25em;">
+            </div>
+          </div>
+        </div>
+        
+        <div style="font-size: 40pt; position: absolute; transform: translate(550%, 0%);"><div class="sync rotate"></div></div>
+        </style>
+
+        <span style="color: transparent">The decentralized distributed graph database engine. GunDB is the Open Source Firebase alternative, a web3 data protocol.</span>
+      </div>
+      </div>
+    </div>
+
+    <div class="how unit col">
+      <style>.how p { margin-top: 0; padding-top: 1%; }</style>
+      <p class="shout crack above rgb glitch"><b>How it works</b></p>
+      <p class="rgb">(1) Sync directly between your devices & friends.</p>
+      <p class="rgb">(2) Reclaim ownership and control of your data.</p>
+      <p class="rgb">(3) Experience a web that is truly free and open.</p>
+    </div>
+  </div>
+  <!-- END WHY SECTION -->
+</div>
+
+  <div class="scan row center">
+    <style>
+      .scan {
+        height: 0.1em;
+        background:linear-gradient(to right, red 0, red 33%, lime 33%, lime 66%, blue 66%, blue 100%);
+      }
+    </style>
+  </div>
+  <div class="row hold center white">
+    <a href="mailto:invest@gun.eco" style="color: black;"><p class="gap center"><span style="color:  red;">&rarr;</span> Sign up for the <span style="color:  green;">$9/month</span> investor newsletter. <span style="color:  blue;">&larr;</span></p></a>
+  </div>
+  <div class="scan row center"></div>
+
+  <div class="wow row center pad">
+    <style>.wow .col { padding: 1em; }</style>
+    <div class="col unit left">
+      <p class="shout crack above rgb glitch" style="max-width: 6em;"><b>Build apps you love</b></p>
+      <p class="justify">GUN is an ecosystem of modular tools. Graphs take you beyond just <a href="https://gun.eco/docs/Content-Addressing" class="ru">immutable hashes</a>, they let you do <a href="https://github.com/amark/gun" class="gu">realtime multiplayer</a> updates on any type of data. <a href="https://gun.eco/docs/SEA" class="bu">SEA</a> gives you the best local-first secure user accounts, but with normal logins and even p2p password resets using <a href="https://twitter.com/marknadal/status/1427715775838572545" class="ru">3FA</a>!</p>
+    </div>
+    <div class="col unit left">
+      <p class="shout crack above rgb glitch" style="max-width: 6em;"><b>70%+ cost savings</b></p>
+      <p class="justify"><a href="https://gun.eco/docs/AXE" class="ru">AXE</a> will let you deploy without clouds to a decentralized edge CDN for your JAMstack apps. It runs everywhere, even via browsers with WebRTC, using the simple yet powerful <a href="https://gun.eco/distributed/matters.html" class="gu">HAM</a> "CRDT" conflict resolution algorithm. Meanwhile, <a href="https://gun.eco/docs/DAM" class="bu">DAM</a> let's you do offline mesh networking and <a href="https://gun.eco/docs/RAD" class="ru">RAD</a> stores your data.</p>
+    </div>
+  </div>
+
+  <div class="row center" style="">
+    <div class="center row">
+      <a href="https://github.com/amark/gun"><button class="rgb glitch" style="margin-bottom: 0.5em;">GET THE CODE</button></a>
+    </div>
+  </div>
+
+  <div class="row hold center">
+    <div class="pad">
+      <div class="left">
+        <p class="loud">For <i>You</i>,</p>
+        <p>Crafted with love, <span class="redt">♥</span> by the <a href="http://era.eco">ERA</a> team and many awesome contributors. Licensed under ZLIB, MIT, or Apache 2.0</p>
+      </div>
+    </div>
+    <div>
+      <img src="https://era.eco/media/world.png" class="row rgb glitch">
+    </div>
+  </div>
+
+</div>
 </section>
 </body>
 
