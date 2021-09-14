@@ -1,41 +1,33 @@
 <div class="homepage">
+
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gun/examples/style.css">
-  <!-- link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gun/examples/style.css" -->
-
-
+  
   <style>
     /*
       Choose white text on a black background so you can add color in.
       Pick your favorite font and choose a font size.
     */
     @import url('https://fonts.googleapis.com/css?family=Raleway|Oxygen');
-
     .homepage {
       font-family: "Raleway", sans-serif;
-      color: white;
+      color:  white;
     }
-
+  
     .homepage a {
       background: transparent;
     }
-
     .homepage .icon {
       height: 1.5em;
     }
-
     .homepage .fade {
       opacity: 0.75;
       transition: all 0.3s;
     }
-
     .homepage .fade:hover {
       opacity: 1;
     }
-
-    body {
-      background: black;
-    }
-
+    body { background: black; }
+  
     .homepage button {
       font-size: 100%;
       padding: 1em;
@@ -45,159 +37,118 @@
       margin: 0.5em;
       margin-bottom: 0;
       cursor: pointer;
-      color: white;
+      color:  white;
     }
-
     .homepage button:hover {
       background: white;
       color: black;
     }
-
-    /*.rgb {
+  
+  /*.rgb {
     filter:
       drop-shadow(-1px 1px 1px rgba(255,0,0,1))
       drop-shadow(-1px 0px 2px rgba(0,255,0,1))
       drop-shadow(1px 1px 1px rgba(0,0,255,1))
       ;
   }*/
-
-    .rgb {
-      --s: 1;
-      --rx: calc(var(--s) * -1px);
-      --ry: calc(var(--s) * 1px);
-      --bx: calc(var(--s) * 1px);
-      --by: calc(var(--s) * -1px);
-      --gx: calc(var(--s) * 0px);
-      --gy: calc(var(--s) * 0px);
-      --gb: 2px;
-      --a: 1;
-      --wasx: 0px;
-      --wasy: 0px;
-      filter:
-        drop-shadow(var(--rx) var(--ry) 1px rgba(255, 0, 0, var(--a))) drop-shadow(var(--gx) var(--gy) var(--gb) rgba(0, 255, 0, var(--a))) drop-shadow(var(--bx) var(--by) 1px rgba(0, 0, 255, var(--a)));
-    }
-
-    img.rgb {
-      --rx: -3px;
-      --ry: 2px;
-      --bx: 3px;
-      --by: 0px;
-      --gb: 1px;
-      --a: 1;
-      --wasx: 0px;
-      --wasy: 0px;
-      filter: drop-shadow(var(--rx) var(--ry) 1px red) drop-shadow(0px -3px var(--gb) green) drop-shadow(1px 2px var(--gb) green) drop-shadow(var(--bx) var(--by) 1px blue);
-    }
-
-    .glitch:hover {
-      animation: 3s 0.1s infinite glitch;
-    }
-
-    .glitching {
-      animation: 3s 0.1s infinite glitch;
-    }
-
-    @keyframes glitch {
-      0% {
-        --a: 0.5;
-        /*opacity: 1;
+  
+  .rgb {
+    --s: 1;
+    --rx: calc(var(--s) * -1px);
+    --ry: calc(var(--s) *  1px);
+    --bx: calc(var(--s) *  1px);
+    --by: calc(var(--s) * -1px);
+    --gx: calc(var(--s) *  0px);
+    --gy: calc(var(--s) *  0px);
+    --gb: 2px;
+    --a: 1;
+    --wasx: 0px;
+    --wasy: 0px;
+    filter:
+      drop-shadow(var(--rx) var(--ry) 1px rgba(255,0,0,var(--a)))
+      drop-shadow(var(--gx) var(--gy) var(--gb) rgba(0,255,0,var(--a)))
+      drop-shadow(var(--bx) var(--by) 1px rgba(0,0,255,var(--a)))
+      ;
+  }
+  img.rgb {
+    --rx: -3px;
+    --ry: 2px;
+    --bx: 3px;
+    --by: 0px;
+    --gb: 1px;
+    --a:  1;
+    --wasx: 0px;
+    --wasy: 0px;
+    filter: drop-shadow(var(--rx) var(--ry) 1px red)
+      drop-shadow(0px -3px var(--gb) green)
+      drop-shadow(1px 2px var(--gb) green)
+      drop-shadow(var(--bx) var(--by) 1px blue);
+  }
+  .glitch:hover {
+    animation: 3s 0.1s infinite glitch;
+  }
+  .glitching {
+    animation: 3s 0.1s infinite glitch;
+  }
+  @keyframes glitch {
+    0% {
+      --a: 0.5;
+      /*opacity: 1;
       transform:  translate(0,0);
       --rx: var(--px1); --ry: calc(var(--px2) / 3);
       --bx: var(--px3); --by: calc(var(--px4) / 3);
       --gb: var(--px5);*/
-      }
-
-      9% {
-        opacity: 1;
-      }
-
-      10% {
-        opacity: 0;
-        transform: translate(0, 0);
-      }
-
-      11% {
-        opacity: 0;
-        --wasx: calc(var(--per6) / 10);
-        --wasy: calc(var(--per7) / 10);
-        transform: translate(var(--wasx), var(--wasy));
-      }
-
-      13% {
-        opacity: 0;
-      }
-
-      14% {
-        opacity: 1;
-      }
-
-      40% {
-        transform: translate(var(--wasx), var(--wasy));
-        --rx: calc(var(--px5) * 1.5);
-        --ry: calc(var(--px4) / 3);
-        --bx: calc(var(--px3) * 1.5);
-        --by: calc(var(--px2) / 3);
-        --gb: var(--px1);
-      }
-
-      41% {
-        transform: translate(0, 0);
-      }
-
-      60%,
-      70%,
-      80%,
-      90% {
-        --rx: var(--px8);
-        --ry: calc(var(--px6) / 3);
-        --bx: var(--px7);
-        --by: calc(var(--px1) / 3);
-        --gb: var(--px9);
-      }
     }
-
-    #hi p+p {
-      margin-top: 0;
+    9% { opacity:  1; }
+    10% { opacity: 0; transform: translate(0,0); }
+    11% {
+      opacity: 0;
+      --wasx: calc(var(--per6) / 10);
+      --wasy: calc(var(--per7) / 10);
+      transform: translate(var(--wasx), var(--wasy));
     }
+    13% { opacity: 0; }
+    14% { opacity: 1; }
+    40% {
+      transform: translate(var(--wasx), var(--wasy));
+      --rx: calc(var(--px5) * 1.5 ); --ry: calc(var(--px4) / 3);
+      --bx: calc(var(--px3) * 1.5 ); --by: calc(var(--px2) / 3);
+      --gb: var(--px1);
+    }
+    41% { transform: translate(0,0); }
+    60%, 70%, 80%, 90% {
+      --rx: var(--px8); --ry: calc(var(--px6) / 3);
+      --bx: var(--px7); --by: calc(var(--px1) / 3);
+      --gb: var(--px9);
+    }
+  }
+  
+  #hi p+p { margin-top: 0; }
   </style>
   <script>
-    ; (function () {
-      (function rando(i) {
-        setTimeout(rando, Math.random() * 100);
-        i = 10; while (--i) {
-          var r = Math.round((Math.random() - Math.random()) * 100);
-          document.documentElement.style.setProperty('--px' + i, r + 'px');
-        }
-      }());
-      (function rando(i) {
-        setTimeout(rando, Math.random() * 500);
-        i = 10; while (--i) {
-          var r = Math.round((Math.random() - Math.random()) * 100);
-          document.documentElement.style.setProperty('--per' + i, r + '%');
-        }
-      }());
-
-    }());
+  ;(function(){ // RANDOMIZE CSS GLITCH EFFECT SINCE CSS DOES NOT SUPPORT RANDOM VARIABLES
+    (function rando(i){ setTimeout(rando, Math.random() * 100);
+      console.log("randomize test");
+      i = 10; while(--i){ var r = Math.round((Math.random() - Math.random())*100);
+      document.documentElement.style.setProperty('--px'+i, r+'px');
+    }}());
+    (function rando(i){ setTimeout(rando, Math.random() * 500);
+      i = 10; while(--i){ var r = Math.round((Math.random() - Math.random())*100);
+      document.documentElement.style.setProperty('--per'+i, r+'%');
+    }}());
+  
+  }());
   </script>
-
-  <!-- div class="cyber">
-  <div class="cyberR"></div>
-  <div class="cyberG"></div>
-  <div class="cyberB"></div>
-  </div -->
-
+  
   <!-- for educational sites, consider starting with a nice full screen welcome message -->
   <div id="hi" class="row hold center full">
     <div class="row">
-      <a href="https://era.eco" class="left gap fade"><img src="https://gun.eco/media/era.png"
-          class="rgb glitch icon"></a>
-      <a href="https://github.com/amark/gun" class="right gap fade"><img src="https://gun.eco/media/github.svg"
-          class="icon rgb glitch"></a>
+      <a href="https://era.eco" class="left gap fade"><img src="https://gun.eco/media/era.png" class="rgb glitch icon"></a>
+      <a href="https://github.com/amark/gun" class="right gap fade"><img src="https://gun.eco/media/github.svg" class="icon rgb glitch"></a>
     </div>
     <div class="focus center row leak gap">
       <!-- just like in real life, looking pretty attracts attention, so show off and look glamorous! -->
-      <img id="hp-logo" class="rgb glitching" src="https://gun.eco/media/gun.svg"
-        style="margin-top: 4%; width: 30%; min-width: 250px;">
+      <img id="hp-logo" class="rgb glitching" src="https://gun.eco/media/gun.svg" style="margin-top: 4%; width: 30%; min-width: 250px;">
     </div>
     <div class="center row focus crack">
       <p class="loud rgb">protecting people's privacy</p>
@@ -205,177 +156,128 @@
       <a href="https://gun.eco/docs/Todo-Dapp"><button class="rgb glitch">GET STARTED</button></a>
       <a href="https://gun.eco/docs/API"><button class="rgb glitch">DOCUMENTATION</button></a>
     </div>
-    <a href="https://gitter.im/amark/gun" class="left gap fade" style="position: absolute; bottom: 0; left: 0;"><img
-        src="https://gun.eco/media/gitter.svg" class="icon rgb glitch"></a>
-    <a href="https://twitter.com/marknadal" class="right gap fade" style="position: absolute; bottom: 0; right: 0;"><img
-        src="https://gun.eco/media/twitter.png" class="icon rgb glitch"></a>
-
+    <a href="https://gitter.im/amark/gun" class="left gap fade" style="position: absolute; bottom: 0; left: 0;"><img src="https://gun.eco/media/gitter.svg" class="icon rgb glitch"></a>
+    <a href="https://twitter.com/marknadal" class="right gap fade" style="position: absolute; bottom: 0; right: 0;"><img src="https://gun.eco/media/twitter.png" class="icon rgb glitch"></a>
+    <script async src="https://cdn.jsdelivr.net/npm/gun/lib/fun.js"></script>
   </div>
-
+  
   <div id="logos" class="row hold white">
     <div class="row logos center">
       <style>
-        #logos {
-          margin-top: 2%;
-        }
-
+        #logos { margin-top: 2%; }
         #logos img {
           filter: grayscale(1);
           margin: 2%;
-          transform: scale(0.6);
+          transform:  scale(0.6);
         }
-
         #logos img:hover {
           filter: grayscale(0);
         }
-
         #logos a {
           vertical-align: middle;
         }
       </style>
-      <a href="https://techcrunch.com/2018/05/23/gun-raises-more-than-1-5m-for-its-decentralized-database-system/"><img
-          style="height: 3em;"
-          src="https://tissuepathology.com/wp-content/uploads/2019/07/TechCrunch-Logo-300x300.jpg"></a>
-
-      <a
-        href="https://www.nbcnews.com/tech/tech-news/these-technologists-think-internet-broken-so-they-re-building-another-n1030136"><img
-          style="height: 2em;" src="https://logodownload.org/wp-content/uploads/2020/06/nbc-logo-3.png"></a>
-
-      <a href="https://finance.yahoo.com/news/hacker-noon-storing-content-blockchain-150011860.html"><img
-          style="height: 1.9em;" src="https://cereusfinancial.com/wp-content/uploads/2020/08/Yahoo-Finance.png"></a>
-
-      <a href="https://www.coywolf.news/social/twitter-bluesky-decentralized-social-ecosystem-review/"><img
-          style="height: 2em;" src="https://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo.png"></a>
-
-      <a href="https://dweb.archive.org/"><img style="height: 2.3em;"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Internet_Archive_logo_and_wordmark.svg/900px-Internet_Archive_logo_and_wordmark.svg.png"></a>
-
-      <a
-        href="https://www.coindesk.com/tech/2020/01/22/hacker-noon-is-storing-content-on-a-blockchain-after-ditching-medium/"><img
-          style="height: 1.4em;" src="https://hackernoon.com/hn-logo.png"></a>
-
-      <a
-        href="https://www.zdnet.com/article/era-hatches-meething-an-open-source-browser-based-video-conferencing-system/"><img
-          style="height: 2em;"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/ZDNet_Logo.svg/1024px-ZDNet_Logo.svg.png"></a>
+      <a href="https://techcrunch.com/2018/05/23/gun-raises-more-than-1-5m-for-its-decentralized-database-system/"><img style="height: 3em;" src="https://tissuepathology.com/wp-content/uploads/2019/07/TechCrunch-Logo-300x300.jpg"></a>
+      
+      <a href="https://www.nbcnews.com/tech/tech-news/these-technologists-think-internet-broken-so-they-re-building-another-n1030136"><img style="height: 2em;" src="https://logodownload.org/wp-content/uploads/2020/06/nbc-logo-3.png"></a>
+      
+      <a href="https://finance.yahoo.com/news/hacker-noon-storing-content-blockchain-150011860.html"><img style="height: 1.9em;" src="https://cereusfinancial.com/wp-content/uploads/2020/08/Yahoo-Finance.png"></a>
+      
+      <a href="https://www.coywolf.news/social/twitter-bluesky-decentralized-social-ecosystem-review/"><img style="height: 2em;" src="https://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo.png"></a>
+  
+      <a href="https://dweb.archive.org/"><img style="height: 2.3em;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Internet_Archive_logo_and_wordmark.svg/900px-Internet_Archive_logo_and_wordmark.svg.png"></a>
+      
+      <a href="https://www.coindesk.com/tech/2020/01/22/hacker-noon-is-storing-content-on-a-blockchain-after-ditching-medium/"><img style="height: 1.4em;" src="https://hackernoon.com/hn-logo.png"></a>
+  
+      <a href="https://www.zdnet.com/article/era-hatches-meething-an-open-source-browser-based-video-conferencing-system/"><img style="height: 2em;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/ZDNet_Logo.svg/1024px-ZDNet_Logo.svg.png"></a>
     </div>
   </div>
-
+  
   <div id="why" class="row full pad">
     <style>
-      #why {}
-
+      #why {
+      }
       #why .see {
         width: 100%;
         margin-top: -0.2em;
         padding: 0 3%;
       }
-
       .homepage .just {
         text-align: justify;
       }
-
       .homepage .above {
-        z-index: 9999;
+        z-index:  9999;
         line-height: 0.9em;
       }
-
       .homepage a {
-        color: inherit;
+        color:  inherit;
       }
-
       .homepage .ru {
         c-olor: red;
         border-bottom: solid 1px red;
       }
-
       .homepage .gu {
         c-olor: green;
         border-bottom: solid 1px lime;
       }
-
       .homepage .bu {
         c-olor: blue;
         border-bottom: solid 1px blue;
       }
     </style>
-
-    <div class="row">
-      <p class="shout above rgb glitch" style="max-width: 8em;"><b>Get ready to disrupt Big Tech</b></p>
-    </div>
+  
+    <div class="row"><p class="shout above rgb glitch" style="max-width: 8em;"><b>Get ready to disrupt Big Tech</b></p></div>
     <div class="row center" style="margin-bottom: 7%;">
       <div class="unit see crack"><embed class="rgb" style="height: 18em;"
-          src="https://www.youtube.com/embed/ZF7a5oj77-U?autohide=0&autoplay=1&modestbranding=1&norel=1"
-          wmode="transparent" type="video/mp4" width="100%" allow="encrypted-media; picture-in-picture" allowfullscreen>
-      </div>
+        src="https://www.youtube.com/embed/ZF7a5oj77-U?autohide=0&autoplay=1&modestbranding=1&norel=1"
+        wmode="transparent"
+        type="video/mp4"
+        width="100%"
+        allow="encrypted-media; picture-in-picture"
+        allowfullscreen
+      ></div>
       <div class="unit">
-        <p class="left just">&emsp;GUN gives you the most powerful digital weapons on the internet: <a
-            href="https://gun.eco/docs/Cartoon-Cryptography" class="ru">encryption</a> for privacy, and independence
-          through <a href="https://gun.eco/distributed/matters.html" class="gu">decentralization</a>. There are now
-          enough phones on the planet to power all of Facebook by the people, for the people, and of the people. So why
-          don't we?
+        <p class="left just">&emsp;GUN gives you the most powerful digital weapons on the internet: <a href="https://gun.eco/docs/Cartoon-Cryptography" class="ru">encryption</a> for privacy, and independence through <a href="https://gun.eco/distributed/matters.html" class="gu">decentralization</a>. There are now enough phones on the planet to power all of Facebook by the people, for the people, and of the people. So why don't we?
       </div>
     </div>
-
+  
     <div class="row center" style="margin-bottom: 7%;">
       <div class="unit col left" style="margin-top: -2.5%; /* v-align not work :( */">
         <p class="shout above rgb glitch" style="max-width: 5.5em;"><b>60+ million monthly downloads</b></p>
       </div>
       <div class="unit col" style="width: 100%;"><embed class="rgb" style="height: 8.5em;"
-          src="https://www.youtube.com/embed/oTQXzhm8w_8?autohide=0&autoplay=1&modestbranding=1&norel=1"
-          wmode="transparent" type="video/mp4" width="100%" allow="encrypted-media; picture-in-picture" allowfullscreen>
-      </div>
+        src="https://www.youtube.com/embed/oTQXzhm8w_8?autohide=0&autoplay=1&modestbranding=1&norel=1"
+        wmode="transparent"
+        type="video/mp4"
+        width="100%"
+        allow="encrypted-media; picture-in-picture"
+        allowfullscreen
+      ></div>
       <div class="unit">
-        <p class="left just" style="padding-top: 1%;">&emsp;Learn why GUN is so neon hot with developers: It's the Pied
-          Piper, Open Source Firebase, Decentralized Dropbox! Backed by FireFox's <a
-            href="https://builders.mozilla.community/who-we-fund.html" class="bu">Mozilla</a>, <a
-            href="https://techcrunch.com/2018/05/23/gun-raises-more-than-1-5m-for-its-decentralized-database-system/"
-            class="ru">Billionaires</a>, and <a href="https://github.com/amark/gun#support" class="gu"><i>the
-              people</i></a>. We're building the future.</p>
+        <p class="left just" style="padding-top: 1%;">&emsp;Learn why GUN is so neon hot with developers: It's the Pied Piper, Open Source Firebase, Decentralized Dropbox! Backed by FireFox's <a href="https://builders.mozilla.community/who-we-fund.html" class="bu">Mozilla</a>, <a href="https://techcrunch.com/2018/05/23/gun-raises-more-than-1-5m-for-its-decentralized-database-system/" class="ru">Billionaires</a>, and <a href="https://github.com/amark/gun#support" class="gu"><i>the people</i></a>. We're building the future.</p>
       </div>
     </div>
-
+  
     <div class="row center" style="margin-bottom: 7%;">
       <div class="center row">
         <p class="loud rgb glitching" style="padding: 0 1em;">the protocol for freedom fighters</p>
-        <span class="loud rgb" style="animation: 3s 0.5s infinite glitch;">&rarr;</span><a
-          href="https://chat.gun.eco"><button class="rgb glitch" style="margin-bottom: 0.5em;">JOIN THE
-            COMMUNITY</button></a>
+        <span class="loud rgb" style="animation: 3s 0.5s infinite glitch;">&rarr;</span><a href="https://chat.gun.eco"><button class="rgb glitch" style="margin-bottom: 0.5em;">JOIN THE COMMUNITY</button></a>
         <p class="loud rgb">Values first. Family first. <i>Monopoly never.</i></p>
       </div>
     </div>
-
+  
     <div class="row center left">
       <div class="unit col" style="width: 100%;">
         <style>
-          .behold {
-            font-size: 16px;
-          }
-
-          .behold .rgb {
-            filter: none;
-          }
-
-          .behold .grid {
-            display: inline-block;
-          }
-
-          .behold .screen {
-            position: relative;
-            overflow: hidden;
-          }
-
+          .behold { font-size: 16px; }
+          .behold .rgb { filter: none; }
+          .behold .grid { display: inline-block; }
+          .behold .screen { position: relative; overflow: hidden;}
           .behold .behold {
-            padding: 0;
+            padding:0;
             text-align: center;
           }
-
-          .behold .sync {
-            display: block;
-            width: 1em;
-            height: 1em;
-          }
-
+          .behold .sync { display: block; width: 1em; height: 1em; }
           .behold .sync::before {
             position: absolute;
             transform: rotate(0.5turn);
@@ -383,187 +285,110 @@
             left: 0;
             content: '\02938';
           }
-
           .behold .sync::after {
             position: absolute;
             top: -0.3em;
             left: 0.5em;
             content: '\02938';
           }
-
           .rotate {
             opacity: 0;
             animation: linear infinite;
             animation-name: rotate, rshow;
             animation-duration: 3s, 9s;
           }
-
           @keyframes rotate {
-            0% {
-              transform: rotate(0turn);
-            }
-
-            100% {
-              transform: rotate(1turn);
-            }
+            0% { transform:  rotate(0turn); }
+            100% { transform:  rotate(1turn); }
           }
-
           @keyframes rshow {
-            20% {
-              opacity: 0;
-            }
-
-            25% {
-              opacity: 1;
-            }
-
-            90% {
-              opacity: 1;
-            }
-
-            95% {
-              opacity: 0;
-            }
+            20% { opacity: 0; }
+            25% { opacity: 1; }
+            90% { opacity: 1; }
+            95% { opacity: 0; }
           }
-
           .rgbs {
-            box-shadow: -1px 1px 4px rgba(255, 0, 0, 1),
-              -1px 0px 4px rgba(0, 255, 0, 1),
-              1px -1px 4px rgba(0, 0, 255, 1);
+            box-shadow: -1px 1px 4px rgba(255,0,0,1),
+              -1px 0px 4px rgba(0,255,0,1),
+              1px -1px 4px rgba(0,0,255,1)
+              ;
           }
         </style>
         <div class="behold">
-          <div class="graphic grid"
-            style="min-width: 250px; max-width: 600px; height: 250px; position: relative; margin:0 auto; padding:0;">
-
-            <div class="desktop rgb glitch" style="height: 10em; width: 17em; position: absolute; top: 10%; left: 3%;">
-              <div class="monitor rgbs"
-                style="height: 100%; width: 100%; background: white; padding: .35em; border-radius: 0.5em;">
-                <div class="screen rgb" style="height: 100%; width: 100%;">
-                  <div class="mouse" style="top: 87%; left: 110%; width: 16px; position: absolute; color: white;">
-                    &#x27a4;</div>
-                  <style>
-                    .graphic .screen {
-                      background: black;
-                      animation: 9s infinite screen;
-                    }
-
-                    @keyframes screen {
-                      20% {
-                        background: black;
-                      }
-
-                      23% {
-                        background: red;
-                      }
-
-                      40% {
-                        background: red;
-                      }
-
-                      43% {
-                        background: lime;
-                      }
-
-                      60% {
-                        background: lime;
-                      }
-
-                      63% {
-                        background: blue;
-                      }
-
-                      80% {
-                        background: blue;
-                      }
-
-                      83% {
-                        background: black;
-                      }
-                    }
-
-                    .mouse {
-                      transform: translate(0%, 0%) scale(1) rotate(-0.32turn);
-                      animation: 9s infinite mouse;
-                    }
-
-                    @keyframes mouse {
-                      18% {
-                        transform: translate(-1000%, -250%) scale(1) rotate(-0.32turn)
-                      }
-
-                      19%,
-                      39%,
-                      59%,
-                      79% {
-                        transform: translate(-1000%, -250%) scale(1) rotate(-0.32turn)
-                      }
-
-                      20%,
-                      40%,
-                      60%,
-                      80% {
-                        transform: translate(-1000%, -250%) scale(0.5) rotate(-0.32turn)
-                      }
-
-                      21%,
-                      41%,
-                      61%,
-                      81% {
-                        transform: translate(-1000%, -250%) scale(1) rotate(-0.32turn)
-                      }
-                    }
-                  </style>
-                </div>
+        <div class="graphic grid" style="min-width: 250px; max-width: 600px; height: 250px; position: relative; margin:0 auto; padding:0;">
+  
+          <div class="desktop rgb glitch" style="height: 10em; width: 17em; position: absolute; top: 10%; left: 3%;">
+            <div class="monitor rgbs" style="height: 100%; width: 100%; background: white; padding: .35em; border-radius: 0.5em;">
+              <div class="screen rgb" style="height: 100%; width: 100%;">
+                <div class="mouse" style="top: 87%; left: 110%; width: 16px; position: absolute; color: white;">&#x27a4;</div>
+                <style>
+                .graphic .screen {
+                  background: black;
+                  animation: 9s infinite screen;
+                }
+                @keyframes screen {
+                  20% { background: black; }
+                  23% { background: red; }
+                  
+                  40% { background: red; }
+                  43% { background: lime; }
+                  
+                  60% { background: lime; }
+                  63% { background: blue; }
+                  
+                  80% { background: blue; }
+                  83% { background: black; }
+                }
+                .mouse {
+                  transform: translate(0%, 0%) scale(1) rotate(-0.32turn);
+                  animation: 9s infinite mouse;
+                }
+                @keyframes mouse {
+                  18% { transform:  translate(-1000%, -250%) scale(1) rotate(-0.32turn) }
+  
+                  19%, 39%, 59%, 79% { transform:  translate(-1000%, -250%) scale(1) rotate(-0.32turn) }
+                  20%, 40%, 60%, 80% { transform:  translate(-1000%, -250%) scale(0.5) rotate(-0.32turn) }
+                  21%, 41%, 61%, 81% { transform:  translate(-1000%, -250%) scale(1) rotate(-0.32turn) }
+                }
+                </style>
               </div>
-              <div class="stand" style="margin: 1px auto 0px;
+            </div>
+            <div class="stand" style="margin: 1px auto 0px;
               border-bottom: 2.75em solid white;
               border-left: .5em solid transparent;
               border-right: .5em solid transparent;
               height: 0;
               width: 3.2em;">
-              </div>
-              <div class="stand rgbs" style="width: 6em; height: .5em; background: white; margin: 0px auto"></div>
             </div>
-
-            <div class="laptop rgb glitch" style="height: 7em; width: 12em; position: absolute; top: 47%; left: 49%;">
-              <div class="lid rgbs"
-                style="height: 100%; width: 100%; background: white; padding: .5em; border-radius: .5em .5em 0em 0em;">
-                <div class="screen rgb" style="height: 100%; width: 100%;">
-                </div>
-              </div>
-              <div class="case rgbs"
-                style="height: .5em; width: 140%; margin-left: -20%; background: white; border-radius: 0em 0em 5em 5em;">
-              </div>
-            </div>
-
-            <div class="phone rgb glitch"
-              style="height: 3.75em; width: 2.1em; position: absolute; top: 13%; left: 67%;">
-              <div class="case rgbs"
-                style="height: 100%; width: 100%; background: white; padding: .2em .05em; margin-left: -.1em; border-radius: 0.25em;">
-                <div class="screen" style="height: 100%; width: 100%; border-radius: 0.25em;">
-                </div>
-              </div>
-            </div>
-
-            <div style="font-size: 40pt; position: absolute; transform: translate(550%, 0%);">
-              <div class="sync rotate"></div>
-            </div>
-            </style>
-
-            <span style="color: transparent">The decentralized distributed graph database engine. GunDB is the Open
-              Source Firebase alternative, a web3 data protocol.</span>
+            <div class="stand rgbs" style="width: 6em; height: .5em; background: white; margin: 0px auto"></div>
           </div>
+  
+          <div class="laptop rgb glitch" style="height: 7em; width: 12em; position: absolute; top: 47%; left: 49%;">
+            <div class="lid rgbs" style="height: 100%; width: 100%; background: white; padding: .5em; border-radius: .5em .5em 0em 0em;">
+              <div class="screen rgb" style="height: 100%; width: 100%;">
+              </div>
+            </div>
+            <div class="case rgbs" style="height: .5em; width: 140%; margin-left: -20%; background: white; border-radius: 0em 0em 5em 5em;">
+            </div>
+          </div>
+  
+          <div class="phone rgb glitch" style="height: 3.75em; width: 2.1em; position: absolute; top: 13%; left: 67%;">
+            <div class="case rgbs" style="height: 100%; width: 100%; background: white; padding: .2em .05em; margin-left: -.1em; border-radius: 0.25em;">
+              <div class="screen" style="height: 100%; width: 100%; border-radius: 0.25em;">
+              </div>
+            </div>
+          </div>
+          
+          <div style="font-size: 40pt; position: absolute; transform: translate(550%, 0%);"><div class="sync rotate"></div></div>
+          </style>
+  
+          <span style="color: transparent">The decentralized distributed graph database engine. GunDB is the Open Source Firebase alternative, a web3 data protocol.</span>
+        </div>
         </div>
       </div>
-
+  
       <div class="how unit col">
-        <style>
-          .how p {
-            margin-top: 0;
-            padding-top: 1%;
-          }
-        </style>
+        <style>.how p { margin-top: 0; padding-top: 1%; }</style>
         <p class="shout crack above rgb glitch"><b>How it works</b></p>
         <p class="rgb">(1) Sync directly between your devices & friends.</p>
         <p class="rgb">(2) Reclaim ownership and control of your data.</p>
@@ -572,68 +397,48 @@
     </div>
     <!-- END WHY SECTION -->
   </div>
-
-  <div class="scan row center">
-    <style>
-      .scan {
-        height: 0.1em;
-        background: linear-gradient(to right, red 0, red 33%, lime 33%, lime 66%, blue 66%, blue 100%);
-      }
-    </style>
-  </div>
-  <div class="row hold center white">
-    <a href="mailto:invest@gun.eco" style="color: black;">
-      <p class="gap center"><span style="color:  red;">&rarr;</span> Sign up for the <span
-          style="color:  green;">$9/month</span> investor newsletter. <span style="color:  blue;">&larr;</span></p>
-    </a>
-  </div>
-  <div class="scan row center"></div>
-
-  <div class="wow row center pad">
-    <style>
-      .wow .col {
-        padding: 1em;
-      }
-    </style>
-    <div class="col unit left">
-      <p class="shout crack above rgb glitch" style="max-width: 6em;"><b>Build apps you love</b></p>
-      <p class="justify">GUN is an ecosystem of modular tools. Graphs take you beyond just <a
-          href="https://gun.eco/docs/Content-Addressing" class="ru">immutable hashes</a>, they let you do <a
-          href="https://github.com/amark/gun" class="gu">realtime multiplayer</a> updates on any type of data. <a
-          href="https://gun.eco/docs/SEA" class="bu">SEA</a> gives you the best local-first secure user accounts, but
-        with normal logins and even p2p password resets using <a
-          href="https://twitter.com/marknadal/status/1427715775838572545" class="ru">3FA</a>!</p>
+  
+    <div class="scan row center">
+      <style>
+        .scan {
+          height: 0.1em;
+          background:linear-gradient(to right, red 0, red 33%, lime 33%, lime 66%, blue 66%, blue 100%);
+        }
+      </style>
     </div>
-    <div class="col unit left">
-      <p class="shout crack above rgb glitch" style="max-width: 6em;"><b>70%+ cost savings</b></p>
-      <p class="justify"><a href="https://gun.eco/docs/AXE" class="ru">AXE</a> will let you deploy without clouds to a
-        decentralized edge CDN for your JAMstack apps. It runs everywhere, even via browsers with WebRTC, using the
-        simple yet powerful <a href="https://gun.eco/distributed/matters.html" class="gu">HAM</a> "CRDT" conflict
-        resolution algorithm. Meanwhile, <a href="https://gun.eco/docs/DAM" class="bu">DAM</a> let's you do offline mesh
-        networking and <a href="https://gun.eco/docs/RAD" class="ru">RAD</a> stores your data.</p>
+    <div class="row hold center white">
+      <a href="mailto:invest@gun.eco" style="color: black;"><p class="gap center"><span style="color:  red;">&rarr;</span> Sign up for the <span style="color:  green;">$9/month</span> investor newsletter. <span style="color:  blue;">&larr;</span></p></a>
     </div>
-  </div>
-
-  <div class="row center" style="">
-    <div class="center row">
-      <a href="https://github.com/amark/gun"><button class="rgb glitch" style="margin-bottom: 0.5em;">GET THE
-          CODE</button></a>
-    </div>
-  </div>
-
-  <div class="row hold center">
-    <div class="pad">
-      <div class="left">
-        <p class="loud">For <i>You</i>,</p>
-        <p>Crafted with love, <span class="redt">♥</span> by the <a href="http://era.eco">ERA</a> team and many awesome
-          contributors. Licensed under ZLIB, MIT, or Apache 2.0</p>
+    <div class="scan row center"></div>
+  
+    <div class="wow row center pad">
+      <style>.wow .col { padding: 1em; }</style>
+      <div class="col unit left">
+        <p class="shout crack above rgb glitch" style="max-width: 6em;"><b>Build apps you love</b></p>
+        <p class="justify">GUN is an ecosystem of modular tools. Graphs take you beyond just <a href="https://gun.eco/docs/Content-Addressing" class="ru">immutable hashes</a>, they let you do <a href="https://github.com/amark/gun" class="gu">realtime multiplayer</a> updates on any type of data. <a href="https://gun.eco/docs/SEA" class="bu">SEA</a> gives you the best local-first secure user accounts, but with normal logins and even p2p password resets using <a href="https://twitter.com/marknadal/status/1427715775838572545" class="ru">3FA</a>!</p>
+      </div>
+      <div class="col unit left">
+        <p class="shout crack above rgb glitch" style="max-width: 6em;"><b>70%+ cost savings</b></p>
+        <p class="justify"><a href="https://gun.eco/docs/AXE" class="ru">AXE</a> will let you deploy without clouds to a decentralized edge CDN for your JAMstack apps. It runs everywhere, even via browsers with WebRTC, using the simple yet powerful <a href="https://gun.eco/distributed/matters.html" class="gu">HAM</a> "CRDT" conflict resolution algorithm. Meanwhile, <a href="https://gun.eco/docs/DAM" class="bu">DAM</a> let's you do offline mesh networking and <a href="https://gun.eco/docs/RAD" class="ru">RAD</a> stores your data.</p>
       </div>
     </div>
-    <div>
-      <img src="https://era.eco/media/world.png" class="row rgb glitch">
+  
+    <div class="row center" style="">
+      <div class="center row">
+        <a href="https://github.com/amark/gun"><button class="rgb glitch" style="margin-bottom: 0.5em;">GET THE CODE</button></a>
+      </div>
     </div>
+  
+    <div class="row hold center">
+      <div class="pad">
+        <div class="left">
+          <p class="loud">For <i>You</i>,</p>
+          <p>Crafted with love, <span class="redt">♥</span> by the <a href="http://era.eco">ERA</a> team and many awesome contributors. Licensed under ZLIB, MIT, or Apache 2.0</p>
+        </div>
+      </div>
+      <div>
+        <img src="https://era.eco/media/world.png" class="row rgb glitch">
+      </div>
+    </div>
+  
   </div>
-  <script>
-
-  </script>
-</div>
