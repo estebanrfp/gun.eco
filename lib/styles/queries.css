@@ -24,7 +24,7 @@
 	.Layout {
 		width: 100% !important;
 	}
-	.Layout code, .Layout p, .Layout a {
+	.Layout code {
 		word-break: break-all;
 	}
 	.Layout img {
