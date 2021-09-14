@@ -209,22 +209,7 @@
         src="https://gun.eco/media/gitter.svg" class="icon rgb glitch"></a>
     <a href="https://twitter.com/marknadal" class="right gap fade" style="position: absolute; bottom: 0; right: 0;"><img
         src="https://gun.eco/media/twitter.png" class="icon rgb glitch"></a>
-    <script>
-      ; (function () {
-        return;
-        var logo = document.getElementById('hp-logo'), w = window;
-        w.onmousemove = w.ontouchmove = tilt;
-        function tilt(eve) {
-          eve = eve.originalEvent || eve;
-          eve = (eve.touches && eve.touches[0]) || eve;
-          var x = eve.clientX - (w.outerWidth / 2), y = eve.clientY - (w.outerHeight / 2);
-          if (!logo) { return }
-          logo.style.transform = 'rotateX(' + y / 15 + 'deg) rotateY(' + x / 15 + 'deg)';
-        };
-      }());
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/gun/examples/jquery.js"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/gun/lib/fun.js"></script>
+
   </div>
 
   <div id="logos" class="row hold white">
@@ -648,5 +633,7 @@
       <img src="https://era.eco/media/world.png" class="row rgb glitch">
     </div>
   </div>
+  <script>
 
+  </script>
 </div>
