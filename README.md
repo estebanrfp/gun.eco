@@ -27,3 +27,4 @@ npm run dev
 
 Creating high-performance applications that solves complex problems requires full dedication from the developers. documentation, portability, bug fixes, infrastructure, user experience, and support.
 
+if it ain't broke, don't fix it.
