@@ -46,7 +46,7 @@
 	position: relative;
 }
 
-.menu ul li .active {
+.menu ul li.active>a {
 	color: var(--highlight-color) !important;
 }
 
@@ -65,9 +65,11 @@
 
 .menu ul .sublist.open::after {
 	transform: rotate(90deg);
-	/* color: var(--highlight-color); */
 }
 
+.menu ul .sublist.active::after {
+	color: var(--highlight-color);
+}
 
 .menu>ul>li>a {
 	padding: 1rem 0;
