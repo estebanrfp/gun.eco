@@ -42,7 +42,11 @@
 	display: block !important;
 }
 
-.menu ul li .active {
+.menu ul li {
+	position: relative;
+}
+
+.menu ul li.active>a {
 	color: var(--highlight-color) !important;
 }
 
@@ -50,19 +54,21 @@
 	filter: brightness(1.2);
 }
 
-.menu ul ul::after {
+.menu ul li .sublist::after {
 	content: "\25b6";
 	position: absolute;
-	top: -1rem;
+	top: 0.25rem;
 	right: 0;
 	font-size: 0.8rem;
 	transition: all 0.5s;
-	transform: rotate(90deg);
-	color: var(--highlight-color);
 }
 
-.menu ul .open~.menu ul ul::after {
-	transform: rotate(9deg);
+.menu ul .sublist.open::after {
+	transform: rotate(90deg);
+}
+
+.menu ul .sublist.active::after {
+	color: var(--highlight-color);
 }
 
 .menu>ul>li>a {
