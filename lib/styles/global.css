@@ -51,10 +51,15 @@
 	padding: 0 1rem;
 	min-width: var(--menu-width);
 	width: 100%;
+	max-width: 80ch;
 	height: calc(100% - 65px);
 	overflow: auto;
 	opacity: 1;
 	position: absolute;
+	left: 50%;
+	right: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0,0,0, 0.2);
 }
 
 .Layout blockquote {
@@ -110,7 +115,9 @@
 }
 
 .show-nav-left .main-container>.Layout {
-	width: calc(100% - var(--menu-width)) !important;
+	width: calc(100% - var(--menu-width))!important;
+	transform: translateX(calc(-50% - var(--menu-width)))!important;
+	left: calc(50% + var(--menu-width) / 2)!important;
 }
 
 .Sidebar-left {
