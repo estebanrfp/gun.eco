@@ -1,7 +1,7 @@
 :root {
 	--background-color: #292929;
 	--highlight-color: #03a9f4;
-	--text-color: rgba(255, 255, 255, 0.51);
+	--text-color: rgba(255, 255, 255, 0.8);
 	--menu-width: 280px;
 	--font-size: 16px;
 }
@@ -149,14 +149,13 @@ input, select {
 blockquote {
 	padding: 0 1rem;
 	margin: 1rem 0;
-	color: #666;
+	color: #888;
 	border-left: 0.25em solid #ddd;
 }
 
 blockquote p {
 	display: block;
 	padding: 0;
-	color: rgba(255, 255, 255, 0.42);
 }
 
 table {
